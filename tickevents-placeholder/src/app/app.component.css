@@ -1,7 +1,55 @@
 .svg-header {
-    height: 100px;
+    overflow: hidden;
+    height: 25vh !important;
 }
 
 .body {
-    margin-top: -100px;
+    margin-top: -25vh;
+}
+
+.svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 200vw !important;
+    max-height: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    animation: rock;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rock {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.svg-1 {
+    animation-duration: 3s;
+}
+
+.svg-2 {
+    animation-duration: 5s;
+}
+
+.svg-3 {
+    animation-duration: 7s;
+}
+
+@media (min-width: 756px) {
+    .svg-header {
+        height: 25vh
+    }
+
+    .svg {
+        width: 200vw !important;
+    }
 }
