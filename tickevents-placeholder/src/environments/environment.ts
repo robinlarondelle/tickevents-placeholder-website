@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mailchimp_api_key: "ae7748b19a933f0a1244ec7273758588-us17",
+  mailchimp_server_prefix: "us17"
 };
 
 /*
