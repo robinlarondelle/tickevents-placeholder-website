@@ -22,34 +22,42 @@
 
     </div>
   </div>
-  <div class="row body align-content-center h-100 no-gutters justify-content-center">
+  <div class="row body content h-100 no-gutters justify-content-center">
     <div class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 h-auto p-0">
 
       <img src="../assets/Full Logo Salmon Transparent.png" alt="Tickevents" class="w-100 my-auto p-0">
-      <p class="text-center subtitle px-5 fs-xxl">Online ticketverkoop met directe uitbetaling en flexibele servicekosten. Dat is
+      <p class="text-center subtitle fs-xxl">Online ticketverkoop met directe uitbetaling en flexibele
+        servicekosten. <br>Dat is
         Tickevents.</p>
 
       <div class="mt-5">
-        <p class="text-center fs-xl">Tickevents is in ontwikkeling! Wil je op de hoogte blijven van onze ontwikkelingen? Laat dan je email achter, en wees de eerste die updates
-          ontvangt!</p>
+        <p class="text-center fs-xl">Tickevents is in ontwikkeling. Wil je op de hoogte blijven van, en betrokken worden
+          bij, de ontwikkeling van Tickevents? Laat dan hier je gegevens achter!</p>
 
         <form [formGroup]="detailsForm" (submit)="sendDetais()" *ngIf="!successfullSignup; else successTemplate">
 
           <div class="form-row my-3 my-md-0">
             <div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
-              <input type="text" name="firstname" id="firstname" formControlName="firstname" class="form-control" placeholder="John">
-              <span *ngIf="checkForm && firstname.invalid && firstname.errors.required" class="r small">Dit veld is verplicht</span>
+              <input type="text" name="firstname" id="firstname" formControlName="firstname" class="form-control"
+                placeholder="John">
+              <span *ngIf="checkForm && firstname.invalid && firstname.errors.required" class="r small">Dit veld is
+                verplicht</span>
             </div>
 
             <div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
-              <input type="text" name="lastname" id="lastname" formControlName="lastname" class="form-control" placeholder="Johnsen">
-              <span *ngIf="checkForm && lastname.invalid && lastname.errors.required" class="r small">Dit veld is verplicht</span>
+              <input type="text" name="lastname" id="lastname" formControlName="lastname" class="form-control"
+                placeholder="Johnsen">
+              <span *ngIf="checkForm && lastname.invalid && lastname.errors.required" class="r small">Dit veld is
+                verplicht</span>
             </div>
 
             <div class="col-12 col-lg-4 my-2 my-lg-0 align-content-center">
-              <input type="email" name="email" id="email" formControlName="email" class="form-control" placeholder="john@email.com">
-              <span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit veld is verplicht</span>
-              <span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig format: aaa@bbb.ccc</span>
+              <input type="email" name="email" id="email" formControlName="email" class="form-control"
+                placeholder="john@email.com">
+              <span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit veld is
+                verplicht</span>
+              <span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig format:
+                aaa@bbb.ccc</span>
             </div>
 
             <div class="col-12 col-lg-2 my-2 my-lg-0">
@@ -62,12 +70,18 @@
 
         </form>
 
-        <div class="col-12" *ngIf="duplicateEmailError"><p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij nieuwe updates!</p></div>
-        <div class="col-12" *ngIf="rejectedEmailError"><p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een ander email adres.</p></div>
+        <div class="col-12" *ngIf="duplicateEmailError">
+          <p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij nieuwe updates!</p>
+        </div>
+        <div class="col-12" *ngIf="rejectedEmailError">
+          <p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een ander email
+            adres.</p>
+        </div>
 
         <ng-template #successTemplate>
           <div class="col-12">
-            <p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht wanneer er interessante updates zijn!</p>
+            <p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht wanneer er interessante
+              updates zijn!</p>
           </div>
         </ng-template>
 

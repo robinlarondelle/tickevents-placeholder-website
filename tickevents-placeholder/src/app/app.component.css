@@ -19,7 +19,7 @@
   animation: rock;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
 }
 
 @keyframes rock {
@@ -33,15 +33,15 @@
 }
 
 .svg-1 {
-  animation-duration: 3s;
+  animation-duration: 10s;
 }
 
 .svg-2 {
-  animation-duration: 5s;
+  animation-duration: 15s;
 }
 
 .svg-3 {
-  animation-duration: 7s;
+  animation-duration: 20s;
 }
 
 @media (min-width: 756px) {
@@ -55,13 +55,13 @@
 }
 
 .corner-ribbon {
-  width: 400px;
+  width: 250px;
   background: #e43;
   position: absolute;
-  top: 60px;
-  left: -100px;
+  top: 40px;
+  left: -60px;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
   letter-spacing: 1px;
   color: #f0f0f0;
   font-weight: bold;
@@ -186,4 +186,8 @@
 
 .subtitle {
   font-family: 'Alata', sans-serif;
+}
+
+.content {
+  padding-top: 30vh
 }
