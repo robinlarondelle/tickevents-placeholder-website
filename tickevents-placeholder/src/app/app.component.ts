@@ -48,7 +48,8 @@ export class AppComponent {
         this.spinner.hide()
 
         if (error.error.type == "MailchimpError") {
-          switch (error.error.message.title) {
+          
+          switch (error.error.message) {
             case "Member Exists": {
               this.duplicateEmailError = true
               break
