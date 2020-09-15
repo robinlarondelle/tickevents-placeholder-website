@@ -161,3 +161,9 @@
 .bg-2 {
   background: linear-gradient(90deg, #EA8585, #ED9696);
 }
+
+.tickevents {
+  font-family: arkhip;
+  font-size: 10rem;
+  font-weight: bolder;
+}

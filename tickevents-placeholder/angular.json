@@ -25,7 +25,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/custom.css"
+              "src/custom.css",
+              "src/assets/fonts/fontnames.css"
             ],
             "scripts": []
           },

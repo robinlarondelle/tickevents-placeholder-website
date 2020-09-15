@@ -26,6 +26,9 @@ Place your color classes here if you need to use them more than once.
 .ft-open-sans { font-family: 'Open Sans', sans-serif; }
 .ft-rowdies { font-family: 'Rowdies', cursive; }
 
+
+
+
 /*font sizes*/
 .fs-xxl { font-size: xx-large !important; }
 .fs-xl{ font-size: x-large !important; }
