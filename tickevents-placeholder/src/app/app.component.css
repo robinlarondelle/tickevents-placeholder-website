@@ -1,57 +1,10 @@
 .svg-header {
   overflow: hidden;
-  height: 25vh !important;
+  height: 100vh !important;
 }
 
 .body {
-  margin-top: -25vh;
-}
-
-.svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 200vw !important;
-  max-height: 100% !important;
-  margin-left: auto;
-  margin-right: auto;
-  animation: rock;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes rock {
-  0% {
-    left: -100%;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-.svg-1 {
-  animation-duration: 10s;
-}
-
-.svg-2 {
-  animation-duration: 15s;
-}
-
-.svg-3 {
-  animation-duration: 20s;
-}
-
-@media (min-width: 756px) {
-  .svg-header {
-    height: 25vh
-  }
-
-  .svg {
-    width: 200vw !important;
-  }
+  margin-top: -100vh;
 }
 
 .corner-ribbon {
@@ -190,4 +143,21 @@
 
 .content {
   padding-top: 30vh
+}
+
+.svg-divider {
+  position: absolute;
+  bottom: 0px;
+  left: -1px;
+  height: 100%;
+  fill: #092134;
+}
+
+.bg-1 {
+  background: #092134;
+  background: linear-gradient(270deg, #092134, #0C2C45);
+}
+
+.bg-2 {
+  background: linear-gradient(90deg, #EA8585, #ED9696);
 }
