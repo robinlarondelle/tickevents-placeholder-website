@@ -1,86 +1,114 @@
 <div class="container-fluid p-0 h-100vh w">
-  <div class="row svg-header no-gutters">
-    <div class="col bg-1"></div>
-    <div class="col bg-2">
-      <svg viewBox="0 0 88 1024" orientation="vertical" class="svg-divider">
-        <path d="M0,0h45.07891c58.40593,190.38815,58.40593,361.05481,0,512s-58.40593,321.61188,0,512H0V0z"></path>
-      </svg>
-    </div>
-  </div>
-  <div class="row body content h-100 no-gutters justify-content-center">
-    <div class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 h-auto p-0">
-      <h1 class="tickevents text-center">Tickevents</h1>
+	<div class="row svg-header no-gutters">
+		<div class="col bg-1"></div>
+		<div class="col bg-2">
+			<svg viewBox="0 0 88 1024" orientation="vertical" class="svg-divider">
+				<path d="M0,0h45.07891c58.40593,190.38815,58.40593,361.05481,0,512s-58.40593,321.61188,0,512H0V0z">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div class="row body content h-100 no-gutters justify-content-center">
+		<div class="col">
+			<div class="row tickevents no-gutters">
+				<div class="col">
+					<img src="../assets/Tickets White.png" alt="Tickevents" class="logo">
+					<h1 class="tickevents-title text-center">Tickevents</h1>
+				</div>
+			</div>
+			<div class="row no-gutters mt-2">
+				<div class="col-12">
+					<p class="text-center subtitle fs-xxl">Meer geld over houden na de verkoop van de tickets van je
+						evenement.
+						<br>Dat is
+						Tickevents.</p>
+				</div>
+			</div>
+			<div class="row no-gutters justify-content-center">
+				<div class="col-3">
+					<button class="btn w-100 btn-lg">Maak een evenement aan!</button>
+				</div>
+			</div>
+			<div class="row no-gutters justify-content-center">
+				<div class="col-8 h-auto justify-content-center">
+					<div class="mt-5">
+						<p class="text-center fs-xl">Tickevents is in ontwikkeling. Wil je op de hoogte blijven van, en
+							betrokken
+							worden
+							bij, de ontwikkeling van Tickevents? Laat dan hier je gegevens achter!</p>
 
-      <!-- <img src="../assets/Full Logo White Transparent.png" alt="Tickevents" class="w-100 my-auto p-0"> -->
-      <p class="text-center subtitle fs-xxl">Online ticketverkoop met directe uitbetaling en flexibele
-        servicekosten. <br>Dat is
-        Tickevents.</p>
+						<form [formGroup]="detailsForm" (submit)="sendDetais()"
+							*ngIf="!successfullSignup; else successTemplate">
 
-      <div class="mt-5">
-        <p class="text-center fs-xl">Tickevents is in ontwikkeling. Wil je op de hoogte blijven van, en betrokken worden
-          bij, de ontwikkeling van Tickevents? Laat dan hier je gegevens achter!</p>
+							<div class="form-row my-3 my-md-0">
+								<div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
+									<input type="text" name="firstname" id="firstname" formControlName="firstname"
+										class="form-control" placeholder="John">
+									<span *ngIf="checkForm && firstname.invalid && firstname.errors.required"
+										class="r small">Dit veld is
+										verplicht</span>
+								</div>
 
-        <form [formGroup]="detailsForm" (submit)="sendDetais()" *ngIf="!successfullSignup; else successTemplate">
+								<div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
+									<input type="text" name="lastname" id="lastname" formControlName="lastname"
+										class="form-control" placeholder="Johnsen">
+									<span *ngIf="checkForm && lastname.invalid && lastname.errors.required"
+										class="r small">Dit veld is
+										verplicht</span>
+								</div>
 
-          <div class="form-row my-3 my-md-0">
-            <div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
-              <input type="text" name="firstname" id="firstname" formControlName="firstname" class="form-control"
-                placeholder="John">
-              <span *ngIf="checkForm && firstname.invalid && firstname.errors.required" class="r small">Dit veld is
-                verplicht</span>
-            </div>
+								<div class="col-12 col-lg-4 my-2 my-lg-0 align-content-center">
+									<input type="email" name="email" id="email" formControlName="email"
+										class="form-control" placeholder="john@email.com">
+									<span *ngIf="checkForm && email.invalid && email.errors.required"
+										class="r small">Dit veld is
+										verplicht</span>
+									<span *ngIf="checkForm && email.invalid && email.errors.email"
+										class="r small">Geldig format:
+										aaa@bbb.ccc</span>
+								</div>
 
-            <div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
-              <input type="text" name="lastname" id="lastname" formControlName="lastname" class="form-control"
-                placeholder="Johnsen">
-              <span *ngIf="checkForm && lastname.invalid && lastname.errors.required" class="r small">Dit veld is
-                verplicht</span>
-            </div>
+								<div class="col-12 col-lg-2 my-2 my-lg-0">
+									<button type="submit" class="btn btn-outline-dark w-100">
+										<ngx-spinner></ngx-spinner>
+										<span>Verstuur</span>
+									</button>
+								</div>
+							</div>
 
-            <div class="col-12 col-lg-4 my-2 my-lg-0 align-content-center">
-              <input type="email" name="email" id="email" formControlName="email" class="form-control"
-                placeholder="john@email.com">
-              <span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit veld is
-                verplicht</span>
-              <span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig format:
-                aaa@bbb.ccc</span>
-            </div>
+						</form>
 
-            <div class="col-12 col-lg-2 my-2 my-lg-0">
-              <button type="submit" class="btn btn-outline-dark w-100">
-                <ngx-spinner></ngx-spinner>
-                <span>Verstuur</span>
-              </button>
-            </div>
-          </div>
+						<div class="col-12" *ngIf="duplicateEmailError">
+							<p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij
+								nieuwe updates!
+							</p>
+						</div>
+						<div class="col-12" *ngIf="rejectedEmailError">
+							<p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een
+								ander email
+								adres.</p>
+						</div>
 
-        </form>
-
-        <div class="col-12" *ngIf="duplicateEmailError">
-          <p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij nieuwe updates!</p>
-        </div>
-        <div class="col-12" *ngIf="rejectedEmailError">
-          <p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een ander email
-            adres.</p>
-        </div>
-
-        <ng-template #successTemplate>
-          <div class="col-12">
-            <p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht wanneer er interessante
-              updates zijn!</p>
-          </div>
-        </ng-template>
+						<ng-template #successTemplate>
+							<div class="col-12">
+								<p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht
+									wanneer er
+									interessante
+									updates zijn!</p>
+							</div>
+						</ng-template>
 
 
-      </div>
-
-    </div>
-  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="corner-ribbon top-left sticky red shadow">
-  <div class="heartbeat">
-    Work in Progress!
-  </div>
+	<div class="heartbeat">
+		Work in Progress!
+	</div>
 </div>
 
 
