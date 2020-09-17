@@ -1,12 +1,3 @@
-.svg-header {
-  overflow: hidden;
-  height: 100vh !important;
-}
-
-.body {
-  margin-top: -100vh;
-}
-
 .corner-ribbon {
   width: 250px;
   background: #e43;
@@ -136,13 +127,122 @@
     animation-timing-function: ease-out;
   }
 }
+/* Heartbeat end */
+
+/* Chevron */
+.chevron-padding {
+  padding-bottom: 85px;
+}
+
+.chevron-container {
+  width: 24px;
+  height: 24px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+.chevron-text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+/* Chevron end */
+
+.main-row {
+  height: 105vh;
+}
 
 .subtitle {
   font-family: 'Alata', sans-serif;
+  font-size: 1.5rem;
 }
 
 .content {
-  padding-top: 5vh
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin-top: -105vh;
+}
+
+
+.svg-header {
+  overflow: hidden;
+  height: 100% !important;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
 
 .svg-divider {
@@ -162,10 +262,6 @@
   background: linear-gradient(90deg, #EA8585, #ED9696);
 }
 
-/* .tickevents {
-  animation: fadeIn 2s;
-} */
-
 .tickevents-title {
   font-family: arkhip;
   font-size: 15vw;
@@ -179,17 +275,6 @@
   display: block;
 }
 
-@media (min-width: 425px) {
-  .logo {
-    width: 250px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .tickevents-title {
-    font-size: 180px;
-  }
-}
 
 .btn {
   background-color: #5D9881;
@@ -212,4 +297,125 @@
   transform: translateY(4px); 
   transition-duration: 0s;
   height: 50px;
+}
+
+.tickets-img {
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: 0;
+  border-radius: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+ol {
+  counter-reset: number-counter;
+  list-style: none;
+  padding-left: 40px;
+}
+
+ol li {
+  margin: 0 0 1rem 0;
+  counter-increment: number-counter;
+  position: relative;
+}
+
+ol li::before {
+  content: counter(number-counter);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  
+  --size: 32px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  transform: rotate(-10deg);
+  background: linear-gradient(90deg, #EA8585, #ED9696);;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.summing-title {
+  font-size: 1.5rem;
+}
+
+.third-row {
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+  background: linear-gradient(270deg, #092134, #0C2C45);
+}
+
+.wrapper {
+  position: relative;
+  vertical-align: center;
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: auto;
+  padding-bottom: auto;
+  background: linear-gradient(90deg, #EA8585, #ED9696);
+  border-radius: 50%;
+  color: white;
+}
+
+.icon-image {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+.fa-envelope-open,.fa-phone{
+  font-size: 2.8rem;
+  color: white;
+}
+
+.footer {
+  background: linear-gradient(270deg, #092134, #0C2C45);
+}
+
+.footer-logo {
+  width: auto;
+  height: 100px;
+}
+
+.line {
+  border: 1px solid white;
+}
+
+@media (min-width: 425px) {
+  .logo {
+    width: 250px;
+  }
+
+}
+
+@media (min-width: 765px) {
+
+  .subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tickevents-title {
+    font-size: 180px;
+  }
+
+  .tickets-img {
+    height: 350px !important;
+    width: auto;
+  }
 }
