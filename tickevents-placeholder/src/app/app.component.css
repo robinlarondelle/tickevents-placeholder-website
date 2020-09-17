@@ -377,7 +377,7 @@ ol li::before {
   line-height: 100px;
 }
 
-.fa-envelope-open,.fa-phone{
+.fa-envelope-open.large,.fa-phone.large{
   font-size: 2.8rem;
   color: white;
 }
