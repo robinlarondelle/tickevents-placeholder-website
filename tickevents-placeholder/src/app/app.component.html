@@ -126,11 +126,12 @@
 	<!-- Reviews section carousel -->
 	<div class="row no-gutters justify-content-center third-row py-5 mt-4 align-content-center">
 		<div class="col-12 col-sm-11 col-md-10">
-			<div id="reviewCarousel" class="carousel slide w-100" data-ride="carousel">
+			<div id="reviewCarousel" class="carousel slide w-100" data-ride="carousel" data-interval="7000">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="w-100 d-block">
-							<h1 class="text-center mx-auto lead quote"><i>"Tickevents heeft mij een hoop zorgen en kosten
+							<h1 class="text-center mx-auto lead quote"><i>"Tickevents heeft mij een hoop zorgen en
+									kosten
 									bespaard! De
 									oprichter komt persoonlijk langs om een bakje koffie te drinken en de plannen van je
 									workshop bespreken, om te kijken hoe we goed samen kunnen werken. Op de dag van het
@@ -144,7 +145,8 @@
 					</div>
 					<div class="carousel-item">
 						<div class="w-100 d-block">
-							<h1 class="text-center w-75 mx-auto lead quote"><i>"Top service en zeer scherpe servicekosten. Dit
+							<h1 class="text-center w-75 mx-auto lead quote"><i>"Top service en zeer scherpe
+									servicekosten. Dit
 									vind je niet snel bij een grote ticketverkoper."</i></h1>
 							<div class="carousel-caption d-block mt-3">
 								<h5>Bas Maats</h5>
@@ -154,7 +156,8 @@
 					</div>
 					<div class="carousel-item">
 						<div class="w-100 d-block">
-							<h1 class="text-center w-75 mx-auto lead quote"><i>"Het is misschien een eenvoudige service zonder
+							<h1 class="text-center w-75 mx-auto lead quote"><i>"Het is misschien een eenvoudige service
+									zonder
 									al te veel poespas, maar wat ze meestal zeggen: 'minder is meer', en dat geldt zeker
 									voor Tickevents. Weinig servicekosten en de enorm goede en persoonlijke benadering
 									is het dubbel en dwars waard."</i></h1>
@@ -169,106 +172,94 @@
 		</div>
 	</div>
 
-	<div class="row no-gutters blue mt-4 justify-content-center">
-		<div class="col-8 p-0">
+	<div class="row no-gutters blue mt-4 justify-content-center px-3">
+		<div class="col-12 col-sm-11 col-md-10 p-0">
 			<h1><strong>Neem contact op!</strong></h1>
-			<p class="fs-xl">Interesse gekregen in wat wij doen? Neem dan contact met ons op.</p>
-			<div class="row no-gutters justify-content-center mt-4">
-				<div class="col-3 text-center fs-xl">
+			<p class="fs-l">Interesse gekregen in wat wij doen, en wil je een evemenent aanmaken? Neem dan contact met ons op. Wil je op de hoogte worden gehouden van, of zelfs betrokken worden bij, onze ontwikkelingen? Laat dan je email-adres achter.</p>
+			<div class="row no-gutters justify-content-center mt-2 mt-md-5">
+				<div class="col-12 col-md-4 text-center fs-xl align-self-center my-2 my-md-0">
 					<div class="wrapper text-center mb-3">
 						<span class="icon-image"><i class="far fa-envelope-open large"></i><br></span>
 					</div>
-					info@tickevent.nl
+					<strong>info@tickevents.nl</strong>
 				</div>
-				<div class="col-3 text-center fs-xl">
-					<div class="wrapper text-center mb-3">
-						<span class="icon-image"><i class="fas fa-phone large"></i><br></span>
+				<div class="col-12 col-md-4 text-center fs-xl align-self-center my-2 my-md-0">
+					<div>
+						<div class="wrapper text-center mb-3">
+							<span class="icon-image mb-3"><i class="fas fa-phone large"></i><br></span>
+						</div>
+						<strong>(+31) 6 40096718</strong>
 					</div>
-					(+31) 6 40096718
 				</div>
-			</div>
-		</div>
-		<div class="col-8 h-auto justify-content-center">
-			<div class="mt-5">
-				<p class="text-center fs-xl">Tickevents is in ontwikkeling. Wil je op de hoogte blijven van, en
-					betrokken
-					worden
-					bij, de ontwikkeling van Tickevents? Laat dan hier je gegevens achter!</p>
+				<div class="col-12 col-md-4 text-center fs-xl  my-2 my-md-0">
+					<form [formGroup]="detailsForm" (submit)="sendDetais()"
+						*ngIf="!successfullSignup; else successTemplate">
 
-				<form [formGroup]="detailsForm" (submit)="sendDetais()"
-					*ngIf="!successfullSignup; else successTemplate">
-
-					<div class="form-row my-3 my-md-0">
-						<div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
+						<div class="form-row my-2">
 							<input type="text" name="firstname" id="firstname" formControlName="firstname"
-								class="form-control" placeholder="John">
-							<span *ngIf="checkForm && firstname.invalid && firstname.errors.required"
-								class="r small">Dit veld is
-								verplicht</span>
+							class="form-control" placeholder="voornaam">
+						<span *ngIf="checkForm && firstname.invalid && firstname.errors.required"
+							class="r small">Dit veld is
+							verplicht</span>
 						</div>
-
-						<div class="col-6 col-lg-3 my-2 my-lg-0 align-content-center">
+						<div class="form-row my-2">
 							<input type="text" name="lastname" id="lastname" formControlName="lastname"
-								class="form-control" placeholder="Johnsen">
-							<span *ngIf="checkForm && lastname.invalid && lastname.errors.required" class="r small">Dit
-								veld is
-								verplicht</span>
+							class="form-control" placeholder="achternaam">
+						<span *ngIf="checkForm && lastname.invalid && lastname.errors.required"
+							class="r small">Dit
+							veld is
+							verplicht</span>
 						</div>
-
-						<div class="col-12 col-lg-4 my-2 my-lg-0 align-content-center">
+						<div class="form-row my-2">
 							<input type="email" name="email" id="email" formControlName="email" class="form-control"
-								placeholder="john@email.com">
-							<span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit
-								veld is
-								verplicht</span>
-							<span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig
-								format:
-								aaa@bbb.ccc</span>
+							placeholder="email">
+						<span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit
+							veld is
+							verplicht</span>
+						<span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig
+							format:
+							aaa@bbb.ccc</span>
 						</div>
-
-						<div class="col-12 col-lg-2 my-2 my-lg-0">
+						<div class="form-row my-2">
 							<button type="submit" class="btn w-100">
 								<ngx-spinner></ngx-spinner>
 								<span>Verstuur</span>
 							</button>
 						</div>
+					</form>
+
+					<div class="col-12" *ngIf="duplicateEmailError">
+						<p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij
+							nieuwe updates!
+						</p>
+					</div>
+					<div class="col-12" *ngIf="rejectedEmailError">
+						<p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een
+							ander email
+							adres.</p>
 					</div>
 
-				</form>
-
-				<div class="col-12" *ngIf="duplicateEmailError">
-					<p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij
-						nieuwe updates!
-					</p>
+					<ng-template #successTemplate>
+						<div class="col-12">
+							<p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht
+								wanneer er
+								interessante
+								updates zijn!</p>
+						</div>
+					</ng-template>
 				</div>
-				<div class="col-12" *ngIf="rejectedEmailError">
-					<p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een
-						ander email
-						adres.</p>
-				</div>
-
-				<ng-template #successTemplate>
-					<div class="col-12">
-						<p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht
-							wanneer er
-							interessante
-							updates zijn!</p>
-					</div>
-				</ng-template>
-
-
 			</div>
 		</div>
 	</div>
 
 	<!-- Footer -->
 	<div class="row no-gutters footer w mnh-25vh mt-5 pt-5 pb-2 justify-content-center fs-l">
-		<div class="col text-center mb-3">
+		<div class="col-12 text-center mb-3">
 			<img src="../assets/Full Logo White Transparent.png" alt="Tickevents logo" class="footer-logo">
 		</div>
 		<div class="w-100"></div>
 		<div class="col text-center mb-2">
-			<i class="far fa-envelope-open mr-3"></i>robinlarondelle@hotmail.com
+			<i class="far fa-envelope-open mr-3"></i>info@tickevents.nl
 		</div>
 		<div class="w-100"></div>
 		<div class="col text-center mb-2">
