@@ -355,6 +355,17 @@ ol li::before {
   -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
   background: linear-gradient(270deg, #092134, #0C2C45);
+  min-height: 350px;
+}
+
+.quote {
+  line-height: 2rem !important;
+}
+
+.carousel-caption {
+  position: relative;
+  left: 0;
+  top: 0;
 }
 
 .wrapper {
