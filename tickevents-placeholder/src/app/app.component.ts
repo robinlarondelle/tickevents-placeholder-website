@@ -32,6 +32,10 @@ export class AppComponent {
     })
   }
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
+
   sendDetais = () => {
     this.checkForm = true;
     this.duplicateEmailError = false
