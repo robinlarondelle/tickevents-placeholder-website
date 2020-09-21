@@ -355,7 +355,7 @@ ol li::before {
   -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
   clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
   background: linear-gradient(270deg, #092134, #0C2C45);
-  min-height: 350px;
+  min-height: 550px;
 }
 
 .quote {
@@ -413,12 +413,19 @@ ol li::before {
     width: 250px;
   }
 
+  .third-row {
+    min-height: 500px;
+  }
+
 }
 
 @media (min-width: 765px) {
-
   .subtitle {
     font-size: 2rem;
+  }
+
+  .third-row {
+    min-height: 400px;
   }
 }
 
@@ -430,5 +437,9 @@ ol li::before {
   .tickets-img {
     height: 350px !important;
     width: auto;
+  }
+
+  .third-row {
+    min-height: 300px;
   }
 }
