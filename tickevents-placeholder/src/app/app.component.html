@@ -41,7 +41,8 @@
 					<div class="col-12">
 						<div class="row no-gutters justify-content-center mt-1 mt-md-5">
 							<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-10">
-								<button class="btn w-100 btn-lg" (click)="scroll(target)">Maak een evenement aan!</button>
+								<button class="btn w-100 btn-lg" (click)="scroll(target)">Maak een evenement
+									aan!</button>
 							</div>
 						</div>
 					</div>
@@ -81,13 +82,13 @@
 
 				<!-- Text section -->
 				<div class="col-12 col-md-6 order-md-2 order-1 px-3">
-					<h1 class="ft-alata  "><Strong>Wat is Tickevents?</Strong></h1>
+					<h1 class="ft-alata" ngsReveal><Strong>Wat is Tickevents?</Strong></h1>
 					<p class="text-justify  fs-l ">Tickevents is een nieuw online platform om jouw tickets voor je
 						evenement te verkopen tegen
 						scherpe servicekosten en een persoonlijke benadering. Bij Tickevents staan we voor:</p>
 
 					<!-- Start ordered list -->
-					<ol>
+					<ol ngsRevealSet [ngsSelector]="'.summing-title'">
 						<li>
 							<strong class="summing-title">Lage Servicekosten:</strong>
 							<br>
@@ -107,7 +108,7 @@
 								platform kunnen verbeteren.
 							</div>
 						</li>
-						<li>
+						<li> 
 							<strong class="summing-title">Betrouwbare afspraken:</strong>
 							<br>
 							<div class="text-justify">
@@ -115,7 +116,7 @@
 								persoonlijk kennen, vinden we het wel zo netjes om ons aan deze afspraken te houden.
 							</div>
 						</li>
-					</ol>
+					</ol>  
 					<!-- End ordered list -->
 				</div>
 				<!-- End text section -->
@@ -126,7 +127,7 @@
 	<!-- Reviews section carousel -->
 	<div class="row no-gutters justify-content-center third-row py-5 mt-4 align-content-center">
 		<div class="col-12 col-sm-11 col-md-10">
-			<div id="reviewCarousel" class="carousel slide w-100" data-ride="carousel" data-interval="7000">
+			<div id="reviewCarousel" class="carousel slide w-100" data-ride="carousel" data-interval="7000" ngsReveal>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="w-100 d-block">
@@ -174,51 +175,70 @@
 
 	<div class="row no-gutters blue mt-4 justify-content-center px-3">
 		<div class="col-12 col-sm-11 col-md-10 p-0">
-			<h1><strong>Neem contact op!</strong></h1>
-			<p class="fs-l">Interesse gekregen in wat wij doen, en wil je een evemenent aanmaken? Neem dan contact met ons op. Wil je op de hoogte worden gehouden van, of zelfs betrokken worden bij, onze ontwikkelingen? Laat dan je email-adres achter.</p>
-			<div class="row no-gutters justify-content-center mt-2 mt-md-5" #target>
-				<div class="col-12 col-md-4 text-center fs-xl align-self-center my-2 my-md-0">
+			<h1 ngsReveal><strong>Neem contact op!</strong></h1>
+			<p class="fs-l" ngsReveal>Interesse gekregen in wat wij doen, en wil je een evemenent aanmaken? Neem dan contact met
+				ons op. Wil je op de hoogte worden gehouden van, of zelfs betrokken worden bij, onze ontwikkelingen?
+				Laat dan je email-adres achter.</p>
+			<div class="row justify-content-center mt-2 mt-md-5" #target ngsRevealSet [ngsSelector]="'.social-button'"> 
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
 					<div class="wrapper text-center mb-3">
 						<span class="icon-image"><i class="far fa-envelope-open large"></i><br></span>
 					</div>
 					<strong>info@tickevents.nl</strong>
 				</div>
-				<div class="col-12 col-md-4 text-center fs-xl align-self-center my-2 my-md-0">
-					<div>
-						<div class="wrapper text-center mb-3">
-							<span class="icon-image mb-3"><i class="fas fa-phone large"></i><br></span>
-						</div>
-						<strong>(+31) 6 40096718</strong>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fas fa-phone large"></i><br></span>
 					</div>
+					<strong>(+31) 6 40096718</strong>
+				</div>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fab fa-instagram large"></i><br></span>
+					</div>
+					<strong>@tickevents</strong>
+				</div>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button"
+					(click)="redirectTo('facebook')">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fab fa-facebook-f large"></i><br></span>
+					</div>
+					<strong>@tickevents</strong>
+				</div>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button"
+					(click)="redirectTo('linkedIn')">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fab fa-linkedin-in large"></i><br></span>
+					</div>
+					<strong>Tickevents</strong>
 				</div>
 				<div class="col-12 col-md-4 text-center fs-xl  my-2 my-md-0">
 					<form [formGroup]="detailsForm" (submit)="sendDetais()"
-						*ngIf="!successfullSignup; else successTemplate">
+						*ngIf="!successfullSignup; else successTemplate" ngsRevealSet [ngsSelector]="'.form-row'">
 
 						<div class="form-row my-2">
 							<input type="text" name="firstname" id="firstname" formControlName="firstname"
-							class="form-control" placeholder="voornaam">
-						<span *ngIf="checkForm && firstname.invalid && firstname.errors.required"
-							class="r small">Dit veld is
-							verplicht</span>
+								class="form-control" placeholder="voornaam">
+							<span *ngIf="checkForm && firstname.invalid && firstname.errors.required"
+								class="r small">Dit veld is
+								verplicht</span>
 						</div>
 						<div class="form-row my-2">
 							<input type="text" name="lastname" id="lastname" formControlName="lastname"
-							class="form-control" placeholder="achternaam">
-						<span *ngIf="checkForm && lastname.invalid && lastname.errors.required"
-							class="r small">Dit
-							veld is
-							verplicht</span>
+								class="form-control" placeholder="achternaam">
+							<span *ngIf="checkForm && lastname.invalid && lastname.errors.required" class="r small">Dit
+								veld is
+								verplicht</span>
 						</div>
 						<div class="form-row my-2">
 							<input type="email" name="email" id="email" formControlName="email" class="form-control"
-							placeholder="email">
-						<span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit
-							veld is
-							verplicht</span>
-						<span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig
-							format:
-							aaa@bbb.ccc</span>
+								placeholder="email">
+							<span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit
+								veld is
+								verplicht</span>
+							<span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig
+								format:
+								aaa@bbb.ccc</span>
 						</div>
 						<div class="form-row my-2">
 							<button type="submit" class="btn w-100">

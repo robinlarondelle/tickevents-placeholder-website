@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,8 @@
     "@angular/router": "~9.1.9",
     "@mailchimp/mailchimp_marketing": "^3.0.14",
     "mailchimp-api-v3": "^1.14.0",
+    "ngx-parallax": "^4.0.0",
+    "ngx-scrollreveal": "^3.0.0",
     "ngx-spinner": "^10.0.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

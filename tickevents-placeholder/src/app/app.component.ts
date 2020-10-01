@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, Validators, FormGroup } from "@angular/forms";
 import { NgxSpinnerService } from "ngx-spinner";
 import { DetailsService } from './services/details.service';
-
+import {NgsRevealConfig} from 'ngx-scrollreveal';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,8 @@ export class AppComponent {
 
   constructor(
     private detailsService: DetailsService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private config: NgsRevealConfig
   ) {
     this.successfullSignup = false
     this.checkForm = false
@@ -30,10 +31,27 @@ export class AppComponent {
       firstname: new FormControl('', [Validators.required]),
       lastname: new FormControl('', [Validators.required])
     })
+    config.duration = 500;
+    config.easing = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+    config.reset = true
   }
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
+  }
+
+  redirectTo = (website) => {
+    console.log(website);
+    
+    
+    switch(website) {
+      case "linkedIn":  
+        window.open('https://www.linkedin.com/company/tickevents', '_blank')
+        break;
+      case "facebook":
+        window.open("https://www.facebook.com/TickEvents-109045754247458/?view_public_for=109045754247458", "_blank")
+        break;
+    }
   }
 
   sendDetais = () => {

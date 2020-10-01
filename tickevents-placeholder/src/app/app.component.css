@@ -383,14 +383,33 @@ ol li::before {
 }
 
 .icon-image {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
   line-height: 100px;
 }
 
-.fa-envelope-open.large,.fa-phone.large{
+.large {
   font-size: 2.8rem;
   color: white;
+}
+
+.social-button {
+  border-radius: 15px;
+  background: none;
+}
+
+.social-button:hover {
+  border-radius: 15px;
+  background: linear-gradient(90deg, #EA8585, #ED9696);
+  color: white;
+}
+
+.social-button:hover .wrapper {
+  background: white;
+}
+
+.social-button:hover .wrapper .large {
+  color: #EA8585;
 }
 
 .footer {
@@ -407,6 +426,7 @@ ol li::before {
 .line {
   border: 1px solid white;
 }
+
 
 @media (min-width: 425px) {
   .logo {

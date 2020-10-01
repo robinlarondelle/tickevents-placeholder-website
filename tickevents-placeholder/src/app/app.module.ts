@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgsRevealModule
   ],
   providers: [],
   bootstrap: [AppComponent]
