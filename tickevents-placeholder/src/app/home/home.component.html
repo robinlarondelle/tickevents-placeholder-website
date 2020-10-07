@@ -1,0 +1,317 @@
+<div class="container-fluid p-0 w">
+
+	<!-- Title screen. First screen you'll see when opening the website -->
+	<div class="row no-gutters main-row">
+		<div class="col">
+			<!-- background -->
+			<div class="row svg-header no-gutters">
+				<div class="col bg-1"></div>
+				<div class="col bg-2">
+					<svg viewBox="0 0 88 1024" orientation="vertical" class="svg-divider">
+						<path
+							d="M0,0h45.07891c58.40593,190.38815,58.40593,361.05481,0,512s-58.40593,321.61188,0,512H0V0z">
+						</path>
+					</svg>
+				</div>
+			</div>
+			<!-- End background -->
+
+			<!-- content overlay -->
+			<div class="row content h-100 no-gutters justify-content-center">
+				<!-- main-row content -->
+				<div class="col-12 h-80 align-content-center">
+					<!-- Title -->
+					<div class="col-12">
+						<img src="../assets/Tickets White.png" alt="Tickevents" class="logo">
+						<h1 class="tickevents-title text-center">Tickevents</h1>
+					</div>
+					<!-- End title -->
+
+					<!-- Subtitle -->
+					<div class="col-12">
+						<p class="text-center subtitle ft-alata mt-2">Meer geld over houden na de verkoop van de tickets
+							van je
+							evenement.
+							<br>Dat is
+							Tickevents.</p>
+					</div>
+					<!-- End subtitle -->
+
+					<!-- Button -->
+					<div class="col-12">
+						<div class="row no-gutters justify-content-center mt-1 mt-md-5">
+							<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-10">
+								<button class="btn w-100 btn-lg" (click)="scroll(target)">Maak een evenement
+									aan!</button>
+							</div>
+						</div>
+					</div>
+					<!-- End button -->
+				</div>
+				<!-- End main-row-content -->
+
+				<!-- Chevrons -->
+				<div class="col-12 h-20">
+					<div class="row no-gutters h-100 align-content-end chevron-padding">
+						<div class="chevron-container">
+							<div class="chevron"></div>
+							<div class="chevron"></div>
+							<div class="chevron"></div>
+							<span class="chevron-text">Scroll down</span>
+						</div>
+					</div>
+				</div>
+				<!-- End chevrons -->
+			</div>
+			<!-- End content-overlay -->
+		</div>
+	</div>
+
+
+	<!-- The second part of the website that you'll see when scrolling down -->
+	<div class="row no-gutters blue justify-content-center  mt-4">
+		<div class="col-12 col-sm-11 col-md-10">
+			<div class="row no-gutters">
+
+				<!-- Tickets image -->
+				<div class="col-12 col-md-6 order-md-1 order-2 align-content-center text-center">
+					<span class="helper"></span>
+					<img src="../assets/double-tickets.png" alt="tickets" class="tickets-img px-3">
+				</div>
+				<!-- End tickets image -->
+
+				<!-- Text section -->
+				<div class="col-12 col-md-6 order-md-2 order-1 px-3">
+					<h1 class="ft-alata" ngsReveal><Strong>Wat is Tickevents?</Strong></h1>
+					<p class="text-justify  fs-l ">Tickevents is een nieuw online platform om jouw tickets voor je
+						evenement te verkopen tegen
+						scherpe servicekosten en een persoonlijke benadering. Bij Tickevents staan we voor:</p>
+
+					<!-- Start ordered list -->
+					<ol ngsRevealSet [ngsSelector]="'.summing-title'">
+						<li>
+							<strong class="summing-title">Lage Servicekosten:</strong>
+							<br>
+							<div class="text-justify">
+								Wij ontwikkelen onze eigen software, waardoor wij je servicekosten enorm kunnen drukken.
+								Hierdoor hou je meer geld over aan een verkocht ticket!
+							</div>
+						</li>
+						<li>
+							<strong class="summing-title">Enorm persoonlijke en betrokken ervaring:</strong>
+							<br>
+							<div class="text-justify">
+								Wij zijn klein, maar dat zorgt er wel voor dat we een ongekend persoonlijke behandeling
+								en
+								ervaring kunnen bieden. Wij willen graag met je meedenken over je evenement en hoe wij
+								ons
+								platform kunnen verbeteren.
+							</div>
+						</li>
+						<li> 
+							<strong class="summing-title">Betrouwbare afspraken:</strong>
+							<br>
+							<div class="text-justify">
+								Geen onverwachte of late uitbetaling, maar alles netjes volgens afspraak. Omdat wij je
+								persoonlijk kennen, vinden we het wel zo netjes om ons aan deze afspraken te houden.
+							</div>
+						</li>
+					</ol>  
+					<!-- End ordered list -->
+				</div>
+				<!-- End text section -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Reviews section carousel -->
+	<div class="row no-gutters justify-content-center third-row py-5 mt-4 align-content-center">
+		<div class="col-12 col-sm-11 col-md-10">
+			<div id="reviewCarousel" class="carousel slide w-100" data-ride="carousel" data-interval="7000" ngsReveal>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="w-100 d-block">
+							<h1 class="text-center mx-auto lead quote"><i>"Tickevents heeft mij een hoop zorgen en
+									kosten
+									bespaard! De
+									oprichter komt persoonlijk langs om een bakje koffie te drinken en de plannen van je
+									workshop bespreken, om te kijken hoe we goed samen kunnen werken. Op de dag van het
+									evenement kwam hij zelfs meehelpen met scannen en ondersteunde hij waar nodig met de
+									ticketverkoop."</i></h1>
+						</div>
+						<div class="carousel-caption d-block mt-3">
+							<h5>Marlijn de Jager</h5>
+							<p>Organiseert kleine feesten in kroegen</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="w-100 d-block">
+							<h1 class="text-center w-75 mx-auto lead quote"><i>"Top service en zeer scherpe
+									servicekosten. Dit
+									vind je niet snel bij een grote ticketverkoper."</i></h1>
+							<div class="carousel-caption d-block mt-3">
+								<h5>Bas Maats</h5>
+								<p>Organiseert kleinschalige workshops voor projectmanagers</p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="w-100 d-block">
+							<h1 class="text-center w-75 mx-auto lead quote"><i>"Het is misschien een eenvoudige service
+									zonder
+									al te veel poespas, maar wat ze meestal zeggen: 'minder is meer', en dat geldt zeker
+									voor Tickevents. Weinig servicekosten en de enorm goede en persoonlijke benadering
+									is het dubbel en dwars waard."</i></h1>
+							<div class="carousel-caption d-block mt-3">
+								<h5>Steef Reusken</h5>
+								<p>Verkoopt tickets voor zijn yogaclass</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row no-gutters blue mt-4 justify-content-center px-3">
+		<div class="col-12 col-sm-11 col-md-10 p-0">
+			<h1 ngsReveal><strong>Neem contact op!</strong></h1>
+			<p class="fs-l" ngsReveal>Interesse gekregen in wat wij doen, en wil je een evemenent aanmaken? Neem dan contact met
+				ons op. Wil je op de hoogte worden gehouden van, of zelfs betrokken worden bij, onze ontwikkelingen?
+				Laat dan je email-adres achter.</p>
+			<div class="row justify-content-center mt-2 mt-md-5" #target ngsRevealSet [ngsSelector]="'.social-button'"> 
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image"><i class="far fa-envelope-open large"></i><br></span>
+					</div>
+					<strong>info@tickevents.nl</strong>
+				</div>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fas fa-phone large"></i><br></span>
+					</div>
+					<strong>(+31) 6 40096718</strong>
+				</div>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fab fa-instagram large"></i><br></span>
+					</div>
+					<strong>@tickevents</strong>
+				</div>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button"
+					(click)="redirectTo('facebook')">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fab fa-facebook-f large"></i><br></span>
+					</div>
+					<strong>@tickevents</strong>
+				</div>
+				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button"
+					(click)="redirectTo('linkedIn')">
+					<div class="wrapper text-center mb-3">
+						<span class="icon-image mb-3"><i class="fab fa-linkedin-in large"></i><br></span>
+					</div>
+					<strong>Tickevents</strong>
+				</div>
+				<div class="col-12 col-md-4 text-center fs-xl  my-2 my-md-0">
+					<form [formGroup]="detailsForm" (submit)="sendDetais()"
+						*ngIf="!successfullSignup; else successTemplate" ngsRevealSet [ngsSelector]="'.form-row'">
+
+						<div class="form-row my-2">
+							<input type="text" name="firstname" id="firstname" formControlName="firstname"
+								class="form-control" placeholder="voornaam">
+							<span *ngIf="checkForm && firstname.invalid && firstname.errors.required"
+								class="r small">Dit veld is
+								verplicht</span>
+						</div>
+						<div class="form-row my-2">
+							<input type="text" name="lastname" id="lastname" formControlName="lastname"
+								class="form-control" placeholder="achternaam">
+							<span *ngIf="checkForm && lastname.invalid && lastname.errors.required" class="r small">Dit
+								veld is
+								verplicht</span>
+						</div>
+						<div class="form-row my-2">
+							<input type="email" name="email" id="email" formControlName="email" class="form-control"
+								placeholder="email">
+							<span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit
+								veld is
+								verplicht</span>
+							<span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig
+								format:
+								aaa@bbb.ccc</span>
+						</div>
+						<div class="form-row my-2">
+							<button type="submit" class="btn w-100">
+								<ngx-spinner></ngx-spinner>
+								<span>Verstuur</span>
+							</button>
+						</div>
+					</form>
+
+					<div class="col-12" *ngIf="duplicateEmailError">
+						<p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij
+							nieuwe updates!
+						</p>
+					</div>
+					<div class="col-12" *ngIf="rejectedEmailError">
+						<p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een
+							ander email
+							adres.</p>
+					</div>
+
+					<ng-template #successTemplate>
+						<div class="col-12">
+							<p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht
+								wanneer er
+								interessante
+								updates zijn!</p>
+						</div>
+					</ng-template>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="row no-gutters footer w mnh-25vh mt-5 pt-5 pb-2 justify-content-center fs-l">
+		<div class="col-12 text-center mb-3">
+			<img src="../assets/Full Logo White Transparent.png" alt="Tickevents logo" class="footer-logo">
+		</div>
+		<div class="w-100"></div>
+		<div class="col text-center mb-2">
+			<i class="far fa-envelope-open mr-3"></i>info@tickevents.nl
+		</div>
+		<div class="w-100"></div>
+		<div class="col text-center mb-2">
+			<i class="fas fa-phone mr-3"></i>(+31) 6 40096718
+		</div>
+		<div class="w-100"></div>
+		<div class="col text-center mb-2">
+			<span class="font-weight-bold">KvK:</span> 78568706
+		</div>
+		<div class="w-100"></div>
+		<div class="col text-center mb-2">
+			<span class="font-weight-bold">BTW-ID:</span> NL03348034B41
+		</div>
+		<div class="w-100"></div>
+		<div class="col mt-5 mb-4">
+			<div class="row no-gutters justify-content-center">
+				<div class="col-auto"><a routerLink="/disclaimer" class="link gr">Disclaimer</a></div>
+				<div class="col-auto"><a routerLink="/privacy" class="link gr">Privacybeleid</a></div>
+				<div class="col-auto"><a routerLink="/contact" class="link gr">Contact</a></div>
+			</div>
+		</div>
+		<div class="w-100"></div>
+		<div class="col-10 col-md-8 col-lg-7 col-xl-6 border-top border-secondary text-center pt-2 gr small">
+			<span>&copy; 2020 Rondelle Software Solutions. Alle rechten voorbehouden.</span>
+		</div>
+	</div>
+</div>
+
+<div class="corner-ribbon top-left red shadow">
+	<div class="heartbeat">
+		Work in Progress!
+	</div>
+</div>
+
+<router-outlet></router-outlet>

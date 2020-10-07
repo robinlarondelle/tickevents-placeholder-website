@@ -29,7 +29,7 @@
               "src/assets/fonts/fontnames.css"
             ],
             "scripts": [
-              "./node_modules/scrollreveal/dist/scrollreveal.js"
+              "node_modules/scrollreveal/dist/scrollreveal.js"
             ]
           },
           "configurations": {
