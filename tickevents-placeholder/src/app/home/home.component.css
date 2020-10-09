@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
+/* Main page */
 .title {
     font-weight: bolder;
     font-size: 2.5em;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .subtitle {
@@ -36,17 +35,14 @@
     transition: background-color 0.2s ease;
 }
 
-.main-row {
-    min-height: 105vh;
-}
-
 .content {
     padding-top: 5vh;
     padding-bottom: 5vh;
     margin-top: -105vh;
 }
+/* End main page */
 
-
+/* Background */
 .svg-header {
     overflow: hidden;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
@@ -69,23 +65,9 @@
 .bg-2 {
     background: linear-gradient(90deg, #EA8585, #ED9696);
 }
+/* End main page */
 
-.tickevents-title {
-    font-family: arkhip;
-    font-size: 15vw;
-    font-weight: bolder;
-}
-
-.logo {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-
-
-
+/* Second page */
 .tickets-img {
     max-width: 100%;
     width: auto;
@@ -138,6 +120,7 @@ ol li::before {
 .summing-title {
     font-size: 1.5rem;
 }
+/* End second page */
 
 .third-row {
     -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
@@ -211,15 +194,8 @@ ol li::before {
     max-width: 100% !important;
 }
 
-.line {
-    border: 1px solid white;
-}
-
 
 @media (min-width: 425px) {
-    .logo {
-        width: 250px;
-    }
 
     .third-row {
         min-height: 500px;
@@ -246,9 +222,6 @@ ol li::before {
 @media (min-width: 1200px) {
     .title {
         font-size: 5em
-    }
-    .tickevents-title {
-        font-size: 180px;
     }
 
     .tickets-img {

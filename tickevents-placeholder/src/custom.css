@@ -1,5 +1,7 @@
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Rowdies&display=swap';
+/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
+/* @import 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Rowdies&display=swap'; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 /*
 
@@ -18,12 +20,13 @@ Place your color classes here if you need to use them more than once.
 .bg-red {background-color: red !important;}
 
 /* Fonts */
-.ft-patua { font-family: 'Patua One', cursive !important; }
-.ft-raleway { font-family: 'Raleway', sans-serif !important; }
-.ft-poppins { font-family: 'Poppins', sans-serif !important; }
-.ft-open-sans { font-family: 'Open Sans', sans-serif !important; }
-.ft-rowdies { font-family: 'Rowdies', cursive !important; }  
+/* .ft-patua { font-family: 'Patua One', cursive !important; } */
+/* .ft-raleway { font-family: 'Raleway', sans-serif !important; } */
+/* .ft-poppins { font-family: 'Poppins', sans-serif !important; } */
+/* .ft-open-sans { font-family: 'Open Sans', sans-serif !important; } */
+/* .ft-rowdies { font-family: 'Rowdies', cursive !important; }   */
 .ft-alata { font-family: 'Alata', sans-serif !important; }
+.ft-montserrat {font-family: 'Montserrat', sans-serif !important;}
 
 
 
