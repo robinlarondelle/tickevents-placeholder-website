@@ -3,6 +3,10 @@
     height: 75px !important;
 }
 
+.container {
+    min-height: 75px;
+}
+
 #navContent.show, #navContent.collapsing {
     background-color: white;
 }
