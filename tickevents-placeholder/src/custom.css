@@ -9,25 +9,21 @@ Place your color classes here if you need to use them more than once.
 
 */
 
-.w { color: white; }
-.b { color: black; }
-.r { color: red; }
-.gr { color: grey; }
+.w { color: white !important; }
+.b { color: black !important; }
+.r { color: red !important; }
+.gr { color: grey !important; }
+.blue { color: #092134 !important;}
 
-.blue { color: #092134}
-
-.color-gradient-light { color: #5EFCE8;}
-.color-gradient-dark { color: #736EFE;}
-
-.bg-red {background-color: red;}
+.bg-red {background-color: red !important;}
 
 /* Fonts */
-.ft-patua { font-family: 'Patua One', cursive; }
-.ft-raleway { font-family: 'Raleway', sans-serif; }
-.ft-poppins { font-family: 'Poppins', sans-serif; }
-.ft-open-sans { font-family: 'Open Sans', sans-serif; }
-.ft-rowdies { font-family: 'Rowdies', cursive; }  
-.ft-alata { font-family: 'Alata', sans-serif; }
+.ft-patua { font-family: 'Patua One', cursive !important; }
+.ft-raleway { font-family: 'Raleway', sans-serif !important; }
+.ft-poppins { font-family: 'Poppins', sans-serif !important; }
+.ft-open-sans { font-family: 'Open Sans', sans-serif !important; }
+.ft-rowdies { font-family: 'Rowdies', cursive !important; }  
+.ft-alata { font-family: 'Alata', sans-serif !important; }
 
 
 
@@ -246,5 +242,5 @@ Place your size classes here if you need to use them more than once.
 .ft-35 {font-size: 3.5em;}
 
 /* Header */
-.header-compensation { margin-top: -56px !important; }
-.header-padding { padding-top: 56px !important; }
+.header-compensation { margin-top: -75px !important; }
+.header-padding { padding-top: 75px !important; }

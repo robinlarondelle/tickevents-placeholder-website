@@ -8,12 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { ChevronComponent } from './home/chevron/chevron.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    ChevronComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+.navbar {
+    background-color: white;
+    height: 75px !important;
+}
+
+#navContent.show, #navContent.collapsing {
+    background-color: white;
+}
+
+.navbar-brand {
+    height: 100%;
+}
+
+.navbar-brand img {
+    height: 30px;
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.fas.fa-bars {
+    color: black;
+}

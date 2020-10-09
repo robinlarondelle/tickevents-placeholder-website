@@ -1,10 +1,11 @@
-<div class="container-fluid p-0 w">
+<app-header></app-header>
+<div class="container-fluid p-0 w header-padding">
 
 	<!-- Title screen. First screen you'll see when opening the website -->
-	<div class="row no-gutters main-row">
+	<div class="row no-gutters main-row mnh-100vh">
 		<div class="col">
 			<!-- background -->
-			<div class="row svg-header no-gutters">
+			<div class="row mnh-100 svg-header no-gutters">
 				<div class="col bg-1"></div>
 				<div class="col bg-2">
 					<svg viewBox="0 0 88 1024" orientation="vertical" class="svg-divider">
@@ -17,51 +18,32 @@
 			<!-- End background -->
 
 			<!-- content overlay -->
-			<div class="row content h-100 no-gutters justify-content-center">
-				<!-- main-row content -->
-				<div class="col-12 h-80 align-content-center">
-					<!-- Title -->
-					<div class="col-12">
-						<img src="../assets/Tickets White.png" alt="Tickevents" class="logo">
-						<h1 class="tickevents-title text-center">Tickevents</h1>
-					</div>
-					<!-- End title -->
-
-					<!-- Subtitle -->
-					<div class="col-12">
-						<p class="text-center subtitle ft-alata mt-2">Meer geld over houden na de verkoop van de tickets
-							van je
-							evenement.
-							<br>Dat is
-							Tickevents.</p>
-					</div>
-					<!-- End subtitle -->
-
-					<!-- Button -->
-					<div class="col-12">
-						<div class="row no-gutters justify-content-center mt-1 mt-md-5">
-							<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-10">
-								<button class="btn w-100 btn-lg" (click)="scroll(target)">Maak een evenement
-									aan!</button>
-							</div>
+			<div class="row content mnh-100 no-gutters justify-content-center">
+				<div class="container px-4 overflow-hidden">
+					<div class="row mnh-80 align-content-center pt-5 animate__animated animate__fadeInRight">
+						<div class="col-12">
+							<h1 class="title">1 EURO PER TICKET. <br>ALL INCLUSIVE</h1>
+						</div>
+						<div class="col-12 col-md-8 mt-4">
+							<p class="subtitle">Hou meer geld over aan het einde van je evenement met scherpe servicekosten van Tickevents. Zo kun je meer, vaker, en grotere evenementen organiseren!</p>
+						</div>
+						<div class="w-100"></div>
+						<div class="col-6 col-md-5 col-lg-4 col-xl-3 my-3">
+							<button class="btn w-100">
+								Meer info
+							</button>
 						</div>
 					</div>
-					<!-- End button -->
-				</div>
-				<!-- End main-row-content -->
 
-				<!-- Chevrons -->
-				<div class="col-12 h-20">
-					<div class="row no-gutters h-100 align-content-end chevron-padding">
-						<div class="chevron-container">
-							<div class="chevron"></div>
-							<div class="chevron"></div>
-							<div class="chevron"></div>
-							<span class="chevron-text">Scroll down</span>
+					<!-- Chevrons -->
+					<div class="row">
+						<div class="col-12">
+							<app-home-chevron></app-home-chevron>
 						</div>
 					</div>
+					<!-- End Chevrons -->
+
 				</div>
-				<!-- End chevrons -->
 			</div>
 			<!-- End content-overlay -->
 		</div>
@@ -76,7 +58,7 @@
 				<!-- Tickets image -->
 				<div class="col-12 col-md-6 order-md-1 order-2 align-content-center text-center">
 					<span class="helper"></span>
-					<img src="../assets/double-tickets.png" alt="tickets" class="tickets-img px-3">
+					<img src="../assets/double-tickets.svg" alt="tickets" class="tickets-img px-3">
 				</div>
 				<!-- End tickets image -->
 
@@ -108,7 +90,7 @@
 								platform kunnen verbeteren.
 							</div>
 						</li>
-						<li> 
+						<li>
 							<strong class="summing-title">Betrouwbare afspraken:</strong>
 							<br>
 							<div class="text-justify">
@@ -116,7 +98,7 @@
 								persoonlijk kennen, vinden we het wel zo netjes om ons aan deze afspraken te houden.
 							</div>
 						</li>
-					</ol>  
+					</ol>
 					<!-- End ordered list -->
 				</div>
 				<!-- End text section -->
@@ -176,10 +158,11 @@
 	<div class="row no-gutters blue mt-4 justify-content-center px-3">
 		<div class="col-12 col-sm-11 col-md-10 p-0">
 			<h1 ngsReveal><strong>Neem contact op!</strong></h1>
-			<p class="fs-l" ngsReveal>Interesse gekregen in wat wij doen, en wil je een evemenent aanmaken? Neem dan contact met
+			<p class="fs-l" ngsReveal>Interesse gekregen in wat wij doen, en wil je een evemenent aanmaken? Neem dan
+				contact met
 				ons op. Wil je op de hoogte worden gehouden van, of zelfs betrokken worden bij, onze ontwikkelingen?
 				Laat dan je email-adres achter.</p>
-			<div class="row justify-content-center mt-2 mt-md-5" #target ngsRevealSet [ngsSelector]="'.social-button'"> 
+			<div class="row justify-content-center mt-2 mt-md-5" #target ngsRevealSet [ngsSelector]="'.social-button'">
 				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
 					<div class="wrapper text-center mb-3">
 						<span class="icon-image"><i class="far fa-envelope-open large"></i><br></span>
