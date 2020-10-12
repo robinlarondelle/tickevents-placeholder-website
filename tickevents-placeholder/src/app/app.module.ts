@@ -10,6 +10,7 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ChevronComponent } from './home/chevron/chevron.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ChevronComponent } from './home/chevron/chevron.component';
     HomeComponent,
     HeaderComponent,
     ChevronComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -200,18 +200,6 @@ ol li::before {
     color: #EA8585;
 }
 
-.footer {
-    background: linear-gradient(270deg, #092134, #0C2C45);
-}
-
-.footer-logo {
-    width: auto;
-    height: auto;
-    max-height: 100px !important;
-    max-width: 100% !important;
-}
-
-
 @media (min-width: 425px) {
     .carousel-item {
         min-height: 400px;
