@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div class="container-fluid p-0 w header-padding">
 
 	<!-- Title screen. First screen you'll see when opening the website -->
@@ -31,9 +30,9 @@
 						</div>
 						<div class="w-100"></div>
 						<div class="col-6 col-md-5 col-lg-4 col-xl-3 my-3">
-							<button class="btn w-100">
-								Meer info
-							</button>
+							<a class="btn w-100" type="button" routerLink="/getting-started">
+								Aan de slag
+							</a>
 						</div>
 					</div>
 
@@ -58,7 +57,7 @@
 				<div class="row no-gutters align-content-center">
 
 					<!-- Tickets image -->
-					<div class="col-12 col-md-7 text-left order-2 order-md-1">
+					<div class="col-12 col-md-7 text-center text-md-left order-2 order-md-1">
 						<img src="../assets/double-tickets.svg" alt="tickets" class="tickets-img-1 px-3">
 					</div>
 					<!-- End tickets image -->
@@ -172,7 +171,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-7 text-right">
+					<div class="col-12 col-md-7 text-center text-md-right">
 						<img src="../../assets/friendship.svg" alt="tickets" class="tickets-img-2 px-3">
 					</div>
 				</div>
@@ -185,10 +184,10 @@
 		<div class="col">
 			<div class="container px-4 px-md-0">
 				<div class="row">
-					<div class="col-12 col-md-7 text-left">
+					<div class="col-12 col-md-7 mt-3 mt-md-0 text-center text-md-left order-2 order-md-1">
 						<img src="../../assets/combo.svg" alt="tickets" class="tickets-img-2 px-3">
 					</div>
-					<div class="col-12 col-md-5">
+					<div class="col-12 col-md-5 order-1 order-md-2">
 						<div class="row align-content-center h-100">
 							<div class="col-12">
 								<h5 class="m-0">Verregaande inzichten</h5>
@@ -213,9 +212,9 @@
 	<!-- Afspraken row -->
 	<div class="row no-gutters section-padding">
 		<div class="col">
-			<div class="container px-5 px-md-0">
-				<div class="row px-5">
-					<div class="col-12 px-5">
+			<div class="container px-4">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-8">
 						<h5 class="pink">Het Tickevents verschil</h5>
 						<h2 class="text-left section-title blue success">
 							Tickevents is het enige online ticketingplatform dat succesvol scherpe servicekosten met een
@@ -227,6 +226,29 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
-	<app-footer></app-footer>
+	<!-- Call to Action part -->
+	<div class="row no-gutters section-padding bg-pink">
+		<div class="col">
+			<div class="container px-4 px-md-0">
+				<div class="row align-content-center">
+					<div class="col-12 col-md-5">
+						<div class="row align-content-center h-100">
+							<div class="col-12">
+								<h2 class="section-title w">Aan de slag met Tickevents</h2>
+							</div>
+							<div class="col-12">
+								<p class="w">Begin vandaag nog met het verhogen van je winst. Meld je aan voor meer informatie.</p>
+							</div>
+							<div class="col-12">
+								<a class="btn mt-2 mnw-50" type="button" routerLink="/getting-started">Aan de slag</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-7 mt-4 mt-md-0 text-center text-md-right">
+						<img src="../../assets/clapping.svg" alt="clapping" class="tickets-img-3 px-3">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top w p-0">
-    <div class="container">
+    <div class="container p-0">
         <!-- Logo on large displays (expanded navbar) -->
-        <div class="navbar-brand pl-3" routerLink="/home">
+        <div class="navbar-brand pl-3 pl-md-0" routerLink="/home">
             <img src="../../assets/Logo Black.svg">
         </div>
 
@@ -10,14 +10,11 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <div class="collapse navbar-collapse mt-2 p-3 ft-alata fs-lr" id="navContent">
+        <div class="collapse navbar-collapse mt-2 p-3 pr-md-0 ft-alata fs-lr" id="navContent">
             <div class="navbar-nav b ml-auto">
-                <a class="nav-link" data-toggle="collapse" data-target="#navContent" routerLink="/home"
+                <a class="nav-link ml-2 mr-2" data-target="#navContent" routerLink="/home"
                     routerLinkActive="active">Home</a>
-                <a class="nav-link" data-toggle="collapse" data-target="#navContent" routerLink="/about"
-                    routerLinkActive="active">Over</a>
-                <a class="nav-link" data-toggle="collapse" data-target="#navContent" routerLink="/contact"
-                    routerLinkActive="active">Contact</a>
+                <a class="nav-link ml-2 mr-2 mr-md-0 pr-md-0" data-target="#navContent" routerLink="/getting-started" routerLinkActive="active">Aan de slag</a>
 
             </div>
         </div>
