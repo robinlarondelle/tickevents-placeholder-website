@@ -1,10 +1,11 @@
-.footer {
-    background: linear-gradient(270deg, #092134, #0C2C45);
-}
-
 .footer-logo {
     width: auto;
     height: auto;
     max-height: 100px !important;
     max-width: 100% !important;
+}
+
+.bg-blue {
+    padding-top: 100px !important;
+    padding-bottom: 20px !important;
 }

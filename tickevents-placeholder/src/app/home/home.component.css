@@ -68,6 +68,11 @@
 /* End main page */
 
 /* Second page */
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .tickets-img-1 {
     max-width: 100%;
     width: auto;
@@ -77,6 +82,11 @@
     border-radius: 15px;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.section-title {
+    font-family: 'Alata', sans-serif !important;
+    font-weight: 500;
 }
 
 .helper {
@@ -123,10 +133,6 @@ ol li::before {
 /* End second page */
 
 /* Quote's section */
-.third-row {
-    background: linear-gradient(270deg, #092134, #0C2C45);
-}
-
 /* Vertically center all the carousel content */
 .carousel-wrapper {
     position: absolute;
@@ -169,48 +175,9 @@ ol li::before {
 }
 /* End fourth Row */
 
-.wrapper {
-    position: relative;
-    vertical-align: center;
-    height: 100px;
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: auto;
-    padding-bottom: auto;
-    background: linear-gradient(90deg, #EA8585, #ED9696);
-    border-radius: 50%;
-    color: white;
-}
-
-.icon-image {
-    display: inline-flex;
-    align-items: center;
-    line-height: 100px;
-}
-
-.large {
-    font-size: 2.8rem;
-    color: white;
-}
-
-.social-button {
-    border-radius: 15px;
-    background: none;
-}
-
-.social-button:hover {
-    border-radius: 15px;
-    background: linear-gradient(90deg, #EA8585, #ED9696);
-    color: white;
-}
-
-.social-button:hover .wrapper {
-    background: white;
-}
-
-.social-button:hover .wrapper .large {
-    color: #EA8585;
+/* Advantage part */
+.section-title.success {
+    font-weight: 300 !important;
 }
 
 @media (min-width: 425px) {

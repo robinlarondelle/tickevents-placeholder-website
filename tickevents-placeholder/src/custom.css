@@ -14,11 +14,12 @@ Place your color classes here if you need to use them more than once.
 .w { color: white !important; }
 .b { color: black !important; }
 .r { color: red !important; }
-.gr { color: grey !important; }
+.gray { color: gray !important; }
 .blue { color: #092134 !important;}
 .pink { color: #EA8585 !important;}
 
 .bg-red {background-color: red !important;}
+.bg-blue { background: linear-gradient(270deg, #092134, #0C2C45); }
 
 /* Fonts */
 /* .ft-patua { font-family: 'Patua One', cursive !important; } */
@@ -40,7 +41,7 @@ Place your color classes here if you need to use them more than once.
 .fs-m { font-size: medium !important; }
 .fs-s { font-size: small !important; }
 .fs-sr { font-size: smaller !important; }
-.fs.xs { font-size: x-small !important; }
+.fs-xs { font-size: x-small !important; }
 .fs-xxs { font-size: xx-small !important; }
 
 /*

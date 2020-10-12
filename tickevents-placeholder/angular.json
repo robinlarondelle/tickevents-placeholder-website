@@ -25,8 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/custom.css",
-              "src/assets/fonts/fontnames.css"
+              "src/custom.css"
             ],
             "scripts": [
               "node_modules/scrollreveal/dist/scrollreveal.js"
