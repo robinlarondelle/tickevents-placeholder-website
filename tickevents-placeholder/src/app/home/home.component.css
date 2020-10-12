@@ -122,11 +122,23 @@ ol li::before {
 }
 /* End second page */
 
+/* Quote's section */
 .third-row {
-    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
     background: linear-gradient(270deg, #092134, #0C2C45);
-    min-height: 550px;
+}
+
+/* Vertically center all the carousel content */
+.carousel-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    /* height: 100%; */
+}
+
+.carousel-item {
+    min-height: 500px;
+    position: relative;
 }
 
 .quote {
@@ -138,6 +150,11 @@ ol li::before {
     left: 0;
     top: 0;
 }
+
+.carousel-caption p {
+    margin: 0 !important;
+}
+/* End Quote's section */
 
 .wrapper {
     position: relative;
@@ -196,11 +213,9 @@ ol li::before {
 
 
 @media (min-width: 425px) {
-
-    .third-row {
-        min-height: 500px;
+    .carousel-item {
+        min-height: 400px;
     }
-
 }
 
 /* md-breakpoint */
@@ -213,8 +228,8 @@ ol li::before {
         font-size: 1.5em;
     }
 
-    .third-row {
-        min-height: 400px;
+    .carousel-item {
+        min-height: 300px;
     }
 }
 
@@ -229,7 +244,7 @@ ol li::before {
         width: auto;
     }
 
-    .third-row {
-        min-height: 300px;
+    .carousel-item {
+        min-height: 200px;
     }
 }
