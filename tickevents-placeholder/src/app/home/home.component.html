@@ -58,16 +58,16 @@
 				<div class="row no-gutters align-content-center">
 
 					<!-- Tickets image -->
-					<div class="col-12 col-md-6 text-center order-2 order-md-1">
-						<img src="../assets/double-tickets.svg" alt="tickets" class="tickets-img px-3">
+					<div class="col-12 col-md-7 text-center order-2 order-md-1">
+						<img src="../assets/double-tickets.svg" alt="tickets" class="tickets-img-1 px-3">
 					</div>
 					<!-- End tickets image -->
 
 					<!-- Text section -->
-					<div class="col-12 col-md-6 h-auto order-1 order-md-2">
+					<div class="col-12 col-md-5 h-auto order-1 order-md-2">
 						<div class="row no-gutters align-content-center h-100">
 							<div class="col-12">
-								<h5 class="m-0">Lage servicekosten</h5>
+								<h5 class="m-0 pink">Lage servicekosten</h5>
 							</div>
 							<div class="col-12">
 								<h2 class="section-title">Lage servicekosten = meer winst onder de streep
@@ -150,101 +150,30 @@
 		</div>
 	</div>
 
-	<div class="row no-gutters blue mt-4 justify-content-center px-3">
-		<div class="col-12 col-sm-11 col-md-10 p-0">
-			<h1 ngsReveal><strong>Neem contact op!</strong></h1>
-			<p class="fs-l" ngsReveal>Interesse gekregen in wat wij doen, en wil je een evemenent aanmaken? Neem dan
-				contact met
-				ons op. Wil je op de hoogte worden gehouden van, of zelfs betrokken worden bij, onze ontwikkelingen?
-				Laat dan je email-adres achter.</p>
-			<div class="row justify-content-center mt-2 mt-md-5" #target ngsRevealSet [ngsSelector]="'.social-button'">
-				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
-					<div class="wrapper text-center mb-3">
-						<span class="icon-image"><i class="far fa-envelope-open large"></i><br></span>
-					</div>
-					<strong>info@tickevents.nl</strong>
-				</div>
-				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
-					<div class="wrapper text-center mb-3">
-						<span class="icon-image mb-3"><i class="fas fa-phone large"></i><br></span>
-					</div>
-					<strong>(+31) 6 40096718</strong>
-				</div>
-				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button">
-					<div class="wrapper text-center mb-3">
-						<span class="icon-image mb-3"><i class="fab fa-instagram large"></i><br></span>
-					</div>
-					<strong>@tickevents</strong>
-				</div>
-				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button"
-					(click)="redirectTo('facebook')">
-					<div class="wrapper text-center mb-3">
-						<span class="icon-image mb-3"><i class="fab fa-facebook-f large"></i><br></span>
-					</div>
-					<strong>@tickevents</strong>
-				</div>
-				<div class="col-12 col-md-2 text-center fs-xl align-self-center my-2 my-md-0 pt-2 social-button"
-					(click)="redirectTo('linkedIn')">
-					<div class="wrapper text-center mb-3">
-						<span class="icon-image mb-3"><i class="fab fa-linkedin-in large"></i><br></span>
-					</div>
-					<strong>Tickevents</strong>
-				</div>
-				<div class="col-12 col-md-4 text-center fs-xl  my-2 my-md-0">
-					<form [formGroup]="detailsForm" (submit)="sendDetais()"
-						*ngIf="!successfullSignup; else successTemplate" ngsRevealSet [ngsSelector]="'.form-row'">
-
-						<div class="form-row my-2">
-							<input type="text" name="firstname" id="firstname" formControlName="firstname"
-								class="form-control" placeholder="voornaam">
-							<span *ngIf="checkForm && firstname.invalid && firstname.errors.required"
-								class="r small">Dit veld is
-								verplicht</span>
+	<div class="row no-gutters py-5">
+		<div class="col">
+			<div class="container px-4 px-md-0">
+				<div class="row">
+					<div class="col-12 col-md-5">
+						<div class="row align-content-center h-100">
+							<div class="col-12">
+								<h5 class="m-0 pink">Persoonlijke Benadering</h5>
+							</div>
+							<div class="col-12">
+								<h2 class="section-title blue">Je staat er niet alleen voor. Tickevents denkt met je mee
+								</h2>
+							</div>
+							<div class="col-12 blue">
+								<p>Tickevents gelooft in de persoonlijke benadering. Werken met abstracte, onbereikbare
+									ticketingplatformen is verleden tijd. Bij Tickevents denken we met je mee over je
+									evenement, en proberen wij jou te helpen waar we maar kunnen. Samen halen we het
+									meeste uit jouw evenement!</p>
+							</div>
 						</div>
-						<div class="form-row my-2">
-							<input type="text" name="lastname" id="lastname" formControlName="lastname"
-								class="form-control" placeholder="achternaam">
-							<span *ngIf="checkForm && lastname.invalid && lastname.errors.required" class="r small">Dit
-								veld is
-								verplicht</span>
-						</div>
-						<div class="form-row my-2">
-							<input type="email" name="email" id="email" formControlName="email" class="form-control"
-								placeholder="email">
-							<span *ngIf="checkForm && email.invalid && email.errors.required" class="r small">Dit
-								veld is
-								verplicht</span>
-							<span *ngIf="checkForm && email.invalid && email.errors.email" class="r small">Geldig
-								format:
-								aaa@bbb.ccc</span>
-						</div>
-						<div class="form-row my-2">
-							<button type="submit" class="btn w-100">
-								<ngx-spinner></ngx-spinner>
-								<span>Verstuur</span>
-							</button>
-						</div>
-					</form>
-
-					<div class="col-12" *ngIf="duplicateEmailError">
-						<p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij
-							nieuwe updates!
-						</p>
 					</div>
-					<div class="col-12" *ngIf="rejectedEmailError">
-						<p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een
-							ander email
-							adres.</p>
+					<div class="col-12 col-md-7 text-center">
+						<img src="../../assets/friendship.svg" alt="tickets" class="tickets-img-2 px-3">
 					</div>
-
-					<ng-template #successTemplate>
-						<div class="col-12">
-							<p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht
-								wanneer er
-								interessante
-								updates zijn!</p>
-						</div>
-					</ng-template>
 				</div>
 			</div>
 		</div>

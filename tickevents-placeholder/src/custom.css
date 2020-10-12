@@ -16,6 +16,7 @@ Place your color classes here if you need to use them more than once.
 .r { color: red !important; }
 .gr { color: grey !important; }
 .blue { color: #092134 !important;}
+.pink { color: #EA8585 !important;}
 
 .bg-red {background-color: red !important;}
 

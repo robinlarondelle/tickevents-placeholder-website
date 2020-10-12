@@ -68,7 +68,7 @@
 /* End main page */
 
 /* Second page */
-.tickets-img {
+.tickets-img-1 {
     max-width: 100%;
     width: auto;
     max-height: 100%;
@@ -156,6 +156,19 @@ ol li::before {
 }
 /* End Quote's section */
 
+/* Fourth row */
+.tickets-img-2 {
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
+    margin-right: auto;
+    margin-left: 0;
+    border-radius: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/* End fourth Row */
+
 .wrapper {
     position: relative;
     vertical-align: center;
@@ -227,7 +240,7 @@ ol li::before {
         font-size: 5em
     }
 
-    .tickets-img {
+    .tickets-img-1, .tickets-img-2 {
         height: 350px !important;
         width: auto;
     }
