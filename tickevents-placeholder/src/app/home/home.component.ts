@@ -10,6 +10,22 @@ import {NgsRevealConfig} from 'ngx-scrollreveal';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  scrollUpWithDelay = {
+    origin: 'bottom',
+    distance: '150%',
+    delay: 1500,
+    scale: 1,
+    duration: 900,
+    reset: false
+  }
+
+  scrollUp = {
+    origin: 'bottom',
+    distance: '150%',
+    scale: 1,
+    duration: 700,
+    reset: false
+  }
 
   detailsForm: FormGroup
   checkForm: boolean

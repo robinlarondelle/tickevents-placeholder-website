@@ -1,8 +1,31 @@
-
 /* Main page */
 .title {
     font-weight: bolder;
     font-size: 2.5em;
+}
+
+.title-animation-1 {
+    animation-delay: 0.1s !important;
+}
+
+.title-animation-2 {
+    animation-delay: 0.25s !important;
+}
+
+.title-animation-3 {
+    animation-delay: 0.4s !important;
+}
+
+.title-animation-4 {
+    animation-delay: 0.55s !important;
+}
+
+.title-animation-5 {
+    animation-delay: 1.0s !important;
+}
+
+.title-animation-6 {
+    animation-delay: 1.15s !important;
 }
 
 .subtitle {
@@ -15,6 +38,7 @@
     padding-bottom: 5vh;
     margin-top: -105vh;
 }
+
 /* End main page */
 
 /* Background */
@@ -40,6 +64,7 @@
 .bg-2 {
     background: linear-gradient(90deg, #EA8585, #ED9696);
 }
+
 /* End main page */
 
 /* Second page */
@@ -105,6 +130,7 @@ ol li::before {
 .summing-title {
     font-size: 1.5rem;
 }
+
 /* End second page */
 
 /* Quote's section */
@@ -135,6 +161,7 @@ ol li::before {
 .carousel-caption p {
     margin: 0 !important;
 }
+
 /* End Quote's section */
 
 /* Fourth row */
@@ -148,6 +175,7 @@ ol li::before {
     margin-top: auto;
     margin-bottom: auto;
 }
+
 /* End fourth Row */
 
 /* Advantage part */
@@ -193,7 +221,8 @@ ol li::before {
         font-size: 5em
     }
 
-    .tickets-img-1, .tickets-img-2{
+    .tickets-img-1,
+    .tickets-img-2 {
         height: 350px !important;
         width: auto;
     }
