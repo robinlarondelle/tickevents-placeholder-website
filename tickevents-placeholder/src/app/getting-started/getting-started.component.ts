@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from "@angular/forms";
 import { NgxSpinnerService } from "ngx-spinner";
 import { DetailsService } from '../services/details.service';

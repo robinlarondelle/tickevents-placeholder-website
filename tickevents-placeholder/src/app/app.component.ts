@@ -11,4 +11,8 @@ export class AppComponent {
   constructor(
   ) {
   }
+
+  onActivate(event) {
+    window.scroll(0,0);
+}
 }
