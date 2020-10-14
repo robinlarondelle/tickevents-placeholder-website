@@ -1,0 +1,14 @@
+.bg-pricing {
+    background-image: url(../../assets/bd-1.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-attachment: scroll;
+}
+
+@media (min-width: 765px) {
+    .bg-pricing {
+        min-height: 50vh !important;
+    }
+}

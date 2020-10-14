@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from "@angular/forms";
 import { NgxSpinnerService } from "ngx-spinner";
 import { DetailsService } from '../services/details.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-getting-started',
   templateUrl: './getting-started.component.html',
   styleUrls: ['./getting-started.component.css']
 })
-export class GettingStartedComponent {
+export class GettingStartedComponent implements OnInit  {
   detailsForm: FormGroup
   checkForm: boolean
   successfullSignup: boolean
@@ -17,6 +18,7 @@ export class GettingStartedComponent {
 
   constructor(
     private detailsService: DetailsService,
+    private titleService: Title,
     private spinner: NgxSpinnerService
   ) {
     this.successfullSignup = false
@@ -27,6 +29,10 @@ export class GettingStartedComponent {
       email: new FormControl('', [Validators.required, Validators.email]),
       privacystatement: new FormControl('', [Validators.required])
     })
+  }
+
+  ngOnInit(): void {
+    this.titleService.setTitle("Tickevents | Aan de slag")
   }
 
   sendDetais = () => {

@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { ChevronComponent } from './home/chevron/chevron.component';
 import { FooterComponent } from './footer/footer.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
+import { SuccessstoriesComponent } from './successstories/successstories.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { GettingStartedComponent } from './getting-started/getting-started.compo
     ChevronComponent,
     FooterComponent,
     GettingStartedComponent,
+    SuccessstoriesComponent,
+    PricingComponent,
   ],
   imports: [
     BrowserModule,
