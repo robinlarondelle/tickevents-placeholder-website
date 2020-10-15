@@ -29,3 +29,8 @@ body {
     transform: translateY(4px);
     transition: background-color 0.2s ease;
 }
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
