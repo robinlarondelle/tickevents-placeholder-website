@@ -1,7 +1,7 @@
 <div class="container-fluid p-0">
 
     <!-- Header row, 50vh on full screen, 100vh on mobile -->
-    <div class="row no-gutters bg-pricing header-padding">
+    <div class="row no-gutters bg-pricing header-padding pb-5">
         <div class="container px-4 px-md-0 first-section my-5">
             <div class="row no-gutters mnh-50vh">
                 <div class="col-12 col-md-6">
@@ -9,7 +9,7 @@
                         <div class="col-12">
                             <h1 class="w title ft-montserrat">1 EURO. ALTIJD. OVERAL.</h1>
                             <p class="w subtitle">Bij Tickevents betaal je altijd 1 euro per ticket, zonder dat je
-                                onverwachte kosten op je dak krijgt. </p>
+                                onverwachte kosten op je dak krijgt. Daarom zijn onze servicekosten inclusief transactiekosten én BTW.</p>
                         </div>
                     </div>
                 </div>
@@ -22,20 +22,25 @@
                         <div class="col-5 col-sm-4 row no-gutters h-auto">
                             <label for="ticket_price" class="col-3 col-sm-2 col-form-label p-0 fs-xxl"><b>€</b></label>
                             <div class="col-9 col-sm-10">
-                                <input type="number" name="ticket_price" [formControl]="ticket_price" id="ticket_price" class="form-control" placeholder="Ticketprijs">
+                                <input type="number" name="ticket_price" [formControl]="ticket_price" max="998" id="ticket_price" class="form-control" placeholder="Ticketprijs">
                             </div>
                         </div>
                         <div class="col-1 mx-2 mx-sm-0">
                             <h6 class="blue fs-xxl text-center"><b>X</b></h6>
                         </div>
-                        <div class="col-5 col-sm-4">
-                            <input type="number" [formControl]="ticket_amount" name="ticket_amount" id="ticket_amount" placeholder="Aantal Tickets" class="form-control">
+                        <div class="col-5 col-sm-3">
+                            <input type="number" [formControl]="ticket_amount" name="ticket_amount" max="3000" id="ticket_amount" placeholder="Aantal Tickets" class="form-control">
                         </div>
                         <div class="col-12 col-sm-1">
                             <h6 class="blue fs-xxl text-center"><b>=</b></h6>
                         </div>
-                        <div class="col-12 col-sm-2">
+                        <div class="col-12 col-sm-3">
                             <h6 class="blue fs-xxl text-center"><b>€ {{ticket_price.value == 0 || ticket_price.value == null ? 0 : ticket_price.value + 1}},-</b></h6>
+                        </div>
+                    </div>
+                    <div class="row no-gutters justify-content-end mt-4">
+                        <div class="col-12 col-sm-6 col-lg-5 ">
+                            <a type="button" class="btn w-100" routerLink="/getting-started">Maak je evenement</a>
                         </div>
                     </div>
                 </div>
@@ -44,11 +49,74 @@
     </div>
 
     <div class="row no-gutters section-padding">
-        <div class="col">
+        <div class="container px-4 px-md-0">
+            <div class="row justify-content-center no-gutters my-5">
+                <div class="col-12">
+                    <h1 class="title text-center blue">Onze servicekosten</h1>
+                    <p class="blue text-center">Bij Tickevents bepaal je zelf wie de kosten betaald: Jij, of je klanten. Zo kan je de prijs laag houden óf je winst maximaliseren. </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5 price-box h-100 mr-4">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-12">
+                            <h1 class="price-title section-title fs-xxl text-center"><b>Gratis Tickets</b></h1>
+                            <p class="text-center price-subtitle fs-m">Voor evenementen met gratis toegang</p>
+                            <h5 class="section-title text-center">Servicekosten: geen</h5>
+                        </div>
+                    </div>
+                    <hr class="px-5">
+                    <div class="row px-4 my-5 justify-content-center">
+                        <div class="col-12 col-md-10">
+                            <ol>
+                                <li>Aangepaste toegang</li>
+                                <li>Aangepaste support</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <hr class="px-5">
+                    <div class="row px-4 my-5 justify-content-center">
+                        <div class="col-12 col-md-11">
+                            <a type="button" class="btn w-100" routerLink="/getting-started">Aan de slag</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 price-box mnh-30vh ml-4">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-12">
+                            <h1 class="price-title section-title fs-xxl text-center"><b>Ticketshop</b></h1>
+                            <p class="text-center price-subtitle fs-m">Voor evenementen met een toegangsprijs</p>
+                            <h5 class="section-title text-center">Servicekosten: €1,-</h5> 
+                        </div>
+                    </div>
+                    <hr class="px-5">
+                    <div class="row px-4 mt-5 justify-content-center">
+                        <div class="col-12 col-md-11">
+                            <ol>
+                                <li>Volledige toegang tot Tickevents systeem</li>
+                                <li>24/7 Support</li>
+                                <li>Ticketscanner voor Android of iOS</li>
+                                <li>Support tijdens evenement</li>
+                                <li>Geavanceerde inzichten met het Adminpanel</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <hr class="px-5">
+                    <div class="row px-4 my-5 justify-content-center">
+                        <div class="col-12 col-md-11">
+                            <a type="button" class="btn w-100" routerLink="/getting-started">Aan de slag</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-gutters section-padding">
             <div class="container px-4 px-md-0">
                 <div class="row no-gutters justify-content-center">
-                    <div class="col-12 col-md-8">
-                        <div class="d-none d-md-block">
+                    <div class="col-12 col-md-8 px-5 px-sm-0">
+                        <div class="d-none d-sm-block">
                             <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"
                                 viewBox="0 0 1086 363.26">
@@ -420,9 +488,24 @@
                                     class="cls-38" transform="translate(835.3 52.05)">Winst!</text>
                             </svg>
                         </div>
-                        <img src="../../assets/sales process vertical.svg" alt="sales process" class="w-100 h-100  d-block d-md-none">
+                        <img src="../../assets/sales process vertical.svg" alt="sales process" class="w-100 h-100 px-5 d-block d-sm-none">
                     </div>
                     <div class="col-12 col-md-8">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="row no-gutters section-padding pt-0">
+        <div class="container px-4 px-md-0">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-12 col-md-8 text-center">
+                    <h1 class="blue text-center section-title"><b>Ook profiteren?</b></h1>
+                    <p class="blue text-center">Profiteer ook van onze scherpe servicekosten en begin vandaag nog met meer winst maken op je evenement. Meld je aan om een evenement aan te maken!</p>
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-12 col-sm-8 col-md-7 col-lg-3">
+                            <a type="button" class="btn w-100" routerLink="/getting-started">Aan de slag</a>
+                        </div>
                     </div>
                 </div>
             </div>

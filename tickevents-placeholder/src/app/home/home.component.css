@@ -38,7 +38,6 @@
     padding-bottom: 5vh;
     margin-top: -105vh;
 }
-
 /* End main page */
 
 /* Background */
@@ -55,16 +54,6 @@
     height: 100%;
     fill: #092134;
 }
-
-.bg-1 {
-    background: #092134;
-    background: linear-gradient(270deg, #092134, #0C2C45);
-}
-
-.bg-2 {
-    background: linear-gradient(90deg, #EA8585, #ED9696);
-}
-
 /* End main page */
 
 /* Second page */
@@ -78,64 +67,14 @@
     margin-top: auto;
     margin-bottom: auto;
 }
-
-.section-title {
-    font-family: 'Alata', sans-serif !important;
-    font-weight: 500;
-}
-
-.helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-ol {
-    counter-reset: number-counter;
-    list-style: none;
-    padding-left: 40px;
-}
-
-ol li {
-    margin: 0 0 1rem 0;
-    counter-increment: number-counter;
-    position: relative;
-}
-
-ol li::before {
-    content: counter(number-counter);
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: absolute;
-
-    --size: 32px;
-    left: calc(-1 * var(--size) - 10px);
-    line-height: var(--size);
-    width: var(--size);
-    height: var(--size);
-    top: 0;
-    transform: rotate(-10deg);
-    background: linear-gradient(90deg, #EA8585, #ED9696);
-    ;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.summing-title {
-    font-size: 1.5rem;
-}
-
 /* End second page */
 
 /* Quote's section */
-/* Vertically center all the carousel content */
 .carousel-wrapper {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    /* height: 100%; */
 }
 
 .carousel-item {
@@ -156,7 +95,6 @@ ol li::before {
 .carousel-caption p {
     margin: 0 !important;
 }
-
 /* End Quote's section */
 
 /* Fourth row */
@@ -189,6 +127,8 @@ ol li::before {
     margin-bottom: auto;
 }
 
+/* Media Queries */
+/* Base width */
 @media (min-width: 425px) {
     .carousel-item {
         min-height: 400px;
@@ -231,3 +171,4 @@ ol li::before {
         min-height: 200px;
     }
 }
+/* End Media Queries */

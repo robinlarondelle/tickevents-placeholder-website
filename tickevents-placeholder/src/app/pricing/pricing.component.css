@@ -28,8 +28,73 @@ input {
     border-radius: 0 !important;
     background: none !important;
     font-size: 0.8em;
+    color: white !important;
+    font-weight: 500 !important;
 }
 /* End first section */
+
+/* Price information section */
+.price-box {
+    /* background: linear-gradient(90deg, #ED9696, #F0A8A8); */
+    /* color: white; */
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.3s;
+}
+
+.price-box:hover {
+    transform: scale(0.99);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.5s;
+}
+
+
+.section-title {
+    font-family: 'Alata', sans-serif !important;
+    font-weight: 500;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+ol {
+    counter-reset: number-counter;
+    list-style: none;
+    padding-left: 40px;
+}
+
+ol li {
+    margin: 0 0 2rem 0;
+    counter-increment: number-counter;
+    position: relative;
+}
+
+ol li::before {
+    content: counter(number-counter);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+
+    --size: 32px;
+    left: calc(-1 * var(--size) - 10px);
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    transform: rotate(-10deg);
+    background: linear-gradient(90deg, #EA8585, #ED9696);
+    ;
+    border-radius: 50%;
+    text-align: center;
+}
+/* End price information section */
+
+/* Media Queries */
+/* Base width */
 @media (min-width: 450px) {
     input {
         font-size: 1em;
@@ -49,6 +114,8 @@ input {
         font-weight: 400;
     }
 }
+
+/* md-breakpoint */
 @media (min-width: 765px) {
     .first-section {
         min-height: 40vh !important;
@@ -58,3 +125,4 @@ input {
         min-height: 50% !important;
     }
 }
+/* End media queries */
