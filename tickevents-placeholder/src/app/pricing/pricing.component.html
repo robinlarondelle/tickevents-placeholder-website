@@ -1,21 +1,42 @@
 <div class="container-fluid p-0">
 
     <!-- Header row, 50vh on full screen, 100vh on mobile -->
-    <div class="row mnh-100vh no-gutters bg-pricing section-padding">
-        <div class="col">
-            <div class="container px-4 px-md-0">
-                <div class="row no-gutters">
-                    <div class="col-12 col-md-6">
-                        <div class="row h-100 align-content-center no-gutters">
-                            <div class="col-12">
-                                <h1 class="w title ft-montserrat">1 EURO. ALTIJD. OVERAL.</h1>
-                                <p class="w subtitle">Bij Tickevents betaal je altijd 1 euro per ticket, zonder dat je
-                                    onverwachte kosten op je dak krijgt. </p>
-                            </div>
+    <div class="row no-gutters bg-pricing header-padding">
+        <div class="container px-4 px-md-0 first-section my-5">
+            <div class="row no-gutters mnh-50vh">
+                <div class="col-12 col-md-6">
+                    <div class="row h-100 no-gutters">
+                        <div class="col-12">
+                            <h1 class="w title ft-montserrat">1 EURO. ALTIJD. OVERAL.</h1>
+                            <p class="w subtitle">Bij Tickevents betaal je altijd 1 euro per ticket, zonder dat je
+                                onverwachte kosten op je dak krijgt. </p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-
+                </div>
+            </div>
+            <div class="row mnh-50vh no-gutters justify-content-end align-content-end"> 
+                <div class="col-12 col-md-8">
+                    <h4 class="w title text-right"><b>Bereken je prijs</b></h4>
+                    <p class="text-right w fs-m bereken">Wil je weten hoeveel servicekosten jij of je klant betaald per ticket?</p>
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-5 col-sm-4 row no-gutters h-auto">
+                            <label for="ticket_price" class="col-3 col-sm-2 col-form-label p-0 fs-xxl"><b>€</b></label>
+                            <div class="col-9 col-sm-10">
+                                <input type="number" name="ticket_price" [formControl]="ticket_price" id="ticket_price" class="form-control" placeholder="Ticketprijs">
+                            </div>
+                        </div>
+                        <div class="col-1 mx-2 mx-sm-0">
+                            <h6 class="blue fs-xxl text-center"><b>X</b></h6>
+                        </div>
+                        <div class="col-5 col-sm-4">
+                            <input type="number" [formControl]="ticket_amount" name="ticket_amount" id="ticket_amount" placeholder="Aantal Tickets" class="form-control">
+                        </div>
+                        <div class="col-12 col-sm-1">
+                            <h6 class="blue fs-xxl text-center"><b>=</b></h6>
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <h6 class="blue fs-xxl text-center"><b>€ {{ticket_price.value == 0 || ticket_price.value == null ? 0 : ticket_price.value + 1}},-</b></h6>
+                        </div>
                     </div>
                 </div>
             </div>

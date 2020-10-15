@@ -8,179 +8,53 @@
     background-attachment: scroll;
 }
 
-/* Overruling the section top-padding to include the header */
-.section-padding {
-    padding-top: 175px !important;
-}
-
 .title {
     font-weight: bolder;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .subtitle {
-    font-size: 1.35em;
+    font-size: 1.2em;
     font-weight: 400;
 }
 
-.cls-1 {
-    fill: url(#Naamloos_verloop_5);
+.bereken {
+    font-size: large;
 }
 
-.cls-2 {
-    fill: url(#Naamloos_verloop_5-2);
-}
-
-.cls-3 {
-    fill: url(#Naamloos_verloop_5-3);
-}
-
-.cls-4 {
-    fill: url(#Naamloos_verloop_5-4);
-}
-
-.cls-5 {
-    fill: url(#Naamloos_verloop_5-5);
-}
-
-.cls-6 {
-    fill: url(#Naamloos_verloop_13);
-}
-
-.cls-7 {
-    fill: url(#Naamloos_verloop_13-2);
-}
-
-.cls-8 {
-    fill: url(#Naamloos_verloop_13-3);
-}
-
-.cls-9 {
-    fill: url(#Naamloos_verloop_13-4);
-}
-
-.cls-10 {
-    fill: url(#Naamloos_verloop_13-5);
-}
-
-.cls-11 {
-    fill: url(#Naamloos_verloop_13-6);
-}
-
-.cls-12 {
-    fill: url(#Naamloos_verloop_13-7);
-}
-
-.cls-13 {
-    fill: url(#Naamloos_verloop_13-8);
-}
-
-.cls-14 {
-    fill: url(#Naamloos_verloop_5-6);
-}
-
-.cls-15 {
-    fill: url(#Naamloos_verloop_5-7);
-}
-
-.cls-16 {
-    fill: url(#Naamloos_verloop_5-8);
-}
-
-.cls-17 {
-    fill: url(#Naamloos_verloop_5-9);
-}
-
-.cls-18 {
-    fill: url(#Naamloos_verloop_5-10);
-}
-
-.cls-19 {
-    fill: url(#Naamloos_verloop_5-11);
-}
-
-.cls-20 {
-    fill: url(#Naamloos_verloop_5-12);
-}
-
-.cls-21 {
-    fill: url(#Naamloos_verloop_5-13);
-}
-
-.cls-22 {
-    fill: url(#Naamloos_verloop_5-14);
-}
-
-.cls-23 {
-    fill: url(#Naamloos_verloop_5-15);
-}
-
-.cls-24 {
-    fill: url(#Naamloos_verloop_5-16);
-}
-
-.cls-25 {
-    fill: url(#Naamloos_verloop_5-17);
-}
-
-.cls-26 {
-    fill: url(#Naamloos_verloop_5-18);
-}
-
-.cls-27 {
-    fill: url(#Naamloos_verloop_5-19);
-}
-
-.cls-28 {
-    fill: url(#Naamloos_verloop_5-20);
-}
-
-.cls-29 {
-    fill: url(#Naamloos_verloop_5-21);
-}
-
-.cls-30 {
-    fill: url(#Naamloos_verloop_5-22);
-}
-
-.cls-31 {
-    fill: url(#Naamloos_verloop_5-23);
-}
-
-.cls-32 {
-    fill: url(#Naamloos_verloop_5-24);
-}
-
-.cls-33 {
-    fill: url(#Naamloos_verloop_5-25);
-}
-
-.cls-34 {
-    fill: url(#Naamloos_verloop_5-26);
-}
-
-.cls-35 {
-    fill: url(#Naamloos_verloop_5-27);
-}
-
-.cls-36,
-.cls-38 {
-    font-size: 60px;
-    font-family: Alata-Regular, Alata;
-}
-
-.cls-36 {
-    letter-spacing: 0.01em;
-}
-
-.cls-37,
-.cls-38 {
-    letter-spacing: 0.07em;
+input {
+    border: none !important;
+    border-bottom: 2px solid #092134 !important;
+    border-radius: 0 !important;
+    background: none !important;
+    font-size: 0.8em;
 }
 /* End first section */
+@media (min-width: 450px) {
+    input {
+        font-size: 1em;
+    }
 
+    .bereken {
+        font-size: larger
+    }
+
+    .title {
+        font-weight: bolder;
+        font-size: 2.5em !important;
+    }
+    
+    .subtitle {
+        font-size: 1.35em !important;
+        font-weight: 400;
+    }
+}
 @media (min-width: 765px) {
-    .bg-pricing {
-        min-height: 50vh !important;
+    .first-section {
+        min-height: 40vh !important;
+    }
+
+    .mnh-50vh {
+        min-height: 50% !important;
     }
 }
