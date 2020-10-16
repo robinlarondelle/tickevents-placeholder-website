@@ -8,13 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgsRevealModule } from 'ngx-scrollreveal';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './shared/header/header.component';
 import { ChevronComponent } from './home/chevron/chevron.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { SuccessstoriesComponent } from './successstories/successstories.component';
 import { PricingComponent } from './pricing/pricing.component';
-
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { PricingComponent } from './pricing/pricing.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgsRevealModule
+    NgsRevealModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

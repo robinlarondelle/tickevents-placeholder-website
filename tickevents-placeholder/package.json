@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
     "@mailchimp/mailchimp_marketing": "^3.0.14",
+    "highcharts": "^8.2.0",
+    "highcharts-angular": "^2.8.0",
     "mailchimp-api-v3": "^1.14.0",
     "ngx-parallax": "^4.0.0",
     "ngx-scrollreveal": "^3.0.0",
