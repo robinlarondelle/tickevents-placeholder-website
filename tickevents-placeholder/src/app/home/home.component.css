@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* Main page */
 .title {
     font-weight: bolder;
@@ -5,27 +12,33 @@
 }
 
 .title-animation-1 {
-    animation-delay: 0.1s !important;
+    -webkit-animation-delay: 0.1s !important;
+            animation-delay: 0.1s !important;
 }
 
 .title-animation-2 {
-    animation-delay: 0.25s !important;
+    -webkit-animation-delay: 0.25s !important;
+            animation-delay: 0.25s !important;
 }
 
 .title-animation-3 {
-    animation-delay: 0.4s !important;
+    -webkit-animation-delay: 0.4s !important;
+            animation-delay: 0.4s !important;
 }
 
 .title-animation-4 {
-    animation-delay: 0.55s !important;
+    -webkit-animation-delay: 0.55s !important;
+            animation-delay: 0.55s !important;
 }
 
 .title-animation-5 {
-    animation-delay: 1.0s !important;
+    -webkit-animation-delay: 1.0s !important;
+            animation-delay: 1.0s !important;
 }
 
 .title-animation-6 {
-    animation-delay: 1.15s !important;
+    -webkit-animation-delay: 1.15s !important;
+            animation-delay: 1.15s !important;
 }
 
 .subtitle {
@@ -73,7 +86,9 @@
 .carousel-wrapper {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 100%;
 }
 

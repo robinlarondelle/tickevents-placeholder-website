@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
 /* @import 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Rowdies&display=swap'; */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
@@ -19,8 +26,8 @@ Place your color classes here if you need to use them more than once.
 .pink { color: #EA8585 !important;}
 
 .bg-red {background-color: red !important;}
-.bg-blue { background: linear-gradient(270deg, #092134, #0C2C45); }
-.bg-pink { background: linear-gradient(90deg, #EA8585, #ED9696);}
+.bg-blue { background: -webkit-gradient(linear, right top, left top, from(#092134), to(#0C2C45)); background: -o-linear-gradient(right, #092134, #0C2C45); background: linear-gradient(270deg, #092134, #0C2C45); }
+.bg-pink { background: -webkit-gradient(linear, left top, right top, from(#EA8585), to(#ED9696)); background: -o-linear-gradient(left, #EA8585, #ED9696); background: linear-gradient(90deg, #EA8585, #ED9696);}
 
 /* Fonts */
 /* .ft-patua { font-family: 'Patua One', cursive !important; } */

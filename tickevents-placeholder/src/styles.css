@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: 'Montserrat', sans-serif !important;
@@ -8,25 +15,37 @@ body {
     color: white;
     font-weight: 500;
     font-size: 18px;
-    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+         -o-transition-duration: 0s;
+            transition-duration: 0s;
     border-radius: 10px;
     height: 45px;
     padding: 8px;
-    box-shadow: 0 5px #68BBBB;
+    -webkit-box-shadow: 0 5px #68BBBB;
+            box-shadow: 0 5px #68BBBB;
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
 }
 
 .btn:hover {
     background-color: #217F7F;
     color: white;
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
 }
 
 .btn:active {
     background-color: #467261;
-    box-shadow: 0 3px #294F53;
+    -webkit-box-shadow: 0 3px #294F53;
+            box-shadow: 0 3px #294F53;
     color: white;
-    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+            transform: translateY(4px);
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
 }
 
