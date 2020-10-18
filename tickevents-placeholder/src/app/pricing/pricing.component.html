@@ -2,25 +2,25 @@
 
 	<!-- Header row, 50vh on full screen, 100vh on mobile -->
 	<div class="row no-gutters bg-pricing header-padding">
-		<div class="container px-4 px-md-0 first-section my-5">
+		<div class="container px-4 px-md-0 first-section mt-5 my-md-5">
 			<div class="row no-gutters mnh-50vh">
 				<div class="col-12 col-md-6">
 					<div class="row h-100 no-gutters">
 						<div class="col-12">
-							<h1 class="w title ft-montserrat">1 EURO. ALTIJD. OVERAL.</h1>
-							<p class="w subtitle">Bij Tickevents betaal je altijd 1 euro per ticket, zonder dat je
+							<h1 class="w title ft-montserrat" [ngsReveal]="scrollUpTitle">1 EURO. ALTIJD. OVERAL.</h1>
+							<p class="w subtitle" [ngsReveal]="scrollUpDelay">Bij Tickevents betaal je altijd 1 euro per ticket, zonder dat je
 								onverwachte kosten op je dak krijgt. Daarom zijn onze servicekosten inclusief
 								transactiekosten én BTW.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row mnh-50vh mb-5 no-gutters justify-content-end align-content-end">
+			<div class="row mnh-50vh my-5 mt-md-0 no-gutters justify-content-end align-content-end">
 				<div class="col-12 col-md-8">
-					<h4 class="w title text-right"><b>Bereken je prijs</b></h4>
-					<p class="text-right w fs-l bereken">Wil je weten hoeveel servicekosten jij of je klant betaald per
+					<h4 class="w title text-right" [ngsReveal]="scrollUpTitle"><b>Bereken je prijs</b></h4>
+					<p class="text-right w fs-l bereken" [ngsReveal]="scrollUpDelay">Wil je weten hoeveel servicekosten jij of je klant betaald per
 						ticket?</p>
-					<div class="row no-gutters justify-content-center">
+					<div class="row no-gutters justify-content-center" [ngsReveal]="scrollUpDelay">
 						<div class="col-5 col-sm-4 row no-gutters h-auto">
 							<label for="ticket_price" class="col-3 col-sm-2 col-form-label p-0 fs-xxl"><b>€</b></label>
 							<div class="col-9 col-sm-10">
@@ -44,7 +44,7 @@
 							</h6>
 						</div>
 					</div>
-					<div class="row no-gutters justify-content-end mt-4">
+					<div class="row no-gutters justify-content-end mt-4"  [ngsReveal]="scrollUpDelay">
 						<div class="col-12 col-sm-6 col-lg-5 ">
 							<a type="button" class="btn w-100" routerLink="/getting-started">Maak je evenement</a>
 						</div>
@@ -57,7 +57,7 @@
 	<div class="row no-gutters section-padding">
 		<div class="container px-4 px-md-0">
 
-			<div class="row justify-content-center no-gutters mb-5">
+			<div class="row justify-content-center no-gutters mb-5"  [ngsReveal]="scrollUpDelay">
 				<div class="col-12">
 					<h1 class="title text-center blue">Onze servicekosten</h1>
 					<p class="blue text-center fs-l">Bij Tickevents bepaal je zelf wie de kosten betaald: Jij, of je klanten.
@@ -168,19 +168,19 @@
 				<div class="col-12 col-md-5">
 					<div class="row h-100 no-gutters align-content-center">
 						<div class="col-12">
-							<h2 class="section-title ">Waar bestaan de servicekosten uit?</h2>
-							<p>Onze lage servicekosten bestaan uit de transactiekosten van een ticket + de
+							<h2 class="section-title" [ngsReveal]="scrollUpTitle">Waar bestaan de servicekosten uit?</h2>
+							<p [ngsReveal]="scrollUpDelay">Onze lage servicekosten bestaan uit de transactiekosten van een ticket + de
 								BTW over
 								het resterende bedrag. Als je de BTW terug kan vragen, kom je dus op een nóg voordeliger
 								bedrag
 								uit!</p>
 							<br>
-							<p>De servicekosten bestaan onder andere uit de hosting van het platform en het
+							<p [ngsReveal]="scrollUpDelay"> De servicekosten bestaan onder andere uit de hosting van het platform en het
 								mogelijk maken van nieuwe technische ontwikkelingen.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6"  [ngsReveal]="scrollUpDelay">
 					<highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"
 						style="width: 100%; height: 400px; display: block;">
 					</highcharts-chart>

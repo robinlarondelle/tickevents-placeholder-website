@@ -14,21 +14,31 @@ export class PricingComponent implements OnInit {
 	ticket_price = new FormControl(null);
 	Highcharts: typeof Highcharts;
 	chartOptions: Highcharts.Options;
-	scrollUp = {
+
+	scrollUpTitle = {
 		origin: 'bottom',
 		distance: '150%',
 		scale: 1,
 		duration: 700,
 		reset: false,
-		delay: 300
+		// delay: 300
 	  }
+
+	scrollUpDelay = {
+		origin: 'bottom',
+		distance: '150%',
+		scale: 1,
+		duration: 1500,
+		reset: false,
+		delay: 500
+	  }
+
 	priceboxScroll = {
 		origin: 'bottom',
 		distance: '150%',
 		scale: 1,
 		duration: 1500,
 		reset: false,
-		// delay: 300,
 		viewFactor: 0.4,
 		afterReveal: (el) => {
 			var a = document.getElementsByClassName('price-box-left')[0]
