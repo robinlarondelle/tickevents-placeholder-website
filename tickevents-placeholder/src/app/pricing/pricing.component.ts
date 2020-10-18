@@ -14,7 +14,34 @@ export class PricingComponent implements OnInit {
 	ticket_price = new FormControl(null);
 	Highcharts: typeof Highcharts;
 	chartOptions: Highcharts.Options;
+	scrollUp = {
+		origin: 'bottom',
+		distance: '150%',
+		scale: 1,
+		duration: 700,
+		reset: false,
+		delay: 300
+	  }
+	priceboxScroll = {
+		origin: 'bottom',
+		distance: '150%',
+		scale: 1,
+		duration: 1500,
+		reset: false,
+		// delay: 300,
+		viewFactor: 0.4,
+		afterReveal: (el) => {
+			var a = document.getElementsByClassName('price-box-left')[0]
+			a.classList.add('animate__animated')
+			a.classList.add('animate__slideInRight')
+			a.classList.add('opacity-1')
 
+			var b = document.getElementsByClassName('price-box-right')[0]
+			b.classList.add('animate__animated')
+			b.classList.add('animate__slideInLeft')
+			b.classList.add('opacity-1')
+		}
+	  }
 
 	constructor() {
 	}
@@ -25,7 +52,13 @@ export class PricingComponent implements OnInit {
 		this.chartOptions = {
 
 			chart: {
-				type: 'variablepie'
+				type: 'variablepie',
+				backgroundColor: null,
+				style: {
+					color: 'white',
+					shadow: null,
+					border: null
+				}
 			},
 
 			colors: ['#EA8585', '#EFA0A0', '#F1B1B1'],
@@ -38,15 +71,20 @@ export class PricingComponent implements OnInit {
 					'Bedrag: <b>€{point.y}</b><br/>'
 			},
 
-			
-
 			series: [{
 				type: 'variablepie',
 				minPointSize: 70,
 				innerSize: '100%',
 				zMin: 0,
 				dataLabels: {
-					distance: 0
+					distance: 0,
+					style: {
+						border: null,
+						fontFamily: 'montserrat',
+						color: 'white',
+						textOutline: null,
+						fontWeight: '500'
+					}
 				},
 
 				data: [{

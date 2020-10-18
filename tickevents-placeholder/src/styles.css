@@ -4,20 +4,20 @@ body {
 }
 
 .btn {
-    background-color: #5D9881;
+    background-color: #2F9494;
     color: white;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 18px;
     transition-duration: 0s;
     border-radius: 10px;
     height: 45px;
     padding: 8px;
-    box-shadow: 0 5px #9AC1B2;
+    box-shadow: 0 5px #68BBBB;
     transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-    background-color: #467261;
+    background-color: #217F7F;
     color: white;
     transition: background-color 0.2s ease;
 }
@@ -31,11 +31,18 @@ body {
 }
 
 .section-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 .section-title {
     font-family: 'Alata', sans-serif !important;
     font-weight: 500;
+}
+
+@media (min-width: 765px) {
+    .section-padding {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }

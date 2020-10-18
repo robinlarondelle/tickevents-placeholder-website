@@ -22,9 +22,10 @@ export class HomeComponent {
     scale: 1,
     duration: 700,
     reset: false,
-    delay: 300
+    delay: 300,
+    viewFactor: 0.15
   }
 
   constructor(
-  ){}
+  ){} 
 }
