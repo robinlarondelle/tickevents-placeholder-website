@@ -26,6 +26,10 @@ body {
     -webkit-transition: background-color 0.2s ease;
     -o-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+        
 }
 
 .btn:hover {
