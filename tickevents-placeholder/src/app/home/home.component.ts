@@ -18,12 +18,11 @@ export class HomeComponent {
 
   scrollUp = {
     origin: 'bottom',
-    distance: '150%',
+    distance: '50%',
     scale: 1,
     duration: 700,
     reset: false,
-    delay: 300,
-    viewFactor: 0.15
+    viewFactor: 1
   }
 
   constructor(

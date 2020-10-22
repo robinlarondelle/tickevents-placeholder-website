@@ -28,7 +28,8 @@
               "src/custom.css"
             ],
             "scripts": [
-              "node_modules/scrollreveal/dist/scrollreveal.js"
+              "node_modules/scrollreveal/dist/scrollreveal.js",
+              "node_modules/tiny-slider/src/tiny-slider.js"
             ]
           },
           "configurations": {

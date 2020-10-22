@@ -1,17 +1,67 @@
-<div class="container-fluid p-0 header-padding header-compensation">
+<div class="container-fluid p-0">
     <div class="row mnh-100vh no-gutters">
         <div class="col">
-            <div class="row mnh-100 no-gutters">
-                <div class="container px-4 px-md-0">
-                    <div class="row h-100 align-content-center">
+
+            <!-- Title section -->
+            <div class="row no-gutters title-section w header-padding section-padding pb-0  ">
+                <div class="col">
+                    <div class="container px-3 px-md-0 h-100">
+                        <div class="row no-gutters h-100">
+                            <div class="col-12 text-center align-self-center">
+                                <h1 class="title m-0">Ga aan de slag met Tickevents en verkoop tickets voor jouw:</h1>
+                                <div class="my-slider w-100 text-center title">
+                                    <p class="m-0 text-lowercase text-center">&#160;geitenmarkt</p>
+                                    <p class="m-0 text-lowercase text-center">&#160;yogaworkshop</p>
+                                    <p class="m-0 text-lowercase text-center">&#160;kamasutrabeurs</p>
+                                    <p class="m-0 text-lowercase text-center">&#160;kroegentocht</p>
+                                    <p class="m-0 text-lowercase text-center">&#160;boekenbeurs</p>
+                                    <p class="m-0 text-lowercase text-center">&#160;Hardstylefeest</p>
+                                    <p class="m-0 text-lowercase text-center">&#160;technorave</p>
+                                </div>
+                                <a routerLink="/register" class="cta btn mt-4 mb-0 my-md-5">Evenement aanmaken</a>
+                            </div>
+                            <div class="col-12 align-self-end text-center justify-content-center">
+                                <app-chevron text="Meer info"></app-chevron>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End title section -->
+
+            <!-- Title banner section -->
+            <div class="row no-gutters bg-blue w section-padding justify-content-center">
+                <div class="col">
+                    <div class="container px-3 px-md-0">
+                        <div class="row no-gutters align-content-center banner">
+                            <div class="col-auto">
+                                <p class="w text-center m-0">Van klimbos tot paintbal. Van kerstmarkt tot paasfeest.
+                                    Tickevents biedt altijd 1 euro servicekosten en support op maat, ongeacht je
+                                    evenement</p>
+                            </div>
+                            <div class="col-auto d-inline-block">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End title banner section -->
+
+
+            <div class="row no-gutters section-padding">
+                <div class="container px-3 px-md-0">
+                    <div class="row no-gutters align-content-center">
                         <div class="col-12 col-md-5">
-                            <h1 class="blue ft-alata font-weight-bold">Aan de slag met Tickevents</h1>
-                            <p class="ft-montserrat">Tickevents is vol in ontwikkeling en we willen je hier graag bij betrekken. Wegens deze
+                            <h1 class="ft-alata font-weight-bold">Aan de slag met Tickevents</h1>
+                            <p class="ft-montserrat">Tickevents is vol in ontwikkeling en we willen je hier graag bij
+                                betrekken. Wegens deze
                                 ontwikkelingen kunnen we nog niet iedereen toegang tot het platform geven. Wil jij
                                 betrokken
                                 worden bij deze ontwikkelingen en als een van de eersten een evenement aanmaken bij
                                 Tickevents? Laat dan je email achter.</p>
                         </div>
+
                         <div class="col-12 col-md-7 mt-5 mt-md-0 align-self-center">
                             <form [formGroup]="detailsForm" (submit)="sendDetais()"
                                 *ngIf="!successfullSignup; else successTemplate">
@@ -36,15 +86,18 @@
                                 <div class="form-row mt-3  justify-content-end">
                                     <div class="col-12 col-sm-9 col-lg-7 mt-3 mt-sm-0 order-2 order-sm-1">
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="privacystatement" formControlName="privacystatement">
+                                            <input type="checkbox" class="form-check-input" id="privacystatement"
+                                                formControlName="privacystatement">
                                             <label class="form-check-label fs-s" for="privacystatement">Ik heb de <a
-                                                href="../../assets/privacy_statement_12-10-2020.pdf" target="_blank">privacyverklaring</a> gelezen en ga hiermee
+                                                    href="../../assets/privacy_statement_12-10-2020.pdf"
+                                                    target="_blank">privacyverklaring</a> gelezen en ga hiermee
                                                 akkoord</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-3 order-1 order-sm-2">
-                                        
-                                        <button type="submit" class="btn w-100" [disabled]="privacystatement.value !== true">
+
+                                        <button type="submit" class="btn w-100"
+                                            [disabled]="privacystatement.value !== true">
                                             <ngx-spinner></ngx-spinner>
                                             <span>Verstuur</span>
                                         </button>
@@ -72,6 +125,7 @@
                                 </div>
                             </ng-template>
                         </div>
+
                     </div>
                 </div>
             </div>

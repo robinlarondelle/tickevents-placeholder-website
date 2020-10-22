@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-home-chevron',
+  selector: 'app-chevron',
   templateUrl: './chevron.component.html',
   styleUrls: ['./chevron.component.css']
 })
 export class ChevronComponent implements OnInit {
+  @Input() text: string
 
   constructor() { }
 
   ngOnInit(): void {
+    this.text = this.text || "Scroll Down"
   }
 
 }

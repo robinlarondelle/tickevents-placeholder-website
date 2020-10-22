@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgsRevealModule } from 'ngx-scrollreveal';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { ChevronComponent } from './home/chevron/chevron.component';
+import { ChevronComponent } from './shared/chevron/chevron.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { SuccessstoriesComponent } from './successstories/successstories.component';

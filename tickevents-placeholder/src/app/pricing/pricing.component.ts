@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import * as Highcharts from 'highcharts';
 import VariablePie from 'highcharts/modules/variable-pie';
+import { Title } from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-pricing',
@@ -53,10 +54,14 @@ export class PricingComponent implements OnInit {
 		}
 	  }
 
-	constructor() {
+	constructor(
+		private titleService: Title,
+	) {
 	}
 
 	ngOnInit(): void {
+		this.titleService.setTitle("Tickevents | Pricing")
+
 		VariablePie(Highcharts)
 		this.Highcharts = Highcharts
 		this.chartOptions = {

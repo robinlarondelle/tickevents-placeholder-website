@@ -3,6 +3,7 @@ import { FormControl, Validators, FormGroup } from "@angular/forms";
 import { NgxSpinnerService } from "ngx-spinner";
 import { DetailsService } from '../services/details.service';
 import { Title } from '@angular/platform-browser';
+import { tns } from "tiny-slider/src/tiny-slider"
 
 @Component({
   selector: 'app-getting-started',
@@ -33,6 +34,20 @@ export class GettingStartedComponent implements OnInit  {
 
   ngOnInit(): void {
     this.titleService.setTitle("Tickevents | Aan de slag")
+
+    tns({
+      container: '.my-slider',
+      items: 1,
+      slideBy: 1,
+      controls: false,
+      nav: false,
+      speed: 300,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayButton: false,
+      autoplayButtonOutput: false,
+      axis: 'vertical' 
+    });    
   }
 
   sendDetais = () => {

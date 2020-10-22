@@ -1,11 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-/* Chevron */
+/* Padding to prevent the chevrons from moving offscreen on the bottom */
 .chevron-padding {
     padding-bottom: 85px;
 }
@@ -25,11 +18,12 @@
     height: 8px;
     opacity: 0;
     -webkit-transform: scale3d(0.5, 0.5, 0.5);
-            transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
     -webkit-animation: move 3s ease-out infinite;
-            animation: move 3s ease-out infinite;
+    animation: move 3s ease-out infinite;
 }
 
+/* Set the animaiton on the chevrons */
 .chevron:first-child {
     -webkit-animation: move 3s ease-out 1s infinite;
             animation: move 3s ease-out 1s infinite;
@@ -39,7 +33,9 @@
     -webkit-animation: move 3s ease-out 2s infinite;
             animation: move 3s ease-out 2s infinite;
 }
+/* End chevron animation */
 
+/* Chevron 'wings */
 .chevron:before,
 .chevron:after {
     content: ' ';
@@ -54,7 +50,7 @@
     left: 0;
     -webkit-transform: skew(0deg, 30deg);
         -ms-transform: skew(0deg, 30deg);
-            transform: skew(0deg, 30deg);
+            transform: skew(0deg, 30deg);         
 }
 
 .chevron:after {
@@ -64,12 +60,13 @@
         -ms-transform: skew(0deg, -30deg);
             transform: skew(0deg, -30deg);
 }
+/* End chevron 'wings' */
 
 .chevron-text {
     display: block;
     margin-top: 75px;
     margin-left: -30px;
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: "alata", sans-serif;
     font-size: 12px;
     color: #fff;
     text-transform: uppercase;
@@ -79,57 +76,41 @@
             animation: pulse 2s linear alternate infinite;
 }
 
-@-webkit-keyframes move {
-    25% {
-        opacity: 1;
-    }
-
-    33% {
-        opacity: 1;
-        -webkit-transform: translateY(30px);
-                transform: translateY(30px);
-    }
-
-    67% {
-        opacity: 1;
-        -webkit-transform: translateY(40px);
-                transform: translateY(40px);
-    }
-
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-                transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-    }
-}
-
 @keyframes move {
+    0% {
+        transform: translateX(-50%);
+    }
     25% {
         opacity: 1;
     }
 
     33% {
         opacity: 1;
-        -webkit-transform: translateY(30px);
-                transform: translateY(30px);
+        -webkit-transform: translateY(30px) translateX(-50%);
+                transform: translateY(30px) translateX(-50%);
+                
     }
 
     67% {
         opacity: 1;
-        -webkit-transform: translateY(40px);
-                transform: translateY(40px);
+        -webkit-transform: translateY(40px) translateX(-50%);
+                transform: translateY(40px) translateX(-50%);
+                
     }
 
     100% {
         opacity: 0;
-        -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-                transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+        -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5) translateX(-50%);
+                transform: translateY(55px) scale3d(0.5, 0.5, 0.5) translateX(-50%);
+                
     }
-}
+    
+    from {
+        transform: translateX(-50%);
+    }
 
-@-webkit-keyframes pulse {
     to {
-        opacity: 1;
+        transform: translateX(-50%) translateY(55px);
     }
 }
 
@@ -138,5 +119,3 @@
         opacity: 1;
     }
 }
-
-/* Chevron end */
