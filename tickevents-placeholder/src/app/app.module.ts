@@ -14,6 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { PricingComponent } from './pricing/pricing.component'; 
 import { HighchartsChartModule } from 'highcharts-angular';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     FooterComponent,
     GettingStartedComponent,
     PricingComponent,
+    HowItWorksComponent,
   ],
   imports: [
     BrowserModule,

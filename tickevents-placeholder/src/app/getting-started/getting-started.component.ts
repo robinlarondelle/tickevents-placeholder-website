@@ -16,6 +16,15 @@ export class GettingStartedComponent implements OnInit  {
   successfullSignup: boolean
   duplicateEmailError: boolean
   rejectedEmailError: boolean
+  
+  scrollUp = {
+    origin: 'bottom',
+    distance: '50%',
+    scale: 1,
+    duration: 700,
+    reset: false,
+    viewFactor: 1
+  }
 
   constructor(
     private detailsService: DetailsService,

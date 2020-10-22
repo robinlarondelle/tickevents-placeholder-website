@@ -1,0 +1,147 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
+/* Title section */
+.title {
+    font-size: 2.1em;
+    font-weight: 600;
+    font-family: 'Alata', sans-serif;
+}
+
+.subtitle {
+    font-size: 1em;
+    font-weight: 400 !important;
+}
+
+.title-section {
+    background-image: url("../../assets/bg-concert.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+}
+
+.cta.btn {
+    background-color: #EA8585;
+    color: white;
+    font-weight: 500;
+    font-size: 1.25em;
+    -webkit-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    border-radius: 10px;
+    height: auto;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.cta.btn:hover {
+    background-color: #B36666;
+    color: white;
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+.cta.btn:active {
+    background-color: #E68383;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+/* End title section */
+
+/* Subtitle section */
+.banner {
+    font-size: 1.35em !important;
+}
+
+/* .my-slide div {
+display: table-cell;
+} */
+/* End subtitle section */
+
+
+.form-check {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+button[disabled] {
+    pointer-events: none;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid black
+}
+
+.input-group-text {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+}
+
+.tickets-img-1 {
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Breakpoints */
+/* md-breakpoint */
+@media (min-width: 765px) {
+    .header-padding.section-padding {
+        padding-top: 175px !important;
+    }
+
+    .title-section {
+        min-height: 30vh;
+    }
+
+    .title {
+        font-size: 3.5em
+    }
+
+    .subtitle {
+        font-size: 1.35em !important;
+        font-weight: 400;
+    }
+
+    .svg-container {
+        height: 100px
+    }
+}
