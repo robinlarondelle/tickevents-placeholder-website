@@ -12,8 +12,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ChevronComponent } from './shared/chevron/chevron.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
-import { SuccessstoriesComponent } from './successstories/successstories.component';
-import { PricingComponent } from './pricing/pricing.component';
+import { PricingComponent } from './pricing/pricing.component'; 
 import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { HighchartsChartModule } from 'highcharts-angular';
     ChevronComponent,
     FooterComponent,
     GettingStartedComponent,
-    SuccessstoriesComponent,
     PricingComponent,
   ],
   imports: [
