@@ -113,20 +113,39 @@
 
 /* QR Animation */
 #red-bar {
-    animation: moveUpAndDown;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    -webkit-animation: moveUpAndDown;
+            animation: moveUpAndDown;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+@-webkit-keyframes moveUpAndDown {
+    from {
+        -webkit-transform: translateY(-40px);
+                transform: translateY(-40px) 
+    }
+
+    to {
+        -webkit-transform: translateY(40px);
+                transform: translateY(40px)
+    }
 }
 
 @keyframes moveUpAndDown {
     from {
-        transform: translateY(-40px) 
+        -webkit-transform: translateY(-40px);
+                transform: translateY(-40px) 
     }
 
     to {
-        transform: translateY(40px)
+        -webkit-transform: translateY(40px);
+                transform: translateY(40px)
     }
 }
 
@@ -138,50 +157,102 @@
 }
 
 #facebook {
-    animation-delay: 2s !important;
-    animation: enlargeTopRight;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s !important;
+            animation-delay: 2s !important;
+    -webkit-animation: enlargeTopRight;
+            animation: enlargeTopRight;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 }
 
 #twitter {
-    animation-delay: 4s !important;
-    animation: enlargeCenterRight;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-delay: 4s !important;
+            animation-delay: 4s !important;
+    -webkit-animation: enlargeCenterRight;
+            animation: enlargeCenterRight;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 }
 
 #insta {
-    animation: enlargeBottomRight;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    -webkit-animation: enlargeBottomRight;
+            animation: enlargeBottomRight;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 }
 
 #horn {
-    animation: horn;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    -webkit-animation: horn;
+            animation: horn;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-    transform-origin: -20px center;
+    -webkit-transform-origin: -20px center;
+        -ms-transform-origin: -20px center;
+            transform-origin: -20px center;
+}
+
+@-webkit-keyframes enlargeTopRight {
+
+    0%,
+    25% {
+        -webkit-transform: translateX(10px) translateY(-10px);
+                transform: translateX(10px) translateY(-10px)
+    }
+
+    25%,
+    100% {
+        -webkit-transform: translateX(0) translateY(-0);
+                transform: translateX(0) translateY(-0)
+    }
 }
 
 @keyframes enlargeTopRight {
 
     0%,
     25% {
-        transform: translateX(10px) translateY(-10px)
+        -webkit-transform: translateX(10px) translateY(-10px);
+                transform: translateX(10px) translateY(-10px)
     }
 
     25%,
     100% {
-        transform: translateX(0) translateY(-0)
+        -webkit-transform: translateX(0) translateY(-0);
+                transform: translateX(0) translateY(-0)
+    }
+}
+
+@-webkit-keyframes enlargeCenterRight {
+
+    0%,
+    25% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px)
+    }
+
+    25%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0)
     }
 }
 
@@ -189,12 +260,29 @@
 
     0%,
     25% {
-        transform: translateX(10px)
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px)
     }
 
     25%,
     100% {
-        transform: translateX(0)
+        -webkit-transform: translateX(0);
+                transform: translateX(0)
+    }
+}
+
+@-webkit-keyframes enlargeBottomRight {
+
+    0%,
+    25% {
+        -webkit-transform: translateX(10px) translateY(10px);
+                transform: translateX(10px) translateY(10px)
+    }
+
+    25%,
+    100% {
+        -webkit-transform: translateX(0) translateY(-0);
+                transform: translateX(0) translateY(-0)
     }
 }
 
@@ -202,20 +290,29 @@
 
     0%,
     25% {
-        transform: translateX(10px) translateY(10px)
+        -webkit-transform: translateX(10px) translateY(10px);
+                transform: translateX(10px) translateY(10px)
     }
 
     25%,
     100% {
-        transform: translateX(0) translateY(-0)
+        -webkit-transform: translateX(0) translateY(-0);
+                transform: translateX(0) translateY(-0)
     }
 }
 
+@-webkit-keyframes horn {
+    0%, 10% { -webkit-transform: scale(1.05); transform: scale(1.05)}
+    10%, 20% { -webkit-transform: scale(1); transform: scale(1)}
+    30%, 40% { -webkit-transform: scale(1.05); transform: scale(1.05)}
+    40%, 50% { -webkit-transform: scale(1); transform: scale(1)}
+}
+
 @keyframes horn {
-    0%, 10% { transform: scale(1.05)}
-    10%, 20% { transform: scale(1)}
-    30%, 40% { transform: scale(1.05)}
-    40%, 50% { transform: scale(1)}
+    0%, 10% { -webkit-transform: scale(1.05); transform: scale(1.05)}
+    10%, 20% { -webkit-transform: scale(1); transform: scale(1)}
+    30%, 40% { -webkit-transform: scale(1.05); transform: scale(1.05)}
+    40%, 50% { -webkit-transform: scale(1); transform: scale(1)}
 }
 /* End Social Media animation */
 
@@ -271,20 +368,29 @@
     #facebook,
     #twitter,
     #insta {
-        animation: none;
-        transition-duration: 0.3s;
+        -webkit-animation: none;
+                animation: none;
+        -webkit-transition-duration: 0.3s;
+             -o-transition-duration: 0.3s;
+                transition-duration: 0.3s;
     }
     
     #facebook:hover {
-        transform: translateX(10px) translateY(-10px)
+        -webkit-transform: translateX(10px) translateY(-10px);
+            -ms-transform: translateX(10px) translateY(-10px);
+                transform: translateX(10px) translateY(-10px)
     }
     
     #twitter:hover {
-        transform: translateX(10px)
+        -webkit-transform: translateX(10px);
+            -ms-transform: translateX(10px);
+                transform: translateX(10px)
     }
     
     #insta:hover {
-        transform: translateX(10px) translateY(10px)
+        -webkit-transform: translateX(10px) translateY(10px);
+            -ms-transform: translateX(10px) translateY(10px);
+                transform: translateX(10px) translateY(10px)
     }
 }
 /* End sm-breakpoint */
