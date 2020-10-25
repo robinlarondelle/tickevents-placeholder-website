@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var Rellax
 
 @Component({
   selector: 'app-how-it-works',
@@ -10,6 +11,9 @@ export class HowItWorksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    var rellax = new Rellax('.rellax', {
+      breakpoints:[576, 768, 1200]
+    });
   }
 
     
