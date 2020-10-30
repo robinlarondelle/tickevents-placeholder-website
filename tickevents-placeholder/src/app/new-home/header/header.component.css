@@ -1,3 +1,7 @@
+nav {
+    z-index: 999
+}
+
 .cls-1 {
     fill: inherit;
 }
@@ -12,4 +16,10 @@
     transition: background-color 300ms linear;
     color: white !important;
     fill: white !important;
+}
+
+.active {
+    color: white !important;
+    border-radius: 18px;
+    background: linear-gradient(90deg, #ea00fb, #211fff)
 }

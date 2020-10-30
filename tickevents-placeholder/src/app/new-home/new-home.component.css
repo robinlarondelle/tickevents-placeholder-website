@@ -1,0 +1,39 @@
+/* Title screen */
+.header-padding {
+    padding-top: 46px !important;
+}
+
+.title-col {
+    margin-top: 3.75em;
+}
+
+.title {
+    font-size: 2.75em;
+}
+
+.section {
+    margin-top: 2.5em;
+}
+
+.button-section {
+    margin-top: 0.75em;
+}
+
+.button {
+    height: 40px;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-cta {
+    background:linear-gradient(90deg, #FFA200, #FF004E);
+    border: none !important;
+    font-size: 1.25em;
+}
+
+.btn-seondairy-cta {
+    border: 2px solid white;
+    font-size: 1.125em;
+    background: rgba(0, 0, 0, 0);
+}
+/* End title screen */

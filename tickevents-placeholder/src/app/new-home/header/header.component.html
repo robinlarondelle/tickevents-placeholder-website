@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-none px-3 w">
+<nav class="navbar navbar-expand-lg bg-none px-3 w p-absolute w-100">
 
     <!-- Navbar Logo -->
     <a routerLink="/new-home">
@@ -36,10 +36,10 @@
 
     <div class="collapse navbar-collapse ft-alata text-center mt-2 mt-lg-0" id="nav">
         <ul class="navbar-nav">
-            <li class="nav-item py-1 py-lg-0 active">Home</li>
-            <li class="nav-item py-1 py-lg-0">Over on</li>
-            <li class="nav-item py-1 py-lg-0">Prijzen</li>
-            <li class="nav-item py-1 py-lg-0">Aan de slag</li>
+            <li class="nav-item py-1 py-lg-0 active" routerLink="/new-home" routerLinkActive="active">Home</li>
+            <li class="nav-item py-1 py-lg-0" routerLink="/about" routerLinkActive="active">Over on</li>
+            <li class="nav-item py-1 py-lg-0" routerLink="/pricing" routerLinkActive="active">Prijzen</li>
+            <li class="nav-item py-1 py-lg-0" routerLink="/getstarted" routerLinkActive="active">Aan de slag</li>
         </ul>
     </div>
 </nav>
