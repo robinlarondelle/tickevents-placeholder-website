@@ -20,10 +20,12 @@ Place your color classes here if you need to use them more than once.
 
 .w { color: white !important; }
 .b { color: black !important; }
+.black { color: black !important; }
 .r { color: red !important; }
 .gray { color: gray !important; }
 .blue { color: #092134 !important;}
 .pink { color: #EA8585 !important;}
+.purple { color: #5300FB !important;}
 
 /* Backgrounds */
 .bg-none {background-color: rgba(0, 0, 0, 0);}

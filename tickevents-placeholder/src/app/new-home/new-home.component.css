@@ -1,18 +1,19 @@
+
 /* Title screen */
 .header-padding {
-    padding-top: 46px !important;
+    padding-top: 56px !important;
 }
 
 .title-col {
-    margin-top: 3.75em;
+    margin-top: 3.5em;
 }
 
 .title {
-    font-size: 2.75em;
+    font-size: 2.5em;
 }
 
 .section {
-    margin-top: 2.5em;
+    margin-top: 2.2em;
 }
 
 .button-section {
@@ -20,9 +21,9 @@
 }
 
 .button {
-    height: 40px;
+    height: 2.5em;
     color: white;
-    border-radius: 20px;
+    border-radius: 1.25em;
 }
 
 .btn-cta {
@@ -37,3 +38,29 @@
     background: rgba(0, 0, 0, 0);
 }
 /* End title screen */
+
+
+/* Wij zijn Tickevents section */
+.wij-zijn-section {
+    margin-top: 150px;
+}
+
+.section-header {
+    font-size: 2.75em !important;
+}
+/* End Wij zijn Tickevents section */
+
+
+/* Jumping man section */
+.jumpig-man {
+    transform: scale(0.8) translateX(-300px)
+}
+
+.jumping-man-section  .section-header {
+    font-size: 1.9em !important;
+}
+
+.mt-4px {
+    margin-top: 4px
+}
+/* End jumping man section */
