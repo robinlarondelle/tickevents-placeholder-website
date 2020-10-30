@@ -60,7 +60,7 @@ export class PricingComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.titleService.setTitle("Tickevents | Pricing")
+		this.titleService.setTitle("Tickevents | Prijzen")
 
 		VariablePie(Highcharts)
 		this.Highcharts = Highcharts

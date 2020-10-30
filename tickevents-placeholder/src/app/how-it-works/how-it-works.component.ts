@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 declare var Rellax
 
 @Component({
@@ -8,9 +9,12 @@ declare var Rellax
 })
 export class HowItWorksComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+  ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle("Tickevents | Hoe het werkt")
     var rellax = new Rellax('.rellax', {
       breakpoints:[576, 768, 1200]
     });

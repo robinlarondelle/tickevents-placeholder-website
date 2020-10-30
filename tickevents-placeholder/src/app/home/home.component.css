@@ -142,6 +142,34 @@
     margin-bottom: auto;
 }
 
+/* Balloon man animation */
+.balloon {
+    width: 100%;
+}
+#balloon_man {
+    -webkit-animation: up_and_down;
+            animation: up_and_down;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+@keyframes up_and_down {
+    from {
+        transform: translateY(-30px)
+    }
+
+    to {
+        transform: translateY(30px)
+    }
+}
+/* End balloon man animation */
+
 /* Media Queries */
 /* Base width */
 @media (min-width: 425px) {

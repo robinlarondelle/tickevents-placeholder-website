@@ -15,6 +15,8 @@ import { GettingStartedComponent } from './getting-started/getting-started.compo
 import { PricingComponent } from './pricing/pricing.component'; 
 import { HighchartsChartModule } from 'highcharts-angular';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { NewHomeComponent } from './new-home/new-home.component';
+import { NewHomeHeaderComponent } from './new-home/header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
     GettingStartedComponent,
     PricingComponent,
     HowItWorksComponent,
+    NewHomeComponent,
+    NewHomeHeaderComponent,
   ],
   imports: [
     BrowserModule,

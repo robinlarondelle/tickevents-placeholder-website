@@ -1,0 +1,15 @@
+.cls-1 {
+    fill: inherit;
+}
+
+.bg-white {
+    transition: background-color 300ms linear;
+    color: black !important;
+    fill: url(#logo-gradient) !important;
+}
+
+.bg-none {
+    transition: background-color 300ms linear;
+    color: white !important;
+    fill: white !important;
+}

@@ -25,10 +25,16 @@ Place your color classes here if you need to use them more than once.
 .blue { color: #092134 !important;}
 .pink { color: #EA8585 !important;}
 
+/* Backgrounds */
+.bg-none {background-color: rgba(0, 0, 0, 0);}
+.bg-gradient-black-transparent { background: linear-gradient(black, rgba(0, 0, 0, 0)) !important }
+.bg-gradient-white-transparent { background: linear-gradient(white, rgba(0, 0, 0, 0)) !important }
 .bg-red {background-color: red !important;}
 .bg-gray {background-color: #f7f7f7 !important;}
+.bg-white {background-color: white !important}
 .bg-blue { background: -webkit-gradient(linear, right top, left top, from(#092134), to(#0C2C45)); background: -o-linear-gradient(right, #092134, #0C2C45); background: linear-gradient(270deg, #092134, #0C2C45); }
 .bg-pink { background: -webkit-gradient(linear, left top, right top, from(#EA8585), to(#ED9696)); background: -o-linear-gradient(left, #EA8585, #ED9696); background: linear-gradient(90deg, #EA8585, #ED9696);}
+/* End backgrounds */
 
 /* Fonts */
 /* .ft-patua { font-family: 'Patua One', cursive !important; } */
@@ -258,3 +264,10 @@ Place your size classes here if you need to use them more than once.
 /* Header */
 .header-compensation { margin-top: -75px !important; }
 .header-padding { padding-top: 75px !important; }
+
+/* Poisitions */
+.overflow-visible {overflow: visible !important}
+.p-relative { position: relative !important}
+.p-absolute { position: absolute !important}
+.top-left { top: 0; left: 0;}
+/* End positions */
