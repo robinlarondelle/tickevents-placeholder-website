@@ -17,6 +17,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { NewHomeComponent } from './new-home/new-home.component';
 import { NewHomeHeaderComponent } from './new-home/header/header.component';
+import { NewHomeFooterComponent } from './new-home/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NewHomeHeaderComponent } from './new-home/header/header.component';
     HowItWorksComponent,
     NewHomeComponent,
     NewHomeHeaderComponent,
+    NewHomeFooterComponent
   ],
   imports: [
     BrowserModule,

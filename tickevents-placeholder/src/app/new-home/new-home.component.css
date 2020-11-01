@@ -101,3 +101,26 @@
 .card-text {
     font-size: 0.8em;
 }
+/* End cards section */
+
+/* Me section */
+.success-name {
+    font-size: 1.5em
+}
+
+.success-subtitle {
+    font-size: 1em;
+    font-weight: 600;
+}
+/* End me section */
+
+/* Review section */
+.review-section {
+    background-image: url(../../assets/new-start-review-background.svg);
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+/* End Review section */
