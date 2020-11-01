@@ -52,10 +52,6 @@
 
 
 /* Jumping man section */
-.jumpig-man {
-    transform: scale(0.8) translateX(-300px)
-}
-
 .jumping-man-section  .section-header {
     font-size: 1.9em !important;
 }
@@ -64,3 +60,44 @@
     margin-top: 4px
 }
 /* End jumping man section */
+
+/* Cards section */
+.cards-section {
+    background-image: url(../../assets/new-start-cards-background.svg);
+    background-position: top left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.card-wrapper.order-1 {
+    padding-right: 0.5em;
+}
+
+.card-wrapper.order-2 {
+    padding-left: 0.5em;
+}
+
+.card {
+    height: 250px !important;
+    border: none !important;
+    padding: 0 0.75em;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 15px !important;
+    background-clip: unset !important;
+}
+
+.card>svg {
+   margin: 0 -0.75em !important; 
+}
+
+.card-header {
+    font-size: 1.45em;
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding: 0 !important;
+    margin-top: 0.5em;
+}
+
+.card-text {
+    font-size: 0.8em;
+}
