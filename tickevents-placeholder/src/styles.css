@@ -11,6 +11,10 @@ body {
     font-size: 18px;
 }
 
+button {
+    font-family: 'alata', sans-serif !important;
+}
+
 .btn {
     background-color: #2F9494;
     color: white;

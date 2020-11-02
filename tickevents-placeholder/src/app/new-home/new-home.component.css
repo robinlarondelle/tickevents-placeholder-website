@@ -1,3 +1,37 @@
+/* General styles */
+.section {
+    margin-top: 2.2em !important;
+}
+
+.section-header {
+    font-size: 1.8em;
+    margin: 0 !important;
+    font-family: alata;
+}
+
+.section-text {
+    font-size: 1em;
+    margin-top: 1em !important;
+    margin-bottom: 0 !important;
+    font-family: montserrat;
+}
+
+@media (min-width: 768px) {
+    .section {
+        margin-top: 3em !important;
+    }
+
+    .section-text {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .section-header {
+        font-size: 3.2em;
+    }
+}
+/* End general styles */
+
 
 /* Title screen */
 .header-padding {
@@ -10,14 +44,6 @@
 
 .title {
     font-size: 2.5em;
-}
-
-.section {
-    margin-top: 2.2em;
-}
-
-.button-section {
-    margin-top: 0.75em;
 }
 
 .button {
@@ -37,29 +63,74 @@
     font-size: 1.125em;
     background: rgba(0, 0, 0, 0);
 }
+
+.jumping-people {
+    width: 100%;
+    max-width: 350px;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3.35em;
+    }
+
+    .subtitle {
+        font-size: 1.35em
+    }
+    
+    .jumping-people {
+        width: 100%;
+        max-width: 500px;
+    }
+}
 /* End title screen */
 
 
 /* Wij zijn Tickevents section */
-.wij-zijn-section {
-    margin-top: 150px;
+.section.wij-zijn-section {
+    margin-top: 150px !important;
 }
 
-.section-header {
-    font-size: 2.75em !important;
+.wij-zijn-section .section-header {
+    font-size: 2.75em;
+}
+
+@media (min-width: 768px) {
+    .section.wij-zijn-section {
+        margin-top: 75px !important;
+    }
+
+    .wij-zijn-section .section-header {
+        font-size: 4em !important;
+    }
 }
 /* End Wij zijn Tickevents section */
 
 
 /* Jumping man section */
 .jumping-man-section  .section-header {
-    font-size: 1.9em !important;
+    font-size: 1.9em;
+}
+
+.jumping-man {
+    margin-left: -250px;
 }
 
 .mt-4px {
     margin-top: 4px
 }
+
+@media (min-width: 768px) {
+    .jumping-man-section .section-header {
+        font-size: 3.2em;
+    }
+
+    .jumping-man {
+        margin-left: -200px;
+    }
+}
 /* End jumping man section */
+
 
 /* Cards section */
 .cards-section {
@@ -101,7 +172,47 @@
 .card-text {
     font-size: 0.8em;
 }
+
+@media (min-width: 768px) {
+    .cards-section {
+        background-image: url(../../assets/new-start-cards-background-tablet.svg);
+        background-position: top right;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .card-wrapper {
+        margin-top: 11em !important;
+        margin-bottom: 11em !important;
+    }
+    
+    .card-wrapper.order-1 {
+        padding-right: 0.5em !important;
+    }
+
+    .card-wrapper.order-2 {
+        padding-right: 0.5em !important;
+        padding-left: 0.5em !important;
+    }
+
+    .card-wrapper.order-3 {
+        padding-left: 0.5em !important;
+    }
+
+    .card {
+        height: 340px !important;
+    }
+
+    .card-text {
+        font-size: 1.1em;
+    }
+
+    .card-header {
+        font-size: 1.9em;
+    }
+}
 /* End cards section */
+
 
 /* Me section */
 .success-name {
@@ -112,15 +223,36 @@
     font-size: 1em;
     font-weight: 600;
 }
+
+@media (min-width: 768px) {
+    .success-name {
+        font-size: 1.8em
+    }
+
+    .success-subtitle {
+        font-size: 1.2em;
+    }
+
+    .credentials-section {
+        transform: translateY(-100px)
+    }
+}
 /* End me section */
+
 
 /* Review section */
 .review-section {
     background-image: url(../../assets/new-start-review-background.svg);
-    background-position: top left;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 8em;
     padding-bottom: 8em;
+}
+
+@media (min-width: 768px) {
+    .review-section {
+        background-image: url(../../assets/new-start-review-background-tablet.svg);
+    }
 }
 /* End Review section */
