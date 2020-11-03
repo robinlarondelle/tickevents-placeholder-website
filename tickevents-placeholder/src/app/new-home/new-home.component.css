@@ -30,6 +30,16 @@
         font-size: 3.2em;
     }
 }
+
+@media (min-width: 1200px) {
+    .section-header {
+        font-size: 3em;
+    }
+
+    .section-text {
+        font-size: 1.35em;
+    }
+}
 /* End general styles */
 
 
@@ -38,12 +48,9 @@
     padding-top: 56px !important;
 }
 
-.title-col {
-    margin-top: 3.5em;
-}
-
 .title {
     font-size: 2.5em;
+    margin-top: 3.5em;
 }
 
 .button {
@@ -83,6 +90,16 @@
         max-width: 500px;
     }
 }
+
+@media (min-width: 1200px) {
+    .title-section {
+        margin-top: 100px;
+    }
+
+    .title {
+        font-size: 4.25em;
+    }
+}
 /* End title screen */
 
 
@@ -102,6 +119,12 @@
 
     .wij-zijn-section .section-header {
         font-size: 4em !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section.wij-zijn-section {
+        margin-top: 300px !important; 
     }
 }
 /* End Wij zijn Tickevents section */
@@ -127,6 +150,22 @@
 
     .jumping-man {
         margin-left: -200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .jumping-man-section .section-header {
+        font-size: 3em;
+    }
+
+    .jumping-man-text {
+        margin-top: 200px !important;
+        margin-bottom: 200px !important;
+    }
+
+    .jumping-man {
+        height: 800px !important;
+        margin-left: -500px;
     }
 }
 /* End jumping man section */
@@ -211,6 +250,59 @@
         font-size: 1.9em;
     }
 }
+
+@media (min-width: 1200px) {
+    .card {
+        height: 500px !important;
+    }
+
+    .card-wrapper {
+        margin-top: 18em !important;
+        margin-bottom: 0 !important;
+    }
+
+    .cards-background {
+        transform: translateX(450px)
+    }
+    .cards-section {
+        background: none;
+        margin-top: -150px !important;
+    }
+
+    .card-wrapper.order-1 {
+        padding-right: 2em !important;
+    }
+
+    .card-wrapper.order-2 {
+        padding-right: 1em !important;
+        padding-left: 1em !important;
+    }
+
+    .card-wrapper.order-3 {
+        padding-left: 2em !important;
+    }
+
+    .card-background {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 -0.75em;
+    }
+
+    .card-number {
+        margin-top: 1rem;
+        font-size: 3em;
+        text-align: center;
+        font-family: 'alata';
+    }
+
+    .card-header {
+        font-size: 2.3em;
+    }
+    
+    .card-text {
+        font-size: 1.35em;
+    }
+}
 /* End cards section */
 
 
@@ -237,6 +329,22 @@
         transform: translateY(-100px)
     }
 }
+
+@media (min-width: 1200px) {
+   .photo-me {
+       height: 700px !important;
+       width: auto !important;
+       transform: translateX(-150px)
+   }
+
+   .success-section {
+       margin-top: 7em !important;
+   }
+
+   .credentials-section {
+    transform: translateY(-100px) translateX(-50px)
+}
+}
 /* End me section */
 
 
@@ -255,4 +363,32 @@
         background-image: url(../../assets/new-start-review-background-tablet.svg);
     }
 }
+
+@media (min-width: 1200px) {
+    .review-section {
+        background-image: url(../../assets/new-start-review-background-desktop.svg);
+    }
+
+    .reviewer-name {
+        font-size: 2em;
+    }
+
+    .reviewer-function {
+        font-size: 1.5em;
+    }
+}
 /* End Review section */
+
+/* Final section */
+@media (min-width: 1200px) {
+    .final-section .section-header {
+        margin-top: 250px !important;
+    }
+
+    .selfie {
+        width: 700px !important;
+        transform: translateX(-200px);
+        z-index: 999;
+    }
+}
+/* End final section */

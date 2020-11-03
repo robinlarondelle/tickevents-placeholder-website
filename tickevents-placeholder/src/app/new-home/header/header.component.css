@@ -18,8 +18,29 @@ nav {
     fill: white !important;
 }
 
-.active {
-    color: white !important;
+.btn-cta {
+    background: linear-gradient(90deg, #FFA200, #FF004E);
+    border: none !important;
     border-radius: 36px;
-    background: linear-gradient(90deg, #9A00FF, #FF004E)
+    color: white !important;
+}
+
+.active {
+    border-radius: 36px;
+    color: white !important;
+    background: linear-gradient(90deg, #9A00FF, #FF004E);
+}
+
+@media (min-width: 992px) {
+    .active {
+        text-decoration: underline white solid;
+        background: none;
+    }
+    nav {
+        font-size: 1.4em !important;
+    }
+
+    #Logo_White {
+        height: 45px !important;
+    }
 }
