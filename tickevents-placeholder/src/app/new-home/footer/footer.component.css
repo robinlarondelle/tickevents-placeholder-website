@@ -1,6 +1,7 @@
 .footer-section {
     background-image: url(../../../assets/new-start-footer-background.svg);
     background-size: cover;
+    margin-top: 100px !important;
 }
 
 input {
@@ -25,19 +26,27 @@ input {
     font-size: 1.8em;
 }
 
+@media (min-width: 768px) {
+    .footer-section {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+        margin-top: 100px !important;
+    }
+
+    .footer-logo {
+        height: 50px;
+    }
+
+    .footer-text {
+        line-height: 2em;
+    }
+}
 
 @media (min-width: 1200px) {
     .footer-section {
         background-image: url(../../../assets/new-start-footer-background-desktop.svg);
         background-size: 130% 100%;
         background-position: center;
-        padding-top: 100px !important;
-        padding-bottom: 100px !important;
-        margin-top: 100px !important;
-    }
-
-    .footer-text {
-        line-height: 2em;
     }
 
     .footer-logo {

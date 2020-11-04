@@ -78,6 +78,7 @@
 
 @media (min-width: 768px) {
     .title {
+        margin-top: 75px !important;
         font-size: 3.35em;
     }
 
@@ -105,7 +106,9 @@
 
 /* Wij zijn Tickevents section */
 .section.wij-zijn-section {
-    margin-top: 150px !important;
+    margin-top: 200px !important;
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
 }
 
 .wij-zijn-section .section-header {
@@ -137,6 +140,10 @@
 
 .jumping-man {
     margin-left: -250px;
+}
+
+.jumping-man-text {
+    margin-top: 100px !important;
 }
 
 .mt-4px {
@@ -174,9 +181,12 @@
 /* Cards section */
 .cards-section {
     background-image: url(../../assets/new-start-cards-background.svg);
-    background-position: top left;
-    background-size: 100% 100%;
+    background-position: top right;
+    background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 100px !important;
+    padding-top: 100px !important;
+    padding-bottom: 20px !important;
 }
 
 .card-wrapper.order-1 {
@@ -187,29 +197,38 @@
     padding-left: 0.5em;
 }
 
+.card-wrapper.order-3 {
+    padding-right: 0.25em;
+    padding-left: 0.25em;
+}
+
 .card {
-    height: 250px !important;
+    min-height: 250px !important;
+    height: 100%;
     border: none !important;
-    padding: 0 0.75em;
+    padding: 0.5em 0.75em;
     background-color: rgba(0, 0, 0, 0) !important;
     border-radius: 15px !important;
     background-clip: unset !important;
 }
 
-.card>svg {
-   margin: 0 -0.75em !important; 
+.card-background {
+    height: 100% !important;
+    width: 100% !important;   
+    margin: 0 -0.75em !important; 
 }
 
 .card-header {
-    font-size: 1.45em;
+    font-size: 1.35em;
     border: none !important;
     background-color: rgba(0, 0, 0, 0) !important;
     padding: 0 !important;
     margin-top: 0.5em;
+    margin-bottom: 1em !important;
 }
 
 .card-text {
-    font-size: 0.8em;
+    font-size: 0.76em;
 }
 
 @media (min-width: 768px) {
@@ -239,7 +258,13 @@
     }
 
     .card {
-        height: 340px !important;
+        min-height: 340px !important;
+    }
+
+    .card-background {
+        height: 100% !important;
+        width: 100% !important;
+        margin-left: -.5em !important;
     }
 
     .card-text {
@@ -253,7 +278,7 @@
 
 @media (min-width: 1200px) {
     .card {
-        height: 500px !important;
+        min-height: 500px !important;
     }
 
     .card-wrapper {
@@ -307,6 +332,10 @@
 
 
 /* Me section */
+.success-section {
+    margin-top: 100px !important;
+}
+
 .success-name {
     font-size: 1.5em
 }
@@ -356,11 +385,25 @@
     background-repeat: no-repeat;
     padding-top: 8em;
     padding-bottom: 8em;
+    margin-top: 100px !important;
 }
 
 @media (min-width: 768px) {
     .review-section {
         background-image: url(../../assets/new-start-review-background-tablet.svg);
+    }
+
+    .review-section .section-text {
+        font-size: 1.2em !important;
+    }
+
+    .reviewer-name {
+        margin-top: 1.5em !important;
+        font-size: 1.5em !important;
+    }
+
+    .reviewer-funtion {
+        font-size: 1.2em !important;
     }
 }
 
@@ -380,6 +423,10 @@
 /* End Review section */
 
 /* Final section */
+.selfie {
+    width: 100%;
+}
+
 @media (min-width: 1200px) {
     .final-section .section-header {
         margin-top: 250px !important;
