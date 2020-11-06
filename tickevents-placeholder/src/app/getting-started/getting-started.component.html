@@ -1,4 +1,5 @@
-<app-header></app-header><div class="container-fluid p-0">
+<app-header></app-header>
+<div class="container-fluid p-0">
     <div class="row mnh-100vh no-gutters">
         <div class="col">
 
@@ -18,7 +19,6 @@
                                     <p class="m-0 text-lowercase text-center">&#160;Hardstylefeest</p>
                                     <p class="m-0 text-lowercase text-center">&#160;technorave</p>
                                 </div>
-                                <a routerLink="/register" class="cta btn mt-4 mb-0 my-md-5">Evenement aanmaken</a>
                             </div>
                             <div class="col-12 align-self-end text-center justify-content-center">
                                 <app-chevron text="Meer info"></app-chevron>
@@ -48,81 +48,90 @@
             </div>
 
 
-            <div class="row no-gutters section-padding">
-                <div class="container px-3 px-md-0">
-                    <div class="row no-gutters align-content-center">
-                        <div class="col-12 col-md-5">
-                            <h1 class="ft-alata font-weight-bold">Aan de slag met Tickevents</h1>
-                            <p class="ft-montserrat">Jij wilt aan de slag met Tickevents, super! Laat je email hier achter, en wij nemen contact met jou op, zodat we samen jouw evenement tot een grandioos succes kunnen brengen. Je ontvangt zo snel mogelijk bericht!</p>
-                        </div>
+            <div class="row no-gutters align-content-center flex-grow section-padding">
+                <div class="col">
+                    <div class="container px-3 px-md-0">
+                        <div class="row no-gutters align-content-center">
+                            <div class="col-12 col-md-5">
+                                <h1 class="ft-alata font-weight-bold">Aan de slag met Tickevents</h1>
+                                <p class="ft-montserrat">Jij wilt aan de slag met Tickevents, super! Laat je email hier
+                                    achter, en wij nemen contact met jou op, zodat we samen jouw evenement tot een
+                                    grandioos succes kunnen brengen. Je ontvangt zo snel mogelijk bericht!</p>
+                            </div>
 
-                        <div class="col-12 col-md-7 mt-5 mt-md-0 align-self-center">
-                            <form [formGroup]="detailsForm" (submit)="sendDetais()"
-                                *ngIf="!successfullSignup; else successTemplate">
+                            <div class="col-12 col-md-7 mt-5 mt-md-0 align-self-center">
+                                <form [formGroup]="detailsForm" (submit)="sendDetais()"
+                                    *ngIf="!successfullSignup; else successTemplate">
 
-                                <div class="form-row  justify-content-end">
-                                    <div class="col-12 col-lg-10">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text ft-montserrat px-2 px-md-4">email:</span>
+                                    <div class="form-row  justify-content-end">
+                                        <div class="col-12 col-lg-10">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span
+                                                        class="input-group-text ft-montserrat px-2 px-md-4">email:</span>
+                                                </div>
+                                                <input type="email" name="email" id="email" formControlName="email"
+                                                    class="form-control" placeholder="john@email.com">
                                             </div>
-                                            <input type="email" name="email" id="email" formControlName="email"
-                                                class="form-control" placeholder="john@email.com">
-                                        </div>
-                                        <span *ngIf="checkForm && email.invalid && email.errors.required"
-                                            class="r small">Dit veld is
-                                            verplicht</span>
-                                        <span *ngIf="checkForm && email.invalid && email.errors.email"
-                                            class="r small">Geldig format:
-                                            aaa@bbb.ccc</span>
-                                    </div>
-                                </div>
-                                <div class="form-row mt-3  justify-content-end">
-                                    <div class="col-12 col-sm-9 col-lg-7 mt-3 mt-sm-0 order-2 order-sm-1">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="privacystatement"
-                                                formControlName="privacystatement">
-                                            <label class="form-check-label fs-s" for="privacystatement">Ik heb de <a
-                                                    href="../../assets/privacy_statement_12-10-2020.pdf"
-                                                    target="_blank">privacyverklaring</a> gelezen en ga hiermee
-                                                akkoord</label>
+                                            <span *ngIf="checkForm && email.invalid && email.errors.required"
+                                                class="r small">Dit veld is
+                                                verplicht</span>
+                                            <span *ngIf="checkForm && email.invalid && email.errors.email"
+                                                class="r small">Geldig format:
+                                                aaa@bbb.ccc</span>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-3 order-1 order-sm-2">
+                                    <div class="form-row mt-3  justify-content-end">
+                                        <div class="col-12 col-sm-9 col-lg-7 mt-3 mt-sm-0 order-2 order-sm-1">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="privacystatement"
+                                                    formControlName="privacystatement">
+                                                <label class="form-check-label fs-s" for="privacystatement">Ik heb de <a
+                                                        href="../../assets/privacy_statement_12-10-2020.pdf"
+                                                        target="_blank">privacyverklaring</a> gelezen en ga hiermee
+                                                    akkoord</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 order-1 order-sm-2">
 
-                                        <button type="submit" class="btn w-100"
-                                            [disabled]="privacystatement.value !== true">
-                                            <ngx-spinner></ngx-spinner>
-                                            <span>Verstuur</span>
-                                        </button>
+                                            <button type="submit" class="btn w-100"
+                                                [disabled]="privacystatement.value !== true">
+                                                <ngx-spinner></ngx-spinner>
+                                                <span>Verstuur</span>
+                                            </button>
+                                        </div>
                                     </div>
+
+                                </form>
+
+                                <div class="col-12" *ngIf="duplicateEmailError">
+                                    <p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons
+                                        bij
+                                        nieuwe updates!</p>
+                                </div>
+                                <div class="col-12" *ngIf="rejectedEmailError">
+                                    <p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het
+                                        met
+                                        een
+                                        ander email
+                                        adres.</p>
                                 </div>
 
-                            </form>
-
-                            <div class="col-12" *ngIf="duplicateEmailError">
-                                <p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij
-                                    nieuwe updates!</p>
-                            </div>
-                            <div class="col-12" *ngIf="rejectedEmailError">
-                                <p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met
-                                    een
-                                    ander email
-                                    adres.</p>
+                                <ng-template #successTemplate>
+                                    <div class="col-12">
+                                        <p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt
+                                            bericht
+                                            wanneer er interessante
+                                            updates zijn!</p>
+                                    </div>
+                                </ng-template>
                             </div>
 
-                            <ng-template #successTemplate>
-                                <div class="col-12">
-                                    <p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt bericht
-                                        wanneer er interessante
-                                        updates zijn!</p>
-                                </div>
-                            </ng-template>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div><app-footer></app-footer>
+</div>
+<app-footer></app-footer>

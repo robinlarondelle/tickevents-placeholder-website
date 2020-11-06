@@ -22,7 +22,7 @@
 					<p class="text-right w fs-l bereken" [ngsReveal]="scrollUpDelay">Wil je weten hoeveel servicekosten
 						jij of je klant betaald per
 						ticket?</p>
-					<div class="row no-gutters justify-content-center" [ngsReveal]="scrollUpDelay">
+					<div class="row w no-gutters justify-content-center" [ngsReveal]="scrollUpDelay">
 						<div class="col-5 col-sm-4 row no-gutters h-auto">
 							<label for="ticket_price" class="col-3 col-sm-2 col-form-label p-0 fs-xxl"><b>€</b></label>
 							<div class="col-9 col-sm-10">
@@ -31,17 +31,17 @@
 							</div>
 						</div>
 						<div class="col-1 mx-2 mx-sm-0">
-							<h6 class="blue fs-xxl text-center"><b>X</b></h6>
+							<h6 class="w fs-xxl text-center"><b>X</b></h6>
 						</div>
 						<div class="col-5 col-sm-3">
 							<input type="number" [formControl]="ticket_amount" name="ticket_amount" max="3000"
 								id="ticket_amount" placeholder="Aantal Tickets" class="form-control">
 						</div>
 						<div class="col-12 col-sm-1">
-							<h6 class="blue fs-xxl text-center"><b>=</b></h6>
+							<h6 class="w fs-xxl text-center"><b>=</b></h6>
 						</div>
 						<div class="col-12 col-sm-3">
-							<h6 class="blue fs-xxl text-center"><b>€
+							<h6 class="w fs-xxl text-center"><b>€
 									{{ticket_price.value == 0 || ticket_price.value == null ? 0 : ticket_price.value + 1}},-</b>
 							</h6>
 						</div>
