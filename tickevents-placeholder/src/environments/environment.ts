@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  gtag: 'G-VRC0J05KNL'
 };
 
 /*
