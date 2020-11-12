@@ -110,6 +110,12 @@ button[disabled] {
     border: none !important;
 }
 
+.cta-email-button {
+    border-radius: 10px !important;
+    background-color: #2F9494 !important;
+    background: unset;
+}
+
 /* Breakpoints */
 /* md-breakpoint */
 @media (min-width: 765px) {

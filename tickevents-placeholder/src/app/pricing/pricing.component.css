@@ -38,6 +38,49 @@ input {
     color: white !important;
     font-weight: 500 !important;
 }
+
+.cta-button {
+    background: none;
+    background-color: #2F9494;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    -webkit-transition-duration: 0s;
+         -o-transition-duration: 0s;
+            transition-duration: 0s;
+    border-radius: 10px;
+    height: 45px;
+    padding: 8px;
+    -webkit-box-shadow: 0 5px #68BBBB;
+            box-shadow: 0 5px #68BBBB;
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.cta-button:hover {
+    background-color: #217F7F;
+    color: white;
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:active {
+    background-color: #467261;
+    -webkit-box-shadow: 0 3px #294F53;
+            box-shadow: 0 3px #294F53;
+    color: white;
+    -webkit-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+            transform: translateY(4px);
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
 /* End first section */
 
 /* Price information section */
