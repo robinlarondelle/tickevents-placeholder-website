@@ -37,7 +37,6 @@ export class GettingStartedComponent implements OnInit  {
     this.rejectedEmailError = false
     this.detailsForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
-      privacystatement: new FormControl('', [Validators.required])
     })
   }
 
@@ -59,9 +58,7 @@ export class GettingStartedComponent implements OnInit  {
     });    
   }
 
-  sendDetais = () => {
-    console.log(this.privacystatement.value);
-    
+  sendDetails = () => {
     this.checkForm = true;
     this.duplicateEmailError = false
     this.rejectedEmailError = false

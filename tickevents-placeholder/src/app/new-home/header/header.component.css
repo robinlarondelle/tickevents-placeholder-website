@@ -18,11 +18,12 @@ nav {
     fill: white !important;
 }
 
-.btn-cta {
+.cta-button {
     background: linear-gradient(90deg, #FFA200, #FF004E);
     border: none !important;
     border-radius: 36px;
     color: white !important;
+    font-size: 22.5px;
 }
 
 .active {
@@ -33,6 +34,9 @@ nav {
 @media (min-width: 992px) {
     nav {
         font-size: 1.4em !important;
+        padding-top: 30px;
+        padding-left: 45px !important;
+        padding-right: 45px !important;
     }
 
     #Logo_White {

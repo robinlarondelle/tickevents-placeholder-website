@@ -100,9 +100,9 @@ button[disabled] {
 }
 
 .form-control {
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid black
+    height: 2.5em !important;
+    border-radius: 1.25em !important;
+    border: 1px solid gray;
 }
 
 .input-group-text {

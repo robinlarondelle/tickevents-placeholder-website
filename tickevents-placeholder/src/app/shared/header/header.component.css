@@ -71,3 +71,9 @@
     -o-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
 }
+
+.cta-button {
+    background: none;
+    color: black;
+    font-size: inherit;
+}

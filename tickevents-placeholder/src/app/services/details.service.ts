@@ -13,6 +13,8 @@ export class DetailsService {
   ) { }
 
   sendDetails = (data: object): Observable<any> => {
+    console.log(data);
+    
     return this.http.post<any>("https://tickevents-placeholder-server.herokuapp.com/sendDetails", data)
   }
 }

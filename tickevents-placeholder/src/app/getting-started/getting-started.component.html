@@ -60,18 +60,14 @@
                             </div>
 
                             <div class="col-12 col-md-7 mt-5 mt-md-0 align-self-center">
-                                <form [formGroup]="detailsForm" (submit)="sendDetais()"
+                                <form [formGroup]="detailsForm" (submit)="sendDetails()"
                                     *ngIf="!successfullSignup; else successTemplate">
 
                                     <div class="form-row  justify-content-end">
                                         <div class="col-12 col-lg-10">
                                             <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span
-                                                        class="input-group-text ft-montserrat px-2 px-md-4">email:</span>
-                                                </div>
                                                 <input type="email" name="email" id="email" formControlName="email"
-                                                    class="form-control" placeholder="john@email.com">
+                                                    class="form-control ft-alata" placeholder="e-mail">
                                             </div>
                                             <span *ngIf="checkForm && email.invalid && email.errors.required"
                                                 class="r small">Dit veld is
@@ -81,27 +77,22 @@
                                                 aaa@bbb.ccc</span>
                                         </div>
                                     </div>
-                                    <div class="form-row mt-3  justify-content-end">
-                                        <div class="col-12 col-sm-9 col-lg-7 mt-3 mt-sm-0 order-2 order-sm-1">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="privacystatement"
-                                                    formControlName="privacystatement">
-                                                <label class="form-check-label fs-s" for="privacystatement">Ik heb de <a
-                                                        href="../../assets/privacy_statement_12-10-2020.pdf"
-                                                        target="_blank">privacyverklaring</a> gelezen en ga hiermee
-                                                    akkoord</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-3 order-1 order-sm-2">
 
-                                            <button type="submit" class="btn w-100"
-                                                [disabled]="privacystatement.value !== true">
+                                    <div class="form-row mt-3  justify-content-end">
+                                        <div class="col-12 col-sm-3">
+                                            <button type="submit" class="btn w-100">
                                                 <ngx-spinner></ngx-spinner>
                                                 <span>Verstuur</span>
                                             </button>
                                         </div>
                                     </div>
 
+                                    <div class="form-row justify-content-end mt-3">
+                                        <div class="col-12 col-lg-10">
+                                            <span class="gray small">Bij het verzenden van uw e-mail gaat u akkoord met onze <a
+                                                href="../../../assets/privacy_statement_12-10-2020.pdf">privacystatement</a></span>
+                                        </div>
+                                    </div>
                                 </form>
 
                                 <div class="col-12" *ngIf="duplicateEmailError">
@@ -118,11 +109,9 @@
                                 </div>
 
                                 <ng-template #successTemplate>
-                                    <div class="col-12">
-                                        <p class="text-center fs-l">Uw aanmelding is succesvol ontvangen! U krijgt
-                                            bericht
-                                            wanneer er interessante
-                                            updates zijn!</p>
+                                    <div class="col-12 col-xm-10 ml-5">
+                                        <h1 class="fs-xl ft-alata">Je aanmelding is succesvol ontvangen! We nemen zo snel mogelijk contact met je op.</h1>
+                                        <p>Hou ook je spambox in de gaten!</p>
                                     </div>
                                 </ng-template>
                             </div>

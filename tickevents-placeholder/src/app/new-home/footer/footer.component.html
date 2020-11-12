@@ -1,22 +1,68 @@
 <div class="row no-gutters footer-section mt-5 pt-5 px-3 w">
     <div class="col">
         <div class="container">
-            <div class="row no-gitter">
+            <div class="row no-gutters">
+
+                <!-- Enter email -->
                 <div class="col-12 col-xl-6 order-xl-2">
                     <div class="row no-gutters">
-                        <div class="col-12 mt-5">
-                            <h4 class="section-header ft-alata">Op de hoogte blijven? Laat je e-mail achter</h4>
+
+                        <form [formGroup]="detailsForm" (submit)="sendDetails()"
+                            *ngIf="!successfullSignup; else successTemplate" class="w-100">
+
+                            <div class="col-12 pl-0 mt-5">
+                                <h4 class="section-header ft-alata">Op de hoogte blijven? Laat je e-mail achter</h4>
+                            </div>
+
+                            <div class="row no-gutters">
+                                <div class="col-12 col-lg-8 col-xl-6 mt-3 pr-md-2 pl-md-0 ">
+                                    <input type="email" name="email" id="email" formControlName="email"
+                                        class="w-100 input px-3 ft-alata" placeholder="e-mail">
+                                    <span *ngIf="checkForm && email.invalid && email.errors.required"
+                                        class="r small">Dit
+                                        veld is verplicht</span>
+                                    <span *ngIf="checkForm && email.invalid && email.errors.email"
+                                        class="r small">Geldig
+                                        format: aaa@bbb.ccc</span>
+                                </div>
+                                <div class="col-12 col-lg-4 mt-3 pl-md-0">
+                                    <ngx-spinner></ngx-spinner>
+                                    <button type="submit"
+                                        class="d-inline-block d-md-none cta-email-button ft-alata px-5">Verzend</button>
+                                    <button type="submit"
+                                        class="d-none d-md-inline-block w-100 cta-email-button ft-alata px-5">Verzend</button>
+                                </div>
+                            </div>
+
+                            <div class="col-12 pl-0 mt-3">
+                                <span class="gray small">Bij het verzenden van uw e-mail gaat u akkoord met onze <a
+                                        href="../../../assets/privacy_statement_12-10-2020.pdf">privacystatement</a></span>
+                            </div>
+                        </form>
+
+                        <div class="col-12 error-message" *ngIf="duplicateEmailError">
+                            <p>Dit e-mail adres is al bekend bij ons. Je hoort snel van ons bij nieuwe updates!</p>
                         </div>
-                        <div class="col-12 col-md-8 mt-3 pr-md-2">
-                            <input type="email" class="w-100 input px-3 ft-alata" placeholder="e-mail">
+                        <div class="col-12 error-message" *ngIf="rejectedEmailError">
+                            <p>Dit e-mail adres klopt niet of is misschien nep. Probeer het met een ander e-mail adres.
+                            </p>
                         </div>
-                        <div class="col-12 col-md-4 mt-3 pl-md-2">
-                            <button class="d-inline-block d-md-none btn-secondary-cta ft-alata px-5">Verzend</button>
-                            <button
-                                class="d-none d-md-inline-block w-100 btn-secondary-cta ft-alata px-5">Verzend</button>
+                        <div class="col-12 error-message" *ngIf="serverError">
+                            <p>Helaas, er is iets mis gegaan. Probeer het later nog eens.</p>
                         </div>
+
+                        <ng-template #successTemplate>
+                            <div class="col-12 mt-5">
+                                <h1 class="text-center fs-xl ft-alata">Uw e-mail is succesvol ontvangen. U krijgt
+                                    bericht
+                                    wanneer er interessante updates zijn!</h1>
+                            </div>
+                        </ng-template>
                     </div>
                 </div>
+                <!-- End enter email -->
+
+                <!-- Logo information -->
                 <div class="col-12 col-xl-6 order-xl-1">
                     <div class="row no-gutters">
                         <div class="col-12 mt-5">
@@ -30,6 +76,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- End Logo information -->
+
             </div>
         </div>
     </div>
