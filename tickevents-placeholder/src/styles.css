@@ -69,7 +69,8 @@ button {
     background: rgba(0, 0, 0, 0);
 }
 
-.cta-email-button {
+.cta-email-button, 
+.cta-footer-button {
     height: 2.5em;
     color: white;
     border-radius: 1.25em;
