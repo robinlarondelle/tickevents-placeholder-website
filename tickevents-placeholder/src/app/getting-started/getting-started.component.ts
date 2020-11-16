@@ -4,19 +4,20 @@ import { NgxSpinnerService } from "ngx-spinner";
 import { DetailsService } from '../services/details.service';
 import { Title } from '@angular/platform-browser';
 import { tns } from "tiny-slider/src/tiny-slider"
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-getting-started',
   templateUrl: './getting-started.component.html',
   styleUrls: ['./getting-started.component.css']
 })
-export class GettingStartedComponent implements OnInit  {
+export class GettingStartedComponent implements OnInit {
   detailsForm: FormGroup
   checkForm: boolean
   successfullSignup: boolean
   duplicateEmailError: boolean
   rejectedEmailError: boolean
-  
+
   scrollUp = {
     origin: 'bottom',
     distance: '50%',
@@ -29,7 +30,9 @@ export class GettingStartedComponent implements OnInit  {
   constructor(
     private detailsService: DetailsService,
     private titleService: Title,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {
     this.successfullSignup = false
     this.checkForm = false
@@ -54,8 +57,8 @@ export class GettingStartedComponent implements OnInit  {
       autoplayTimeout: 2000,
       autoplayButton: false,
       autoplayButtonOutput: false,
-      axis: 'vertical' 
-    });    
+      axis: 'vertical'
+    });
   }
 
   sendDetails = () => {
@@ -67,6 +70,7 @@ export class GettingStartedComponent implements OnInit  {
       this.spinner.show()
 
       this.detailsService.sendDetails(this.detailsForm.value).subscribe(result => {
+        this.addSendEmailStatusToQueryParams("success")
         this.spinner.hide()
         this.successfullSignup = true
 
@@ -74,14 +78,16 @@ export class GettingStartedComponent implements OnInit  {
         this.spinner.hide()
 
         if (error.error.type == "MailchimpError") {
-          
+
           switch (error.error.message) {
             case "Member Exists": {
               this.duplicateEmailError = true
+              this.addSendEmailStatusToQueryParams("duplicateEmail")
               break
             }
             case "Invalid Resource": {
               this.rejectedEmailError = true
+              this.addSendEmailStatusToQueryParams("serverError")
               break
             }
           }
@@ -89,6 +95,9 @@ export class GettingStartedComponent implements OnInit  {
       })
     }
   }
+
+  private addSendEmailStatusToQueryParams = (status: String) =>
+    (window as any).dataLayer.push({ event:'Send Email', sendEmail: status })
 
   get email() { return this.detailsForm.get('email') }
   get privacystatement() { return this.detailsForm.get('privacystatement') }
