@@ -1,5 +1,5 @@
 .footer-section {
-    background-image: url(../../../assets/new-start-footer-background.svg);
+    background-image: url(../../../../assets/new-start-footer-background.svg);
     background-size: cover;
     margin-top: 100px !important;
 }
@@ -41,7 +41,7 @@ input {
 
 @media (min-width: 1200px) {
     .footer-section {
-        background-image: url(../../../assets/new-start-footer-background-desktop.svg);
+        background-image: url(../../../../assets/new-start-footer-background-desktop.svg);
         background-size: 130% 100%;
         background-position: center;
     }

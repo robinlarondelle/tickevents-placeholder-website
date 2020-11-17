@@ -1,217 +1,441 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-/* Main page */
-.title {
-    font-weight: bolder;
-    font-size: 2.5em;
+/* General styles */
+.section {
+    margin-top: 2.2em !important;
 }
 
-.title-animation-1 {
-    -webkit-animation-delay: 0.1s !important;
-            animation-delay: 0.1s !important;
-}
-
-.title-animation-2 {
-    -webkit-animation-delay: 0.25s !important;
-            animation-delay: 0.25s !important;
-}
-
-.title-animation-3 {
-    -webkit-animation-delay: 0.4s !important;
-            animation-delay: 0.4s !important;
-}
-
-.title-animation-4 {
-    -webkit-animation-delay: 0.55s !important;
-            animation-delay: 0.55s !important;
-}
-
-.title-animation-5 {
-    -webkit-animation-delay: 1.0s !important;
-            animation-delay: 1.0s !important;
-}
-
-.title-animation-6 {
-    -webkit-animation-delay: 1.15s !important;
-            animation-delay: 1.15s !important;
-}
-
-.subtitle {
-    font-size: 1.35em;
-    font-weight: 400;
-}
-
-.content {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    margin-top: -105vh;
-}
-/* End main page */
-
-/* Background */
-.svg-header {
-    overflow: hidden;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-}
-
-.svg-divider {
-    position: absolute;
-    bottom: 0px;
-    left: -1px;
-    height: 100%;
-    fill: #092134;
-}
-/* End main page */
-
-/* Second page */
-.tickets-img-1 {
-    max-width: 100%;
-    width: auto;
-    max-height: 100%;
-    margin-left: auto;
-    margin-right: 0;
-    border-radius: 15px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-/* End second page */
-
-/* Quote's section */
-.carousel-wrapper {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 100%;
-}
-
-.carousel-item {
-    min-height: 500px;
-    position: relative;
-}
-
-.quote {
-    line-height: 1.6rem !important;
-}
-
-.carousel-caption {
-    position: relative;
-    left: 0;
-    top: 0;
-}
-
-.carousel-caption p {
+.section-header {
+    font-size: 1.8em;
     margin: 0 !important;
-}
-/* End Quote's section */
-
-/* Fourth row */
-.tickets-img-2 {
-    max-width: 100%;
-    width: auto;
-    max-height: 100%;
-    margin-right: auto;
-    margin-left: 0;
-    border-radius: 15px;
-    margin-top: auto;
-    margin-bottom: auto;
+    font-family: alata;
 }
 
-/* End fourth Row */
-
-/* Advantage part */
-.section-title.success {
-    font-weight: 300 !important;
+.section-text {
+    font-size: 1em;
+    margin-top: 1em !important;
+    margin-bottom: 0 !important;
+    font-family: montserrat;
 }
 
-.tickets-img-3 {
-    max-width: 100%;
-    width: auto;
-    max-height: 100%;
-    margin-right: auto;
-    margin-left: 0;
-    border-radius: 15px;
-    margin-top: auto;
-    margin-bottom: auto;
+@media (min-width: 768px) {
+    .section {
+        margin-top: 3em !important;
+    }
+
+    .section-text {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .section-header {
+        font-size: 3.2em;
+    }
 }
 
-/* Balloon man animation */
-.balloon {
+@media (min-width: 1200px) {
+    .section-header {
+        font-size: 3em;
+    }
+
+    .section-text {
+        font-size: 1.35em;
+    }
+}
+/* End general styles */
+
+
+/* Title screen */
+.header-padding {
+    padding-top: 56px !important;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-top: 3.5em;
+}
+
+.button {
+    height: 2.5em;
+    color: white;
+    border-radius: 1.25em;
+}
+
+.btn-cta {
+    background:linear-gradient(90deg, #FFA200, #FF004E);
+    border: none !important;
+    font-size: 1.25em;
+}
+
+.cta-secondary-button {
+    border: 2px solid white;
+    font-size: 1.125em;
+    background: rgba(0, 0, 0, 0);
+}
+
+.jumping-people {
     width: 100%;
-}
-#balloon_man {
-    -webkit-animation: up_and_down;
-            animation: up_and_down;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate;
+    max-width: 350px;
 }
 
-@keyframes up_and_down {
-    from {
-        transform: translateY(-30px)
-    }
-
-    to {
-        transform: translateY(30px)
-    }
-}
-/* End balloon man animation */
-
-/* Media Queries */
-/* Base width */
-@media (min-width: 425px) {
-    .carousel-item {
-        min-height: 400px;
-    }
-}
-
-/* md-breakpoint */
-@media (min-width: 765px) {
+@media (min-width: 768px) {
     .title {
-        font-size: 4em;
+        margin-top: 75px !important;
+        font-size: 3.35em;
     }
 
     .subtitle {
+        font-size: 1.35em
+    }
+    
+    .jumping-people {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-section {
+        margin-top: 100px;
+    }
+
+    .title {
+        font-size: 4.25em;
+    }
+}
+/* End title screen */
+
+
+/* Wij zijn Tickevents section */
+.section.wij-zijn-section {
+    margin-top: 200px !important;
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+}
+
+.wij-zijn-section .section-header {
+    font-size: 2.75em;
+}
+
+@media (min-width: 768px) {
+    .section.wij-zijn-section {
+        margin-top: 75px !important;
+    }
+
+    .wij-zijn-section .section-header {
+        font-size: 4em !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section.wij-zijn-section {
+        margin-top: 200px !important; 
+    }
+}
+/* End Wij zijn Tickevents section */
+
+
+/* Jumping man section */
+.jumping-man-section  .section-header {
+    font-size: 1.9em;
+}
+
+.jumping-man {
+    margin-left: -250px;
+}
+
+.jumping-man-text {
+    margin-top: 100px !important;
+}
+
+.mt-4px {
+    margin-top: 4px
+}
+
+@media (min-width: 768px) {
+    .jumping-man-section .section-header {
+        font-size: 3.2em;
+    }
+
+    .jumping-man {
+        margin-left: -200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .jumping-man-section .section-header {
+        font-size: 3em;
+    }
+
+    .jumping-man-text {
+        margin-top: 200px !important;
+        margin-bottom: 200px !important;
+    }
+
+    .jumping-man {
+        height: 800px !important;
+        margin-left: -500px;
+    }
+}
+/* End jumping man section */
+
+
+/* Cards section */
+.cards-section {
+    background-image: url(../../assets/new-start-cards-background.svg);
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 100px !important;
+    padding-top: 100px !important;
+    padding-bottom: 20px !important;
+}
+
+.card-wrapper.order-1 {
+    padding-right: 0.5em;
+}
+
+.card-wrapper.order-2 {
+    padding-left: 0.5em;
+}
+
+.card-wrapper.order-3 {
+    padding-right: 0.25em;
+    padding-left: 0.25em;
+}
+
+.card {
+    min-height: 250px !important;
+    height: 100%;
+    border: none !important;
+    padding: 0.5em 0.75em;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 15px !important;
+    background-clip: unset !important;
+}
+
+.card-background {
+    height: 100% !important;
+    width: 100% !important;   
+    margin: 0 -0.75em !important; 
+}
+
+.card-header {
+    font-size: 1.35em;
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding: 0 !important;
+    margin-top: 0.5em;
+    margin-bottom: 1em !important;
+}
+
+.card-text {
+    font-size: 0.76em;
+}
+
+@media (min-width: 768px) {
+    .cards-section {
+        background-image: url(../../assets/new-start-cards-background-tablet.svg);
+        background-position: top right;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .card-wrapper {
+        margin-top: 11em !important;
+        margin-bottom: 11em !important;
+    }
+    
+    .card-wrapper.order-1 {
+        padding-right: 0.5em !important;
+    }
+
+    .card-wrapper.order-2 {
+        padding-right: 0.5em !important;
+        padding-left: 0.5em !important;
+    }
+
+    .card-wrapper.order-3 {
+        padding-left: 0.5em !important;
+    }
+
+    .card {
+        min-height: 340px !important;
+    }
+
+    .card-background {
+        height: 100% !important;
+        width: 100% !important;
+        margin-left: -.5em !important;
+    }
+
+    .card-text {
+        font-size: 1.1em;
+    }
+
+    .card-header {
+        font-size: 1.9em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        min-height: 500px !important;
+    }
+
+    .card-wrapper {
+        margin-top: 18em !important;
+        margin-bottom: 0 !important;
+    }
+
+    .cards-background {
+        transform: translateX(450px)
+    }
+    .cards-section {
+        background: none;
+        margin-top: -150px !important;
+    }
+
+    .card-wrapper.order-1 {
+        padding-right: 2em !important;
+    }
+
+    .card-wrapper.order-2 {
+        padding-right: 1em !important;
+        padding-left: 1em !important;
+    }
+
+    .card-wrapper.order-3 {
+        padding-left: 2em !important;
+    }
+
+    .card-background {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 -0.75em;
+    }
+
+    .card-number {
+        margin-top: 1rem;
+        font-size: 3em;
+        text-align: center;
+        font-family: 'alata';
+    }
+
+    .card-header {
+        font-size: 2.3em;
+    }
+    
+    .card-text {
+        font-size: 1.35em;
+    }
+}
+/* End cards section */
+
+
+/* Me section */
+.success-section {
+    margin-top: 100px !important;
+}
+
+.success-name {
+    font-size: 1.5em
+}
+
+.success-subtitle {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .success-name {
+        font-size: 1.8em
+    }
+
+    .success-subtitle {
+        font-size: 1.2em;
+    }
+
+    .credentials-section {
+        transform: translateY(-100px)
+    }
+}
+
+@media (min-width: 1200px) {
+   .photo-me {
+       height: 700px !important;
+       width: auto !important;
+       transform: translateX(-150px)
+   }
+
+   .success-section {
+       margin-top: 7em !important;
+   }
+
+   .credentials-section {
+    transform: translateY(-100px) translateX(-50px)
+}
+}
+/* End me section */
+
+
+/* Review section */
+.review-section {
+    background-image: url(../../assets/new-start-review-background.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 8em;
+    padding-bottom: 8em;
+    margin-top: 100px !important;
+}
+
+@media (min-width: 768px) {
+    .review-section {
+        background-image: url(../../assets/new-start-review-background-tablet.svg);
+    }
+
+    .review-section .section-text {
+        font-size: 1.2em !important;
+    }
+
+    .reviewer-name {
+        margin-top: 1.5em !important;
+        font-size: 1.5em !important;
+    }
+
+    .reviewer-funtion {
+        font-size: 1.2em !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .review-section {
+        background-image: url(../../assets/new-start-review-background-desktop.svg);
+    }
+
+    .reviewer-name {
+        font-size: 2em;
+    }
+
+    .reviewer-function {
         font-size: 1.5em;
     }
+}
+/* End Review section */
 
-    .carousel-item {
-        min-height: 300px;
-    }
+/* Final section */
+.selfie {
+    width: 100%;
 }
 
-/* lg-breakpoint */
 @media (min-width: 1200px) {
-    .title {
-        font-size: 5em
+    .final-section .section-header {
+        margin-top: 250px !important;
     }
 
-    .tickets-img-1,
-    .tickets-img-2 {
-        height: 350px !important;
-        width: auto;
-    }
-
-    .tickets-img-3 {
-        height: 300px !important;
-        width: auto;
-    }
-
-    .carousel-item {
-        min-height: 200px;
+    .selfie {
+        width: 700px !important;
+        transform: translateX(-200px);
+        z-index: 999;
     }
 }
-/* End Media Queries */
+/* End final section */

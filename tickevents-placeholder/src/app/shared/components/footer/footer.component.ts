@@ -1,36 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup } from "@angular/forms";
-import { NgxSpinnerService } from "ngx-spinner";
-import { Title } from '@angular/platform-browser';
-import { tns } from "tiny-slider/src/tiny-slider"
-import { SendEmailStatuses } from '../shared/models/sendEmailStatusesEnum';
-import { EmailService } from '../shared/services/email.service';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { SendEmailStatuses } from 'src/app/shared/models/sendEmailStatusesEnum';
+import { EmailService } from 'src/app/shared/services/email.service';
 
 @Component({
-  selector: 'app-getting-started',
-  templateUrl: './getting-started.component.html',
-  styleUrls: ['./getting-started.component.css']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
 })
-export class GettingStartedComponent implements OnInit {
+export class FooterComponent {
+  
   detailsForm: FormGroup
   checkForm: boolean
   successfullSignup: boolean
   duplicateEmailError: boolean
   rejectedEmailError: boolean
-
-  scrollUp = {
-    origin: 'bottom',
-    distance: '50%',
-    scale: 1,
-    duration: 700,
-    reset: false,
-    viewFactor: 1
-  }
-
+  serverError: boolean
   constructor(
     private emailService: EmailService,
-    private titleService: Title,
-    private spinner: NgxSpinnerService,
+    private spinner: NgxSpinnerService
   ) {
     this.successfullSignup = false
     this.checkForm = false
@@ -41,24 +30,6 @@ export class GettingStartedComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-    this.titleService.setTitle("Tickevents | Aan de slag")
-
-    tns({
-      container: '.my-slider',
-      items: 1,
-      slideBy: 1,
-      controls: false,
-      nav: false,
-      speed: 300,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayButton: false,
-      autoplayButtonOutput: false,
-      axis: 'vertical'
-    });
-  }
-
   sendDetails = () => {
     this.checkForm = true;
     this.duplicateEmailError = false
@@ -67,30 +38,21 @@ export class GettingStartedComponent implements OnInit {
     if (this.detailsForm.valid) {
       this.spinner.show()
 
-      console.log('sending form data');
-      
       this.emailService.sendEmail(this.detailsForm.value).subscribe(sendEmailStatus => {
-        console.log('Received server response with error ' + sendEmailStatus);
         this.spinner.hide()
 
         switch (sendEmailStatus) {
           case SendEmailStatuses.SUCCESS: {
-            console.log('adding success to params');
-            
             this.addSendEmailStatusToQueryParams("success")
             this.successfullSignup = true
             break
           }
           case SendEmailStatuses.DUPLICATE_EMAIL: {
-            console.log('adding duplicate_email to params');
-            
             this.duplicateEmailError = true
-            this.addSendEmailStatusToQueryParams("duplicateEmail")
+            this.addSendEmailStatusToQueryParams("duplicateEmail")   
             break
           }
           default: {
-            console.log('adding serverError to params');
-
             this.rejectedEmailError = true
             this.addSendEmailStatusToQueryParams("serverError")
             break
