@@ -36,6 +36,6 @@ export class EmailService {
   }
 
   private sendDetailsToServer = (data: DetailsModel): Observable<any> => {
-    return this.http.post<any>("http://localhost:3000/sendDetails", data)
+    return this.http.post<any>("https://tickevents-placeholder-server.herokuapp.com/sendDetails", data)
   }
 }
