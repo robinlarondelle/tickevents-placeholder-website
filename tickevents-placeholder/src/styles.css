@@ -105,3 +105,10 @@ button {
         padding-bottom: 100px;
     }
 }
+
+@media (min-width: 1920px) {
+    .container {
+        width: 1400px !important;
+        max-width: 1400px !important;
+    }
+}

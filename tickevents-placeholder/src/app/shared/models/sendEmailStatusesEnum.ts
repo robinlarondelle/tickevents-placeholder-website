@@ -1,5 +1,0 @@
-export enum SendEmailStatuses {
-    DUPLICATE_EMAIL = "DUPLICATE_EMAIL",
-    SERVER_ERROR = "SERVER_ERROR",
-    SUCCESS = "SUCCESS"
-}

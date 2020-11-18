@@ -1,6 +1,7 @@
 {
   "name": "tickevents-placeholder",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -30,7 +31,6 @@
     "rellax": "^1.12.1",
     "rxjs": "~6.5.4",
     "scrollreveal": "^4.0.7",
-    "tiny-slider": "2.9.2",
     "tslib": "^1.14.1",
     "zone.js": "~0.10.2"
   },

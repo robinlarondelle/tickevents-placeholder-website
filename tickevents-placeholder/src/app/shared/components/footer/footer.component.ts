@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { SendEmailStatuses } from 'src/app/shared/models/sendEmailStatusesEnum';
 import { EmailService } from 'src/app/shared/services/email.service';
+import { DetailsModel } from '../../models/detailsModel';
+import { ServerResponse } from '../../models/serverResponseEnum';
 
 @Component({
   selector: 'app-footer',
@@ -35,31 +36,29 @@ export class FooterComponent {
     this.duplicateEmailError = false
     this.rejectedEmailError = false
 
-    if (this.detailsForm.valid) {
-      this.spinner.show()
+		if (this.detailsForm.valid) {
+			this.spinner.show()
 
-      this.emailService.sendEmail(this.detailsForm.value).subscribe(sendEmailStatus => {
-        this.spinner.hide()
-
-        switch (sendEmailStatus) {
-          case SendEmailStatuses.SUCCESS: {
-            this.addSendEmailStatusToQueryParams("success")
-            this.successfullSignup = true
-            break
-          }
-          case SendEmailStatuses.DUPLICATE_EMAIL: {
-            this.duplicateEmailError = true
-            this.addSendEmailStatusToQueryParams("duplicateEmail")   
-            break
-          }
-          default: {
-            this.rejectedEmailError = true
-            this.addSendEmailStatusToQueryParams("serverError")
-            break
-          }
-        }
-      })
-    }
+			this.emailService.sendDetails(this.detailsForm.value as DetailsModel).subscribe(sendDetailsStatus => {
+				this.spinner.hide()
+				switch (sendDetailsStatus) {
+					case ServerResponse.SUCCESS: {
+						this.addSendEmailStatusToQueryParams("success")
+						this.successfullSignup = true
+						break
+					}
+					case ServerResponse.DUPLICATE_EMAIL: {
+						this.duplicateEmailError = true
+						this.addSendEmailStatusToQueryParams("duplicateEmail")
+						break
+					}
+					case ServerResponse.INVALID_BODY || ServerResponse.INVALID_RESOURCE || ServerResponse.EMAIL_MISSING_IN_BODY: {
+						this.rejectedEmailError = true
+						this.addSendEmailStatusToQueryParams("serverError")
+					}
+				}
+			})
+		}
   }
 
   // This piece of code is responsible for triggering a Google Tag Manager event

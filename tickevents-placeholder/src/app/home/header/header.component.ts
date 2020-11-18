@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-new-home-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+	selector: 'app-new-home-header',
+	templateUrl: './header.component.html',
+	styleUrls: ['./header.component.css']
 })
 export class NewHomeHeaderComponent implements OnInit {
+	@Input() logoColor: string
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+		this.logoColor = this.logoColor || "white"
+	}
 
 	changeBackground = () => {
 		const button = document.querySelector('.navbar-toggler');

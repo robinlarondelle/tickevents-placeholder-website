@@ -1,40 +1,41 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { SendEmailStatuses } from '../models/sendEmailStatusesEnum';
+import { Observable, Subject } from 'rxjs';
+import { DetailsModel } from '../models/detailsModel';
+import { ServerResponse } from '../models/serverResponseEnum';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EmailService {  
+export class EmailService {
 
   constructor(
     private http: HttpClient
   ) { }
 
-  sendEmail = (email: String): Observable<SendEmailStatuses> => {
-    console.log('received form data, sending data to server');
-    
-    this.sendDetailsToServer(email).subscribe(response => {   
-      console.log('received success data. Returning observable');
-               
-      return of(SendEmailStatuses.SUCCESS)
-    }, error => {
-      if (error.error.type == "MailchimpError") {
-        switch (error.error.message) {
-          case "Member Exists": {
-            console.log('Duplicate Email found. Returning duplicate email error');
-            
-            return of(SendEmailStatuses.DUPLICATE_EMAIL)}
-          case "Invalid Resource": return of(SendEmailStatuses.SERVER_ERROR)
-        }
-      }
-    })
+  sendDetails = (details: DetailsModel): Observable<ServerResponse> => {
+    const subject = new Subject<ServerResponse>()
 
-    return of(SendEmailStatuses.SERVER_ERROR)
+    this.sendDetailsToServer(details)
+      .subscribe(() => subject.next(ServerResponse.SUCCESS),
+        error => {
+          switch (error.error.type) {
+            case ServerResponse.EMAIL_MISSING_IN_BODY: subject.next(ServerResponse.EMAIL_MISSING_IN_BODY)
+            case ServerResponse.INVALID_BODY: subject.next(ServerResponse.INVALID_BODY)
+            case ServerResponse.MAILCHIMP_ERROR: {
+
+              switch (error.error.message) {
+                case "Member Exists": subject.next(ServerResponse.DUPLICATE_EMAIL)
+                case "Invalid Resource": subject.next(ServerResponse.INVALID_RESOURCE)
+              }
+            }
+          }
+        })
+
+    return subject
   }
 
-  private sendDetailsToServer = (data: object): Observable<any> => {
-    return this.http.post<any>("https://tickevents-placeholder-server.herokuapp.com/sendDetails", data)
+  private sendDetailsToServer = (data: DetailsModel): Observable<any> => {
+    return this.http.post<any>("http://localhost:3000/sendDetails", data)
   }
 }

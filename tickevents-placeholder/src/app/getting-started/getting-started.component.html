@@ -1,127 +1,116 @@
-<app-header></app-header>
 <div class="container-fluid p-0">
-    <div class="row mnh-100vh no-gutters">
+
+    <!-- Title section -->
+    <div class="row no-gutters title-background">
         <div class="col">
+            <div class="container p-3 p-sm-0">
 
-            <!-- Title section -->
-            <div class="row no-gutters title-section w header-padding section-padding pb-0  ">
-                <div class="col">
-                    <div class="container px-3 px-md-0 h-100">
-                        <div class="row no-gutters h-100">
-                            <div class="col-12 text-center align-self-center">
-                                <h1 class="title m-0">Ga aan de slag met Tickevents en verkoop tickets voor jouw:</h1>
-                                <div class="my-slider w-100 text-center title">
-                                    <p class="m-0 text-lowercase text-center">&#160;geitenmarkt</p>
-                                    <p class="m-0 text-lowercase text-center">&#160;yogaworkshop</p>
-                                    <p class="m-0 text-lowercase text-center">&#160;kamasutrabeurs</p>
-                                    <p class="m-0 text-lowercase text-center">&#160;kroegentocht</p>
-                                    <p class="m-0 text-lowercase text-center">&#160;boekenbeurs</p>
-                                    <p class="m-0 text-lowercase text-center">&#160;Hardstylefeest</p>
-                                    <p class="m-0 text-lowercase text-center">&#160;technorave</p>
-                                </div>
-                            </div>
-                            <div class="col-12 align-self-end text-center justify-content-center">
-                                <app-chevron text="Meer info"></app-chevron>
-                            </div>
-                        </div>
+                <!-- Header -->
+                <div class="row no-gutters">
+                    <div class="col d-none d-lg-flex">
+                        <app-new-home-header logoColor="black"></app-new-home-header>
+                    </div>
+                    <div class="col d-lg-none d-flex">
+                        <app-new-home-header logoColor="white"></app-new-home-header>
                     </div>
                 </div>
-            </div>
-            <!-- End title section -->
+                <!-- End Header -->
 
-            <!-- Title banner section -->
-            <div class="row no-gutters bg-blue w section-padding justify-content-center">
-                <div class="col">
-                    <div class="container px-3 px-md-0">
-                        <div class="row no-gutters align-content-center banner">
-                            <div class="col-auto">
-                                <p class="w text-center m-0">Van klimbos tot paintbal. Van kerstmarkt tot paasfeest.
-                                    Tickevents biedt altijd 1 euro servicekosten en support op maat, ongeacht je
-                                    evenement</p>
-                            </div>
-                            <div class="col-auto d-inline-block">
+                <!-- Title content -->
+                <div class="row no-gutters content">
+                    <div class="col-12 col-lg-6 order-2 order-lg-1 phone-image align-self-baseline align-self-md-center">
+                        <img src="../../assets/getting-started-title-phone.svg"
+                            alt="Getting Started Phone illustration">
+                    </div>
 
+                    <div class="col-12 col-lg-6 order-1 order-lg-2 content-card rellax">
+                        <h1 class="title ft-alata">Meld je aan om te <span class="title-segment">beginnen met
+                                Tickevents</span></h1>
+                        <p class="subtitle">Laat je e-mail adres achter om te beginnen met het organiseren van
+                            evenementen met Tickevents. Wij nemen zo snel mogelijk contact met je op. Wij hebben er zin
+                            in! jij ook?</p>
+
+                        <form [formGroup]="detailsForm" (submit)="sendDetails()" class="mt-3"
+                            *ngIf="!successfullSignup; else successTemplate">
+
+                            <div class="form-row">
+                                <div class="col-12 col-md-6 pr-lg-2">
+                                    <label for="firstname">Voornaam*</label>
+                                    <input type="text" name="firstname" id="firstname" formControlName="firstname"
+                                        class="form-control ft-alata"
+                                        [class.invalid]="(checkForm && (firstname.invalid || firstname.errors?.required))">
+                                    <div [@inOutAnimation] *ngIf="checkForm && firstname.invalid && firstname.errors.required"
+                                        class="r small error-message">Voornaam is verplicht</div>
+
+                                </div>
+                                <div class="col-12 col-md-6 pl-lg-2">
+                                    <label for="lastname">Achternaam*</label>
+                                    <input type="text" name="lastname" id="lastname" formControlName="lastname"
+                                        class="form-control ft-alata"
+                                        [class.invalid]="(checkForm && (lastname.invalid || lastname.errors?.required))">
+                                    <div [@inOutAnimation] *ngIf="checkForm && lastname.invalid && lastname.errors.required"
+                                        class="r small error-message">Achternaam is verplicht</div>
+
+                                </div>
                             </div>
+
+                            <div class="form-row email-row">
+                                <div class="col-12">
+                                    <label for="email">E-mail*</label>
+                                    <input type="email" name="email" id="email" formControlName="email"
+                                        class="form-control ft-alata"
+                                        [class.invalid]="(checkForm && (email.invalid || email.errors?.required))">
+                                    <div [@inOutAnimation] *ngIf="checkForm && email.invalid && email.errors?.required"
+                                        class="r small error-message">E-mail is verplicht</div>
+                                    <div [@inOutAnimation] *ngIf="checkForm && email.invalid && email.errors?.email"
+                                        class="r small error-message">Geldig format: aaa@bbb.ccc</div>
+                                </div>
+                            </div>
+
+                            <div class="form-row submit-row">
+                                <div class="col-12">
+                                    <button type="submit" class="cta-email-button w-100">
+                                        <ngx-spinner></ngx-spinner>
+                                        <span>Verzenden!</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-row privacy-row">
+                                <div class="col-12">
+                                    <span class="gray small">Bij het verzenden van je gegevens ga je akkoord met de <a
+                                            href="../../../assets/privacy_statement_12-10-2020.pdf">privacy
+                                            statement</a></span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="col-12 mt-3" [@inOutAnimation] *ngIf="duplicateEmailError">
+                            <p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons bij
+                                nieuwe updates!</p>
                         </div>
+                        <div class="col-12 mt-3" [@inOutAnimation] *ngIf="rejectedEmailError">
+                            <p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het met een
+                                ander email adres.</p>
+                        </div>
+                        <div class="col-12 mt-3" [@inOutAnimation] *ngIf="serverError">
+                            <p class="text-center r">Er ging iets mis! Het ligt waarschijnlijk aan ons, dus probeer het later opnieuw!</p>
+                        </div>
+
+                        <ng-template #successTemplate>
+                            <h1 class="ft-alata mt-5 title title-segment">Gelukt!</h1>
+                            <p class="subtitle">We hebben je aanmelding succesvol ontvangen. Je krijgt zo snel mogelijk bericht van ons! Hou ook je spambox in de gaten.</p>
+                        </ng-template>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="row no-gutters align-content-center flex-grow section-padding">
-                <div class="col">
-                    <div class="container px-3 px-md-0">
-                        <div class="row no-gutters align-content-center">
-                            <div class="col-12 col-md-5">
-                                <h1 class="ft-alata font-weight-bold">Aan de slag met Tickevents</h1>
-                                <p class="ft-montserrat">Jij wilt aan de slag met Tickevents, super! Laat je email hier
-                                    achter, en wij nemen contact met jou op, zodat we samen jouw evenement tot een
-                                    grandioos succes kunnen brengen. Je ontvangt zo snel mogelijk bericht!</p>
-                            </div>
-
-                            <div class="col-12 col-md-7 mt-5 mt-md-0 align-self-center">
-                                <form [formGroup]="detailsForm" (submit)="sendDetails()"
-                                    *ngIf="!successfullSignup; else successTemplate">
-
-                                    <div class="form-row  justify-content-end">
-                                        <div class="col-12 col-lg-10">
-                                            <div class="input-group">
-                                                <input type="email" name="email" id="email" formControlName="email"
-                                                    class="form-control ft-alata" placeholder="e-mail">
-                                            </div>
-                                            <span *ngIf="checkForm && email.invalid && email.errors.required"
-                                                class="r small">Dit veld is
-                                                verplicht</span>
-                                            <span *ngIf="checkForm && email.invalid && email.errors.email"
-                                                class="r small">Geldig format:
-                                                aaa@bbb.ccc</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row mt-3  justify-content-end">
-                                        <div class="col-12 col-sm-3">
-                                            <button type="submit" class="cta-email-button btn w-100">
-                                                <ngx-spinner></ngx-spinner>
-                                                <span>Verstuur</span>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row justify-content-end mt-3">
-                                        <div class="col-12 col-lg-10">
-                                            <span class="gray small">Bij het verzenden van uw e-mail gaat u akkoord met onze <a
-                                                href="../../../assets/privacy_statement_12-10-2020.pdf">privacystatement</a></span>
-                                        </div>
-                                    </div>
-                                </form>
-
-                                <div class="col-12" *ngIf="duplicateEmailError">
-                                    <p class="text-center r">Dit email adres is al bekend bij ons. Je hoort snel van ons
-                                        bij
-                                        nieuwe updates!</p>
-                                </div>
-                                <div class="col-12" *ngIf="rejectedEmailError">
-                                    <p class="text-center r">Dit email adres klopt niet of is misschien nep. Probeer het
-                                        met
-                                        een
-                                        ander email
-                                        adres.</p>
-                                </div>
-
-                                <ng-template #successTemplate>
-                                    <div class="col-12 col-xm-10 ml-5">
-                                        <h1 class="fs-xl ft-alata">Je aanmelding is succesvol ontvangen! We nemen zo snel mogelijk contact met je op.</h1>
-                                        <p>Hou ook je spambox in de gaten!</p>
-                                    </div>
-                                </ng-template>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <!-- End title content -->
             </div>
         </div>
     </div>
-</div>
+    <!-- End Title section -->
 
-<app-footer></app-footer>
+    <div class="footer-margin">
+        <app-footer></app-footer>
+    </div>
+
+</div>

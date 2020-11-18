@@ -1,5 +1,8 @@
 nav {
-    z-index: 999
+    z-index: 999;
+    padding-left:0;
+    padding-right: 0;
+    padding-top: 30px;
 }
 
 .cls-1 {
@@ -31,12 +34,14 @@ nav {
     background: none;
 }
 
+.cta-button.active {
+    padding-left: 16px !important;
+    padding-right: 0 !important;
+}
+
 @media (min-width: 992px) {
     nav {
         font-size: 1.4em !important;
-        padding-top: 30px;
-        padding-left: 45px !important;
-        padding-right: 45px !important;
     }
 
     #Logo_White {

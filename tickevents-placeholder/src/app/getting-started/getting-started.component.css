@@ -1,142 +1,174 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
+.title-background {
+    background-image: url(../../assets/getting-started-background-mobile.svg);
+    background-size: 100% auto;
+}
 
+.content {
+    margin-top: 150px;
+}
 
-/* Title section */
+.content-card {
+    border-radius: 35px;
+    min-height: 750px;
+    padding: 30px;
+    background: white;
+    -webkit-box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+}
+
 .title {
-    font-size: 2.1em;
-    font-weight: 600;
-    font-family: 'Alata', sans-serif;
+    font-size: 42px;
+}
+
+.title-segment {
+    color: #0705DE;
 }
 
 .subtitle {
-    font-size: 1em;
-    font-weight: 400 !important;
+    font-size: 22px;
+    margin-top: 14px;
 }
 
-.title-section {
-    background-image: url("../../assets/bg-getting-started.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    min-height: 100vh;
+label {
+    color: #878787 !important;
+    padding-left: 30px;
+    font-family: 'alata';
+    font-size: 24px;
+    margin-top: 15px;
 }
 
-.cta.btn {
-    background-color: #EA8585;
-    color: white;
-    font-weight: 500;
-    font-size: 1.25em;
-    -webkit-transition-duration: 0s;
-    -o-transition-duration: 0s;
-    transition-duration: 0s;
-    border-radius: 10px;
-    height: auto;
-    padding: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
-    transition: background-color 0.2s ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
+input {
+    height: 60px;
+    border-radius: 30px;
+    font-size: 24px;
+    -webkit-box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+    border-color: #BFBFBF;
 }
 
-.cta.btn:hover {
-    background-color: #B36666;
-    color: white;
-    -webkit-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
-    transition: background-color 0.2s ease;
+.email-row {
+    margin-top: 15px;
 }
 
-.cta.btn:active {
-    background-color: #E68383;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: white;
-    -webkit-transform: translateY(4px);
-    -ms-transform: translateY(4px);
-    transform: translateY(4px);
-    -webkit-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
-    transition: background-color 0.2s ease;
-}
-
-/* End title section */
-
-/* Subtitle section */
-.banner {
-    font-size: 1.35em !important;
-}
-
-/* .my-slide div {
-display: table-cell;
-} */
-/* End subtitle section */
-
-
-.form-check {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-button[disabled] {
-    pointer-events: none;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
-.form-control {
-    height: 2.5em !important;
-    border-radius: 1.25em !important;
-    border: 1px solid gray;
-}
-
-.input-group-text {
-    background-color: rgba(0, 0, 0, 0) !important;
-    border: none !important;
+.submit-row {
+    margin-top: 48px
 }
 
 .cta-email-button {
-    border-radius: 10px !important;
-    background-color: #2F9494 !important;
-    background: unset;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 24px;
+    border: none;
+    background: linear-gradient(90deg, #FFA200, #FF014E);
+    -webkit-box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 12px 12px 16px 0px rgba(0, 0, 0, 0.16);
 }
 
-/* Breakpoints */
-/* md-breakpoint */
-@media (min-width: 765px) {
-    .header-padding.section-padding {
-        padding-top: 175px !important;
+.privacy-row {
+    padding-left: 30px;
+    font-size: 14px;
+    color: #878787 !important;
+    margin-top: 5px;
+}
+
+.phone-image {
+    margin-top: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    animation: upAndDown;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.error-message {
+    padding-left: 30px;
+    height: 24px
+}
+
+.invalid {
+    transition-duration: 0.3s;
+    color: red !important;
+    border-color: red !important;
+}
+
+@media (min-width: 576px) {
+    .title {
+        font-size: 41px;
     }
 
-    .title-section {
-        min-height: 30vh;
+    .content {
+        margin-top: 175px;
+    }
+
+    .content-card {
+        padding: 40px
+    }
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 51px;
+    }
+
+    .footer-margin {
+        margin-top: 100px;
+    }
+}
+
+/* XL breakpoint */
+@media (min-width: 992px) {
+    .title-background {
+        background-image: url(../../assets/getting-started-background.svg);
     }
 
     .title {
-        font-size: 3.5em
+        font-size: 35px;
+    }
+
+    .phone-image {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title {
+        font-size: 43px
+    }
+}
+
+/* XXL breakpoint */
+@media (min-width: 1920px) {
+    .phone-image {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .content-card {
+        padding: 60px;
+    }
+
+    .title {
+        font-size: 50px;
     }
 
     .subtitle {
-        font-size: 1.35em !important;
-        font-weight: 400;
+        font-size: 24px;
+    }
+}
+
+
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0)
     }
 
-    .svg-container {
-        height: 100px
+    100% {
+        transform: translateY(-40px)
     }
 }
