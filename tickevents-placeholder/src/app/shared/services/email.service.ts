@@ -20,13 +20,13 @@ export class EmailService {
       .subscribe(() => subject.next(ServerResponse.SUCCESS),
         error => {
           switch (error.error.type) {
-            case ServerResponse.EMAIL_MISSING_IN_BODY: subject.next(ServerResponse.EMAIL_MISSING_IN_BODY)
-            case ServerResponse.INVALID_BODY: subject.next(ServerResponse.INVALID_BODY)
+            case ServerResponse.EMAIL_MISSING_IN_BODY: subject.next(ServerResponse.EMAIL_MISSING_IN_BODY); break; 
+            case ServerResponse.INVALID_BODY: subject.next(ServerResponse.INVALID_BODY); break; 
             case ServerResponse.MAILCHIMP_ERROR: {
 
               switch (error.error.message) {
-                case "Member Exists": subject.next(ServerResponse.DUPLICATE_EMAIL)
-                case "Invalid Resource": subject.next(ServerResponse.INVALID_RESOURCE)
+                case "Member Exists": subject.next(ServerResponse.DUPLICATE_EMAIL); break; 
+                case "Invalid Resource": subject.next(ServerResponse.INVALID_RESOURCE); break; 
               }
             }
           }
