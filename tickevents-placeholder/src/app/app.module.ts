@@ -17,6 +17,8 @@ import { NewHomeHeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';  
 import { HomeComponent } from './home/home.component';
 import { CreateEventComponent } from './create-event/create-event.component';
+import { EventNameComponent } from './create-event/event-name/event-name.component';
+import { CreateEventHeaderComponent } from './create-event/create-event-header/create-event-header.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CreateEventComponent } from './create-event/create-event.component';
     HomeComponent,
     NewHomeHeaderComponent,
     CreateEventComponent,
+    EventNameComponent,
+    CreateEventHeaderComponent,
   ],
   imports: [
     BrowserModule,
