@@ -16,6 +16,7 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { NewHomeHeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';  
 import { HomeComponent } from './home/home.component';
+import { CreateEventComponent } from './create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomeComponent } from './home/home.component';
     HowItWorksComponent,
     HomeComponent,
     NewHomeHeaderComponent,
+    CreateEventComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+.left-panel {
+    background-image: url(../../assets/create-event-left-panel.svg);
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-width: 500px;
+}
+
+.title {
+    font-size: 54px;
+}
+
+.list-item {
+    color: #9A9A9A;
+}
+
+.circle {
+    border: 6px;
+    border-style: solid;
+    border-color: #9A9A9A;
+    
+    color: inherit;
+    border-radius: 50%;
+    height: 100px !important;
+    width: 100px !important;
+    font-size: 54px;
+    /* display: inline-block; */
+}
+
+.active,
+.active .circle {
+    border-color: white !important;
+    color: white !important;
+}

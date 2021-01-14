@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-new-home-header',
@@ -7,33 +7,39 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NewHomeHeaderComponent implements OnInit {
 	@Input() logoColor: string
+	navbarClass: string
 
 	constructor() { }
 
 	ngOnInit(): void {
 		this.logoColor = this.logoColor || "white"
+		
+		switch(this.logoColor) {
+			case "white": this.navbarClass = "white-logo"
+			case "black": this.navbarClass = "black-logo"
+		}
 	}
 
 	changeBackground = () => {
-		console.log("change background called");
-		
 		const button = document.querySelector('.navbar-toggler');
-		const nav = document.querySelector('nav');
+		let navbar
 
-		if (button.attributes.getNamedItem("aria-expanded").value != 'true') {
-			console.log("adding white background");
-			
-			
-			nav.classList.add("bg-white")
-			nav.classList.remove("bg-none")
-		} else {
-			console.log("removing white background");
-			
-			console.log(nav.classList);
-			nav.classList.remove("bg-white");
-			nav.classList.add("bg-none")
-			console.log(nav.classList);
+		console.log(this.logoColor);
+		
 
+		switch(this.logoColor) {
+			case "white": navbar = document.querySelector(".white-logo"); console.log("appending white")
+			case "black": navbar = document.querySelector(".black-logo"); console.log("appending black")
 		}
+
+		console.log(navbar);
+		
+		// if (button.attributes.getNamedItem("aria-expanded").value != 'true') {
+		// 	navbar.classList.add("bg-white")
+		// 	navbar.classList.remove("bg-none")
+		// } else {
+		// 	navbar.classList.remove("bg-white");
+		// 	navbar.classList.add("bg-none")
+		// }
 	}
 }

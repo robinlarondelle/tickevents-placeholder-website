@@ -4,15 +4,17 @@ import { GettingStartedComponent } from './getting-started/getting-started.compo
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { CreateEventComponent } from './create-event/create-event.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: "home", pathMatch: "full" },
+  { path: '', redirectTo: "create-event", pathMatch: "full" },
   { path: 'new-home', redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "getting-started", component: GettingStartedComponent },
   { path: "how-it-works", component: HowItWorksComponent },
   { path: "pricing", component: PricingComponent },
+  { path: "create-event", component: CreateEventComponent },
 
 ];
 
