@@ -7,18 +7,24 @@ import { CreateEventService } from '../shared/services/create-event.service';
   styleUrls: ['./create-event.component.css']
 })
 export class CreateEventComponent implements OnInit {
-  _firstEventActive: boolean
   _secondEventActive: boolean
   _thirdEventActive: boolean
 
   constructor(
-    private creaetEventService: CreateEventService
+    private createEventService: CreateEventService
   ) { }
 
   ngOnInit(): void {
-    this._firstEventActive = this.creaetEventService.firstSectionActive
-    this._secondEventActive = this.creaetEventService.secondSectionActive
-    this._thirdEventActive = this.creaetEventService.thirdSectionActive
+
+    this.createEventService.secondSectionActive.subscribe(value => {
+      this._secondEventActive = value
+    })
+
+    this.createEventService.thirdSectionActive.subscribe(value => {
+      console.log(value);
+      
+      this._thirdEventActive = value
+    })
   }
 
 }

@@ -7,6 +7,14 @@
     min-width: 500px;
 }
 
+.left-panel-content {
+    margin-top: 150px
+}
+
+.mb-5 {
+    margin-bottom: 80px !important;
+}
+
 .title {
     font-size: 54px;
 }

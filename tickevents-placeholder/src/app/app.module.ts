@@ -17,8 +17,10 @@ import { NewHomeHeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';  
 import { HomeComponent } from './home/home.component';
 import { CreateEventComponent } from './create-event/create-event.component';
-import { EventNameComponent } from './create-event/event-name/event-name.component';
 import { CreateEventHeaderComponent } from './create-event/create-event-header/create-event-header.component';
+import { EventDetailsComponent } from './create-event/event-details/event-details.component';
+import { TicketDetailsComponent } from './create-event/ticket-details/ticket-details.component';
+import { PersonalDetailsComponent } from './create-event/personal-details/personal-details.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,10 @@ import { CreateEventHeaderComponent } from './create-event/create-event-header/c
     HomeComponent,
     NewHomeHeaderComponent,
     CreateEventComponent,
-    EventNameComponent,
     CreateEventHeaderComponent,
+    EventDetailsComponent,
+    TicketDetailsComponent,
+    PersonalDetailsComponent,
   ],
   imports: [
     BrowserModule,

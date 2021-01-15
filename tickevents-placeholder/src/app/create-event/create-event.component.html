@@ -8,11 +8,12 @@
 		<div class="col-5 left-panel mnh-100vh">
 
 			<div class="row h-100">
-				<div class="col-12 px-5 align-self-center">
+				<div class="col-12 px-5 left-panel-content">
 
 					<h1 class="w ft-alata text-center title mb-5">Maak een evenement aan</h1>
 
-					<div class="row list-item mb-5" [ngClass]="{active: _firstEventActive}">
+					<!-- The first item in the list is always active -->
+					<div class="row list-item mb-5 active"> 
 						<div class="col-auto">
 							<div class="circle text-center ft-alata">
 								<span>1</span>
@@ -53,7 +54,7 @@
 
 		<!-- Right panel -->
 		<div class="col-7">
-
+			<app-event-details></app-event-details>
 		</div>
 		<!-- End right panel -->
 

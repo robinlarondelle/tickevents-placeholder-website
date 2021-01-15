@@ -8,7 +8,7 @@ import { CreateEventComponent } from './create-event/create-event.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: "create-event", pathMatch: "full" },
+  { path: '', redirectTo: "home", pathMatch: "full" },
   { path: 'new-home', redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   // { path: "getting-started", component: GettingStartedComponent },
