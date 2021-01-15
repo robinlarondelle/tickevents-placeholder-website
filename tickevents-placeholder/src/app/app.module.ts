@@ -21,6 +21,7 @@ import { CreateEventHeaderComponent } from './create-event/create-event-header/c
 import { EventDetailsComponent } from './create-event/event-details/event-details.component';
 import { TicketDetailsComponent } from './create-event/ticket-details/ticket-details.component';
 import { PersonalDetailsComponent } from './create-event/personal-details/personal-details.component';
+import { EventNameComponent } from './create-event/event-details/event-name/event-name.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PersonalDetailsComponent } from './create-event/personal-details/person
     EventDetailsComponent,
     TicketDetailsComponent,
     PersonalDetailsComponent,
+    EventNameComponent,
   ],
   imports: [
     BrowserModule,
