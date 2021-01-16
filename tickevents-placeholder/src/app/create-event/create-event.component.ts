@@ -21,10 +21,7 @@ export class CreateEventComponent implements OnInit {
     })
 
     this.createEventService.thirdSectionActive.subscribe(value => {
-      console.log(value);
-      
       this._thirdEventActive = value
     })
   }
-
 }

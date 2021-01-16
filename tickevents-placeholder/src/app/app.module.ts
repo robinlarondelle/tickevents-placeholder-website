@@ -22,6 +22,8 @@ import { EventDetailsComponent } from './create-event/event-details/event-detail
 import { TicketDetailsComponent } from './create-event/ticket-details/ticket-details.component';
 import { PersonalDetailsComponent } from './create-event/personal-details/personal-details.component';
 import { EventNameComponent } from './create-event/event-details/event-name/event-name.component';
+import { EventLocationComponent } from './create-event/event-details/event-location/event-location.component';
+import { EventDatetimeComponent } from './create-event/event-details/event-datetime/event-datetime.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { EventNameComponent } from './create-event/event-details/event-name/even
     TicketDetailsComponent,
     PersonalDetailsComponent,
     EventNameComponent,
+    EventLocationComponent,
+    EventDatetimeComponent,
   ],
   imports: [
     BrowserModule,
