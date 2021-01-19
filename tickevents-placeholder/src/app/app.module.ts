@@ -24,6 +24,8 @@ import { PersonalDetailsComponent } from './create-event/personal-details/person
 import { EventNameComponent } from './create-event/event-details/event-name/event-name.component';
 import { EventLocationComponent } from './create-event/event-details/event-location/event-location.component';
 import { EventDatetimeComponent } from './create-event/event-details/event-datetime/event-datetime.component';
+import { NextButtonComponent } from './create-event/shared/next-button/next-button.component';
+import { PrevButtonComponent } from './create-event/shared/prev-button/prev-button.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { EventDatetimeComponent } from './create-event/event-details/event-datet
     EventNameComponent,
     EventLocationComponent,
     EventDatetimeComponent,
+    NextButtonComponent,
+    PrevButtonComponent,
   ],
   imports: [
     BrowserModule,

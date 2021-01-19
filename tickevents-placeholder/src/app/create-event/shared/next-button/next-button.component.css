@@ -1,0 +1,30 @@
+.nav-btn {
+    background: linear-gradient(45deg, #169BD6, #005FDB) !important;
+
+    -webkit-box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.16);
+
+    border: none;
+    border-radius: 50px;
+
+    height: 100px;
+    width: 100px;
+
+    color: white;
+    font-size: 3.5rem;
+
+    transition-duration: 0.3s;
+    transition-property: background, color; /* don't animate the border*/
+}
+
+.nav-btn:hover {
+    background: white !important;
+
+    border: 5px solid #005FDB;
+
+    color: #005FDB;
+
+    transition-duration: 0.3s;
+    transition-property: background, color; /* don't animate the border*/
+}
