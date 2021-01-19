@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { EventDetailsState } from 'src/app/shared/models/EventDetailsStateEnum,';
 import { CreateEventService } from 'src/app/shared/services/create-event.service';
 import { EventDetailsService } from 'src/app/shared/services/event-details.service';
@@ -8,60 +9,26 @@ import { EventDetailsService } from 'src/app/shared/services/event-details.servi
   templateUrl: './event-details.component.html',
   styleUrls: ['./event-details.component.css']
 })
-export class EventDetailsComponent implements OnInit {
+
+export class EventDetailsComponent implements OnInit, OnDestroy {
   state: EventDetailsState
+  $state: Subscription
   eventName = EventDetailsState.EVENT_NAME
   eventLocation = EventDetailsState.EVENT_LOCATION
   eventDateTime = EventDetailsState.EVENT_DATETIME
 
   constructor(
-    private createEventService: CreateEventService
+    private eventDetailsService: EventDetailsService
   ) {
-    this.state = EventDetailsState.EVENT_NAME
    }
 
   ngOnInit(): void {
-    console.log(this.state == this.eventName);
-    console.log(this.state);
+    this.$state = this.eventDetailsService.getCurrentState().subscribe(newState => {
+      this.state = newState
+    })
   }
 
-  clickNext(): void {
-    console.log("next");
-    
-    switch(this.state) {
-      case EventDetailsState.EVENT_NAME: {
-        this.state = EventDetailsState.EVENT_DATETIME
-        break;
-      }
-      case EventDetailsState.EVENT_DATETIME: {
-        this.state = EventDetailsState.EVENT_LOCATION
-        break;
-      }
-      case EventDetailsState.EVENT_LOCATION: {
-        this.createEventService.toggleSecondSectionActive()
-        break;
-      }
-    }
+  ngOnDestroy(): void {
+    this.$state.unsubscribe()
   }
-
-  clickPrevious(): void {
-    console.log("prev");
-    
-    switch(this.state) {
-      case EventDetailsState.EVENT_NAME: {
-        //do nothing
-        break;
-      }
-      case EventDetailsState.EVENT_DATETIME: {
-        this.state = EventDetailsState.EVENT_NAME
-        break;
-
-      }
-      case EventDetailsState.EVENT_LOCATION: {
-        this.state = EventDetailsState.EVENT_DATETIME
-        break;
-      }
-    }
-  }
-
 }

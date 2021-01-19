@@ -1,14 +1,28 @@
 <div class="row no-gutters h-100">
-    <div class="col-2 align-self-center">
-        <button class="w-100 btn" (click)="clickPrevious()">prev</button>
+
+    <!-- Content -->
+    <div class="col-12">
+
+        <!-- this div is used to make the second row take the remaining height -->
+        <div class="d-flex flex-column h-100"> 
+
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <h1 class="text-center title ft-alata">Gegevens van je evenement</h1>
+                </div>
+            </div>
+            
+            <!-- Flex-grow-1 takes the remaining available height -->
+            <div class="row no-gutters flex-grow-1">
+                <div class="col-12">
+                    <app-event-name *ngIf="state == eventName"></app-event-name>
+                    <app-event-datetime *ngIf="state == eventDateTime"></app-event-datetime>
+                    <app-event-location *ngIf="state == eventLocation"></app-event-location>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="col-8 h-100">
-        <h1 class="text-center title ft-alata">Gegevens van je evenement</h1>
-        <app-event-name *ngIf="state == eventName"></app-event-name>
-        <app-event-datetime *ngIf="state == eventDateTime"></app-event-datetime>
-        <app-event-location *ngIf="state == eventLocation"></app-event-location>
-    </div>
-    <div class="col-2 align-self-center">
-        <button class="w-100 btn" (click)="clickNext()">next</button>
-    </div>
+    <!-- End content -->
+
 </div>

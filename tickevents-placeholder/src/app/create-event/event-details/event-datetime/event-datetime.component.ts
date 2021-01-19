@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventDetailsService } from 'src/app/shared/services/event-details.service';
 
 @Component({
   selector: 'app-event-datetime',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventDatetimeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private eventDetailsService: EventDetailsService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  clickNext() {
+    this.eventDetailsService.nextState()
+  }
+
+  clickPrevious() {
+    this.eventDetailsService.previousState()
+
   }
 
 }
