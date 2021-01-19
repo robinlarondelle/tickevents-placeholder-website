@@ -26,7 +26,7 @@ export class EventDetailsService {
         break;
       }
       case EventDetailsState.EVENT_LOCATION: {
-        this.createEventService.toggleSecondSectionActive()
+        this.createEventService.nextState()
         break;
       }
     }
