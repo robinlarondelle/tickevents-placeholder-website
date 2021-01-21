@@ -18,7 +18,7 @@
 						</div>
 
 						<!-- The first item in the list is always active -->
-						<div class="row no-gutters flex-grow-1">
+						<div class="row no-gutters flex-grow-1  content-compensation">
 							<div class="col-12 align-self-center">
 								<div class="row list-item mb-4 active">
 									<div class="col-auto">
@@ -76,9 +76,9 @@
 		<!-- Right panel -->
 		<div class="col-7">
 			<app-event-details *ngIf="state == createEvent"></app-event-details>
-			<!-- <app-ticket-details *ngIf="state == createTickets"></app-ticket-details>
+			<app-ticket-details *ngIf="state == createTickets"></app-ticket-details>
 			<app-personal-details *ngIf="state == createPersonalDetails"></app-personal-details>
-			<app-overview *ngIf="state == overview"></app-overview> -->
+			<app-overview *ngIf="state == overview"></app-overview>
 		</div>
 		<!-- End right panel -->
 

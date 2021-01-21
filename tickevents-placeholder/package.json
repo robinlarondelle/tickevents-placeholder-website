@@ -25,6 +25,7 @@
     "highcharts": "^8.2.0",
     "highcharts-angular": "^2.8.0",
     "mailchimp-api-v3": "^1.14.0",
+    "moment": "^2.29.1",
     "ngx-parallax": "^4.0.0",
     "ngx-scrollreveal": "^3.0.0",
     "ngx-spinner": "^10.0.1",

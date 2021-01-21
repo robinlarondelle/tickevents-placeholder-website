@@ -1,22 +1,19 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { CreateEventState } from '../models/CreateEventStateEnum';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { CreateEventState } from '../models/states/CreateEventStateEnum';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CreateEventService {
+export class CreateEventStateService {
   private state: BehaviorSubject<CreateEventState>
 
-  constructor(
-    private http: HttpClient
-  ) {
+  constructor() {
     this.state = new BehaviorSubject(CreateEventState.CREATE_EVENT)
   }
 
   nextState() {
-    switch(this.state.getValue()) {
+    switch (this.state.getValue()) {
       case CreateEventState.CREATE_EVENT:
         this.state.next(CreateEventState.CREATE_TICKETS)
         break
@@ -33,7 +30,7 @@ export class CreateEventService {
   }
 
   previousState() {
-    switch(this.state.getValue()) {
+    switch (this.state.getValue()) {
       case CreateEventState.CREATE_EVENT:
         // Nothing, this is the first state, there is nothing before this
         break
@@ -48,7 +45,6 @@ export class CreateEventService {
         break;
     }
   }
-
 
   getCurrentState(): Observable<CreateEventState> {
     return this.state.asObservable()

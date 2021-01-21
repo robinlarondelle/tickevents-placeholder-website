@@ -1,24 +1,31 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Observable, Subscription } from 'rxjs';
-import { EventDetailsState } from 'src/app/shared/models/EventDetailsStateEnum,';
-import { CreateEventService } from 'src/app/shared/services/create-event.service';
+import { EventDetailsState } from 'src/app/shared/models/states/EventDetailsStateEnum,';
+import { CreateEventFormService } from 'src/app/shared/services/create-event-form.service';
 import { EventDetailsService } from 'src/app/shared/services/event-details.service';
 
 @Component({
   selector: 'app-event-details',
   templateUrl: './event-details.component.html',
-  styleUrls: ['./event-details.component.css']
+  styleUrls: ['./event-details.component.css', '../shared/stylesheets/create-event.css']
 })
 
 export class EventDetailsComponent implements OnInit, OnDestroy {
   state: EventDetailsState
-  $state: Subscription
+  private $state: Subscription
+
+  createEventForm: FormGroup
+  private $createEventForm: Subscription
+
+  // states to expose them to the template
   eventName = EventDetailsState.EVENT_NAME
   eventLocation = EventDetailsState.EVENT_LOCATION
   eventDateTime = EventDetailsState.EVENT_DATETIME
 
   constructor(
-    private eventDetailsService: EventDetailsService
+    private eventDetailsService: EventDetailsService,
+    private createEventFormService: CreateEventFormService
   ) {
    }
 
@@ -26,9 +33,14 @@ export class EventDetailsComponent implements OnInit, OnDestroy {
     this.$state = this.eventDetailsService.getCurrentState().subscribe(newState => {
       this.state = newState
     })
+
+    this.$createEventForm = this.createEventFormService.getCreateEventForm().subscribe(form => {
+      this.createEventForm = form      
+    })
   }
 
   ngOnDestroy(): void {
     this.$state.unsubscribe()
+    this.$createEventForm.unsubscribe()
   }
 }

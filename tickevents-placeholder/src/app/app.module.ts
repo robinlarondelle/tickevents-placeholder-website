@@ -27,6 +27,7 @@ import { EventDatetimeComponent } from './create-event/event-details/event-datet
 import { NextButtonComponent } from './create-event/shared/next-button/next-button.component';
 import { PrevButtonComponent } from './create-event/shared/prev-button/prev-button.component';
 import { OverviewComponent } from './create-event/overview/overview.component';
+import { ProgressTrackerComponent } from './create-event/event-details/progress-tracker/progress-tracker.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { OverviewComponent } from './create-event/overview/overview.component';
     NextButtonComponent,
     PrevButtonComponent,
     OverviewComponent,
+    ProgressTrackerComponent,
   ],
   imports: [
     BrowserModule,

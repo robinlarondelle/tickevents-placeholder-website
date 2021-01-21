@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { EventDetailsState } from '../models/EventDetailsStateEnum,';
-import { CreateEventService } from './create-event.service';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { EventDetailsState } from '../models/states/EventDetailsStateEnum,';
+import { CreateEventStateService } from './create-event-state.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class EventDetailsService {
   private state: BehaviorSubject<EventDetailsState>
 
   constructor(
-    private createEventService: CreateEventService
+    private createEventStateService: CreateEventStateService
   ) {
     this.state = new BehaviorSubject(EventDetailsState.EVENT_NAME)
   }
@@ -26,7 +26,7 @@ export class EventDetailsService {
         break;
       }
       case EventDetailsState.EVENT_LOCATION: {
-        this.createEventService.nextState()
+        this.createEventStateService.nextState()
         break;
       }
     }

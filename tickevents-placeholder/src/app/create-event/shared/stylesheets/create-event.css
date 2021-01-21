@@ -1,0 +1,31 @@
+.create-event-form {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.content-compensation {
+    margin-top: -100px;
+}
+
+input {
+    width: 100%;
+    height: 75px;
+    border: 4px solid hsl(0, 0%, 60%);
+    border-radius: 37.5px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #9A9A9A;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 0;
+
+    -webkit-box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.16);
+}
+
+label {
+    margin-left: 25px;
+    margin-bottom: 0;
+    font-size: 36px;
+}
