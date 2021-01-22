@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { EventDetailsState } from 'src/app/shared/models/states/EventDetailsStateEnum,';
 import { CreateEventFormService } from 'src/app/shared/services/create-event-form.service';
-import { EventDetailsService } from 'src/app/shared/services/event-details.service';
 
 @Component({
   selector: 'app-event-details',
@@ -24,16 +23,11 @@ export class EventDetailsComponent implements OnInit, OnDestroy {
   eventDateTime = EventDetailsState.EVENT_DATETIME
 
   constructor(
-    private eventDetailsService: EventDetailsService,
     private createEventFormService: CreateEventFormService
   ) {
    }
 
   ngOnInit(): void {
-    this.$state = this.eventDetailsService.getCurrentState().subscribe(newState => {
-      this.state = newState
-    })
-
     this.$createEventForm = this.createEventFormService.getCreateEventForm().subscribe(form => {
       this.createEventForm = form      
     })

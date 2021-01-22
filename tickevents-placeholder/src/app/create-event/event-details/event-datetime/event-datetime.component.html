@@ -1,13 +1,27 @@
-<div class="row no-gutters h-100">
-    <div class="col-2 align-self-center text-center">
-        <app-prev-button (click)="clickPrevious()"></app-prev-button>
+<div class="d-flex flex-column h-100">
+    <div class="row no-gutters">
+        <div class="col-12">
+            <h1 class="text-center subtitle">Op welke dag start je evenement? <br>Je kunt meerdere dagen selecteren</h1>
+        </div>
     </div>
 
-    <div class="col-8">
-        <h1 class="text-center subtitle">Op welke dag start je evenement? <br>Je kunt meerdere dagen selecteren</h1>
-    </div>
+    <div class="row no-gutters flex-grow-1 align-content-center content-compensation">
+        <div class="col-2 align-self-center text-center my-auto">
+            <app-prev-button (click)="clickPrevious()"></app-prev-button>
+        </div>
 
-    <div class="col-2 align-self-center text-center">
-        <app-next-button (click)="clickNext()"></app-next-button>
+        <div class="col-8">
+            <!-- <form [formGroup]="createEventForm" class="create-event-form">
+                <div class="form-row">
+                        <label for="eventName">Naam evenement</label>
+                        <input type="text" formControlName="eventName" id="eventName">
+                </div>
+            </form> -->
+            <h1 class="text-center">DateTime</h1>
+        </div>
+
+        <div class="col-2 text-center my-auto">
+            <app-next-button (click)="clickNext()"></app-next-button>
+        </div>
     </div>
 </div>

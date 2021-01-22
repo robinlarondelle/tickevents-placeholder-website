@@ -15,9 +15,10 @@
             <!-- Flex-grow-1 takes the remaining available height -->
             <div class="row no-gutters flex-grow-1">
                 <div class="col-12">
-                    <app-event-name *ngIf="state == eventName"></app-event-name>
+                    <router-outlet></router-outlet>
+                    <!-- <app-event-name *ngIf="state == eventName"></app-event-name>
                     <app-event-datetime *ngIf="state == eventDateTime"></app-event-datetime>
-                    <app-event-location *ngIf="state == eventLocation"></app-event-location>
+                    <app-event-location *ngIf="state == eventLocation"></app-event-location> -->
                 </div>
             </div>
 

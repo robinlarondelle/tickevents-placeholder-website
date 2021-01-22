@@ -75,10 +75,11 @@
 
 		<!-- Right panel -->
 		<div class="col-7">
-			<app-event-details *ngIf="state == createEvent"></app-event-details>
+			<router-outlet></router-outlet>
+			<!-- <app-event-details *ngIf="state == createEvent"></app-event-details>
 			<app-ticket-details *ngIf="state == createTickets"></app-ticket-details>
 			<app-personal-details *ngIf="state == createPersonalDetails"></app-personal-details>
-			<app-overview *ngIf="state == overview"></app-overview>
+			<app-overview *ngIf="state == overview"></app-overview> -->
 		</div>
 		<!-- End right panel -->
 

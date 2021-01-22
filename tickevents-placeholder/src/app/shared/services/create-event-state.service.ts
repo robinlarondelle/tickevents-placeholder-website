@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { CreateEventState } from '../models/states/CreateEventStateEnum';
 
@@ -8,14 +9,17 @@ import { CreateEventState } from '../models/states/CreateEventStateEnum';
 export class CreateEventStateService {
   private state: BehaviorSubject<CreateEventState>
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
     this.state = new BehaviorSubject(CreateEventState.CREATE_EVENT)
   }
 
-  nextState() {
+  nextState(route: ActivatedRoute) {
     switch (this.state.getValue()) {
       case CreateEventState.CREATE_EVENT:
         this.state.next(CreateEventState.CREATE_TICKETS)
+        this.router.navigate(["ticket-details"], { relativeTo: route.parent.parent })
         break
       case CreateEventState.CREATE_TICKETS:
         this.state.next(CreateEventState.CREATE_PERSONAL_DETAILS)
@@ -29,7 +33,7 @@ export class CreateEventStateService {
     }
   }
 
-  previousState() {
+  previousState(route: ActivatedRoute) {
     switch (this.state.getValue()) {
       case CreateEventState.CREATE_EVENT:
         // Nothing, this is the first state, there is nothing before this

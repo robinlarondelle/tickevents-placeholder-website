@@ -28,6 +28,7 @@ import { NextButtonComponent } from './create-event/shared/next-button/next-butt
 import { PrevButtonComponent } from './create-event/shared/prev-button/prev-button.component';
 import { OverviewComponent } from './create-event/overview/overview.component';
 import { ProgressTrackerComponent } from './create-event/event-details/progress-tracker/progress-tracker.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ProgressTrackerComponent } from './create-event/event-details/progress-
     PrevButtonComponent,
     OverviewComponent,
     ProgressTrackerComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
