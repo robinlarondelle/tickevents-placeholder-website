@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { CreateEventFormService } from 'src/app/shared/services/create-event-form.service';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProgressTrackerService } from 'src/app/shared/services/progress-tracker.service';
 
 @Component({
   selector: 'app-event-location',
@@ -16,6 +17,7 @@ export class EventLocationComponent implements OnInit, OnDestroy {
 
   constructor(
     private createEventFormService: CreateEventFormService,
+    private progressTrackerService: ProgressTrackerService,
     private title: Title,
     private route: ActivatedRoute,
     private router: Router
@@ -30,10 +32,12 @@ export class EventLocationComponent implements OnInit, OnDestroy {
   }
 
   clickNext() {
+    this.progressTrackerService.nextSubState()
     this.router.navigate(["ticket-details"], {relativeTo: this.route.parent.parent})
   }
 
   clickPrevious() {
+    this.progressTrackerService.previousSubState()
    this.router.navigate(["event-datetime"], {relativeTo: this.route.parent})
   }
 

@@ -1,0 +1,34 @@
+<div class="row no-gutters mb-3">
+    <div class="col-12 justify-content-center">
+        <div class="text-center" *ngIf="mainState == createEvent">
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == eventName;else circle"><b>Naam</b></div>
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == eventDate;else circle"><b>Datum</b></div>
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == eventLocation;else circle"><b>Locatie</b>
+            </div>
+        </div>
+        <div class="text-center" *ngIf="mainState == createTickets">
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == ticketName;else circle"><b>Naam</b></div>
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == ticketAmount;else circle">
+                <b>Hoeveelheid</b>
+            </div>
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == ticketDate;else circle"><b>Datum</b></div>
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == ticketOverview;else circle">
+                <b>Overzicht</b>
+            </div>
+        </div>
+        <div class="text-center" *ngIf="mainState == createPersonalDetails">
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == personalName;else circle"><b>Gegevens</b>
+            </div>
+            <div class="text-center d-inline-block fs-lr" *ngIf="subState == personalOverview;else circle">
+                <b>Overzicht</b>
+            </div>
+        </div>
+        <div class="text-center" *ngIf="mainState == overview">
+
+        </div>
+    </div>
+</div>
+
+<ng-template #circle>
+    <div class="circle text-center d-inline-block"></div>
+</ng-template>

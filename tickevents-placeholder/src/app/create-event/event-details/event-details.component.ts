@@ -12,7 +12,6 @@ import { CreateEventFormService } from 'src/app/shared/services/create-event-for
 
 export class EventDetailsComponent implements OnInit, OnDestroy {
   state: EventDetailsState
-  private $state: Subscription
 
   createEventForm: FormGroup
   private $createEventForm: Subscription
@@ -34,7 +33,6 @@ export class EventDetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.$state.unsubscribe()
     this.$createEventForm.unsubscribe()
   }
 }

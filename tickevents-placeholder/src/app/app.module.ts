@@ -27,7 +27,7 @@ import { EventDatetimeComponent } from './create-event/event-details/event-datet
 import { NextButtonComponent } from './create-event/shared/next-button/next-button.component';
 import { PrevButtonComponent } from './create-event/shared/prev-button/prev-button.component';
 import { OverviewComponent } from './create-event/overview/overview.component';
-import { ProgressTrackerComponent } from './create-event/event-details/progress-tracker/progress-tracker.component';
+import { ProgressTrackerComponent } from './create-event/shared/progress-tracker/progress-tracker.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
