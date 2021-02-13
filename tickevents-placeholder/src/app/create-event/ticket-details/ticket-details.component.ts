@@ -6,7 +6,7 @@ import { CreateEventFormService } from 'src/app/shared/services/create-event-for
 @Component({
   selector: 'app-ticket-details',
   templateUrl: './ticket-details.component.html',
-  styleUrls: ['./ticket-details.component.css']
+  styleUrls: ['./ticket-details.component.css', './../shared/stylesheets/create-event.css']
 })
 export class TicketDetailsComponent implements OnInit {
   createEventForm: FormGroup

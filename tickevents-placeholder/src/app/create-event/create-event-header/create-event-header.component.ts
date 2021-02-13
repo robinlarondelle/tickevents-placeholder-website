@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-event-header',
   templateUrl: './create-event-header.component.html',
-  styleUrls: ['./create-event-header.component.css']
+  styleUrls: ['./create-event-header.component.css', './../shared/stylesheets/create-event.css']
 })
 export class CreateEventHeaderComponent implements OnInit {
 

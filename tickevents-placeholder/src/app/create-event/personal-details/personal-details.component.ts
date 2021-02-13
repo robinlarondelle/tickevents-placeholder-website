@@ -6,7 +6,7 @@ import { CreateEventFormService } from 'src/app/shared/services/create-event-for
 @Component({
   selector: 'app-personal-details',
   templateUrl: './personal-details.component.html',
-  styleUrls: ['./personal-details.component.css']
+  styleUrls: ['./personal-details.component.css', './../shared/stylesheets/create-event.css']
 })
 export class PersonalDetailsComponent implements OnInit {
 

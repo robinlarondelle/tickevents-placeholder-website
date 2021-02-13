@@ -6,7 +6,7 @@ import { CreateEventState, EventDetailsState, PersonalDetailsState, TicketDetail
 @Component({
   selector: 'app-personal-data',
   templateUrl: './personal-data.component.html',
-  styleUrls: ['./personal-data.component.css']
+  styleUrls: ['./personal-data.component.css', '../../shared/stylesheets/create-event.css']
 })
 export class PersonalDataComponent implements OnInit {
   constructor(

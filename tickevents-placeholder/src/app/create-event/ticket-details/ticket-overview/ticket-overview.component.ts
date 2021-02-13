@@ -6,7 +6,7 @@ import { CreateEventState, PersonalDetailsState, TicketDetailsState } from 'src/
 @Component({
   selector: 'app-ticket-overview',
   templateUrl: './ticket-overview.component.html',
-  styleUrls: ['./ticket-overview.component.css']
+  styleUrls: ['./ticket-overview.component.css', '../../shared/stylesheets/create-event.css']
 })
 export class TicketOverviewComponent implements OnInit {
 

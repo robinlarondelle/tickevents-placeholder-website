@@ -9,7 +9,7 @@ import { CreateEventFormService } from 'src/app/shared/services/create-event-for
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.css']
+  styleUrls: ['./overview.component.css', './../shared/stylesheets/create-event.css']
 })
 export class OverviewComponent implements OnInit {
 

@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <div class="row no-gutters flex-grow-1 align-content-center content-compensation">
+    <div class="row no-gutters flex-grow-1 align-content-center">
         <div class="col-2 text-center">
             <!-- Nothing, there is nothing to return to -->
         </div>
@@ -13,8 +13,11 @@
         <div class="col-8">
             <form [formGroup]="createEventForm" class="create-event-form">
                 <div class="form-row">
-                        <label for="eventName">Naam evenement</label>
-                        <input type="text" formControlName="eventName" id="eventName">
+                    <label for="eventName">Naam evenement</label>
+                    <input type="text" formControlName="eventName" id="eventName">
+                    <span class="form-error"
+                        *ngIf="submitted && !eventName.valid && (eventName.dirty || !eventName.touched)">Dit veld is
+                        verplicht</span>
                 </div>
             </form>
         </div>

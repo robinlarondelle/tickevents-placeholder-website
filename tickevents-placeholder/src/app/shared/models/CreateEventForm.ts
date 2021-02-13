@@ -1,8 +1,8 @@
-import { FormArray, FormControl, FormGroup } from "@angular/forms";
+import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
 import { Event } from "./EventModel";
 
 export class CreateEventForm {
-    eventName = new FormControl()
+    eventName = new FormControl('', [Validators.required])
     eventStartDate = new FormControl()
     eventEndDate = new FormControl()
     eventStartTime = new FormControl()

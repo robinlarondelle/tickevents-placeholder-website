@@ -6,7 +6,7 @@ import { TicketDetailsState, CreateEventState } from 'src/app/shared/models/stat
 @Component({
   selector: 'app-ticket-amount',
   templateUrl: './ticket-amount.component.html',
-  styleUrls: ['./ticket-amount.component.css']
+  styleUrls: ['./ticket-amount.component.css', '../../shared/stylesheets/create-event.css']
 })
 export class TicketAmountComponent implements OnInit {
 

@@ -8,7 +8,7 @@ import { ProgressTrackerService } from 'src/app/shared/services/progress-tracker
 @Component({
   selector: 'app-progress-tracker',
   templateUrl: './progress-tracker.component.html',
-  styleUrls: ['./progress-tracker.component.css']
+  styleUrls: ['./progress-tracker.component.css', './../shared/stylesheets/create-event.css']
 })
 export class ProgressTrackerComponent implements OnInit, OnDestroy {
   mainState: CreateEventState

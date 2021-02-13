@@ -16,6 +16,10 @@ export class EventNameComponent implements OnInit, OnDestroy {
   createEventForm: FormGroup
   private $createEventForm: Subscription
 
+  submitted: boolean = false
+  touched: boolean = false
+  dirty: boolean = false
+
   constructor(
     private createEventFormService: CreateEventFormService,
     private title: Title,
@@ -32,7 +36,11 @@ export class EventNameComponent implements OnInit, OnDestroy {
   }
 
   clickNext() {
-    this.router.navigate([EventDetailsState.EVENT_DATETIME.toString()], { relativeTo: this.route.parent })
+    this.submitted = true
+
+    if (this.eventName.valid && (this.eventName.touched || this.eventName.dirty)) {
+      this.router.navigate([EventDetailsState.EVENT_DATETIME.toString()], { relativeTo: this.route.parent })
+    }
   }
 
   ngOnDestroy() {
