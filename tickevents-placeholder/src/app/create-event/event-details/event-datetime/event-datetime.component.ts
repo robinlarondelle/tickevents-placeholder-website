@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { CreateEventFormService } from 'src/app/shared/services/create-event-form.service';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProgressTrackerService } from 'src/app/shared/services/progress-tracker.service';
+import { EventDetailsState } from 'src/app/shared/models/states';
 
 @Component({
   selector: 'app-event-datetime',
@@ -17,14 +17,13 @@ export class EventDatetimeComponent implements OnInit, OnDestroy {
 
   constructor(
     private createEventFormService: CreateEventFormService,
-    private progressTrackerService: ProgressTrackerService,
     private title: Title,
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Tickevents | Create Event Date and Time")
+    this.title.setTitle("Tickevents | Datum van evenement")
 
     this.$createEventForm = this.createEventFormService.getCreateEventForm().subscribe(form => {
       this.createEventForm = form
@@ -32,13 +31,11 @@ export class EventDatetimeComponent implements OnInit, OnDestroy {
   }
 
   clickNext() {
-    this.progressTrackerService.nextSubState()
-    this.router.navigate(["event-location"], {relativeTo: this.route.parent})
+    this.router.navigate([EventDetailsState.EVENT_LOCATION.toString()], { relativeTo: this.route.parent })
   }
 
   clickPrevious() {
-    this.progressTrackerService.previousSubState()
-    this.router.navigate(["event-name"], {relativeTo: this.route.parent})
+    this.router.navigate([EventDetailsState.EVENT_NAME.toString()], { relativeTo: this.route.parent })
   }
 
   ngOnDestroy() {

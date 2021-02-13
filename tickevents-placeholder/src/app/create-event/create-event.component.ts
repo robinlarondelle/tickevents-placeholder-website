@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CreateEventState } from '../shared/models/states/CreateEventStateEnum';
-import { CreateEventStateService } from '../shared/services/create-event-state.service';
+import { ProgressTrackerService } from '../shared/services/progress-tracker.service';
 
 @Component({
   selector: 'app-create-event',
@@ -9,23 +9,48 @@ import { CreateEventStateService } from '../shared/services/create-event-state.s
   styleUrls: ['./create-event.component.css', './shared/stylesheets/create-event.css']
 })
 export class CreateEventComponent implements OnInit, OnDestroy {
-  state: CreateEventState
   private $state: Subscription
-
-  // states to expose them to the template
-  createEvent = CreateEventState.CREATE_EVENT
-  createTickets = CreateEventState.CREATE_TICKETS
-  createPersonalDetails = CreateEventState.CREATE_PERSONAL_DETAILS
-  overview = CreateEventState.OVERVIEW
-
+  createEventActive: boolean = true
+  createTicketActive: boolean = false
+  createPersonalDetailsActive: boolean = false
+  overviewActive: boolean = false
 
   constructor(
-    private createEventStateService: CreateEventStateService
+    private progressTrackerService: ProgressTrackerService
   ) { }
 
   ngOnInit(): void {
-    this.$state = this.createEventStateService.getCurrentState().subscribe(newState => {
-      this.state = newState
+    this.$state = this.progressTrackerService.mainState.subscribe(mainState => {
+      switch (mainState) {
+
+        case CreateEventState.CREATE_TICKETS:
+          this.createEventActive = true
+          this.createTicketActive = true
+          this.createPersonalDetailsActive = false
+          this.overviewActive = false
+          break
+
+        case CreateEventState.CREATE_PERSONAL_DETAILS:
+          this.createEventActive = true
+          this.createTicketActive = true
+          this.createPersonalDetailsActive = true
+          this.overviewActive = false
+          break
+
+        case CreateEventState.OVERVIEW:
+          this.createEventActive = true
+          this.createTicketActive = true
+          this.createPersonalDetailsActive = true
+          this.overviewActive = true
+          break
+
+        // default case only happens when the state is CreateEvent, which is the first possible state
+        default:
+          this.createEventActive = true
+          this.createTicketActive = false
+          this.createPersonalDetailsActive = false
+          this.overviewActive = false
+      }
     })
   }
 

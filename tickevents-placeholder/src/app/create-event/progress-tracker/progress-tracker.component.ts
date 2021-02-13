@@ -1,11 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { PersonalDetails } from 'src/app/shared/models/PersonalDetailsModel';
 import { PersonalDetailsState, TicketDetailsState } from 'src/app/shared/models/states';
 import { CreateEventState } from 'src/app/shared/models/states/CreateEventStateEnum';
 import { EventDetailsState } from 'src/app/shared/models/states/EventDetailsStateEnum,';
 import { ProgressTrackerService } from 'src/app/shared/services/progress-tracker.service';
-import { TicketDetailsComponent } from '../../ticket-details/ticket-details.component';
 
 @Component({
   selector: 'app-progress-tracker',
@@ -30,7 +28,7 @@ export class ProgressTrackerComponent implements OnInit, OnDestroy {
   ticketOverview = TicketDetailsState.TICKET_OVERVIEW
 
   createPersonalDetails = CreateEventState.CREATE_PERSONAL_DETAILS
-  personalName = PersonalDetailsState.PERSONAL_DETAILS
+  personalName = PersonalDetailsState.PERSONAL_DATA
   personalOverview = PersonalDetailsState.PERSONAL_OVERVIEW
 
   overview = CreateEventState.OVERVIEW

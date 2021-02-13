@@ -1,4 +1,4 @@
 export enum PersonalDetailsState {
-    PERSONAL_DETAILS = "personalDetails",
+    PERSONAL_DATA = "personalData",
     PERSONAL_OVERVIEW = "personalOverview"
 }

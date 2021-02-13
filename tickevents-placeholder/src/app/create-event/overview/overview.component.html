@@ -1,1 +1,54 @@
-<p>overview works!</p>
+<div class="row no-gutters h-100">
+
+    <!-- Content -->
+    <div class="col-12">
+
+        <!-- this div is used to make the second row take the remaining height -->
+        <div class="d-flex flex-column h-100"> 
+
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <h1 class="text-center title ft-alata">Gegevens van je evenement</h1>
+                </div>
+            </div>
+            
+            <!-- Flex-grow-1 takes the remaining available height -->
+            <div class="row no-gutters flex-grow-1">
+                <div class="col-12">
+                    <div class="d-flex flex-column h-100">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <h1 class="text-center subtitle">Op welke dag start je evenement? <br>Je kunt meerdere dagen selecteren</h1>
+                            </div>
+                        </div>
+                    
+                        <div class="row no-gutters flex-grow-1 align-content-center content-compensation">
+                            <div class="col-2 align-self-center text-center my-auto">
+                                <app-prev-button (click)="clickPrevious()"></app-prev-button>
+                            </div>
+                    
+                            <div class="col-8">
+                                <!-- <form [formGroup]="createEventForm" class="create-event-form">
+                                    <div class="form-row">
+                                            <label for="eventName">Naam evenement</label>
+                                            <input type="text" formControlName="eventName" id="eventName">
+                                    </div>
+                                </form> -->
+                                <h1 class="text-center">Overview</h1>
+                            </div>
+                    
+                            <div class="col-2 text-center my-auto">
+                                <app-next-button (click)="clickNext()"></app-next-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <app-progress-tracker></app-progress-tracker>
+
+        </div>
+    </div>
+    <!-- End content -->
+
+</div>

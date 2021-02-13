@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { EventDetailsState } from 'src/app/shared/models/states/EventDetailsStateEnum,';
 import { CreateEventFormService } from 'src/app/shared/services/create-event-form.service';
 
 @Component({
@@ -11,24 +10,17 @@ import { CreateEventFormService } from 'src/app/shared/services/create-event-for
 })
 
 export class EventDetailsComponent implements OnInit, OnDestroy {
-  state: EventDetailsState
-
   createEventForm: FormGroup
   private $createEventForm: Subscription
-
-  // states to expose them to the template
-  eventName = EventDetailsState.EVENT_NAME
-  eventLocation = EventDetailsState.EVENT_LOCATION
-  eventDateTime = EventDetailsState.EVENT_DATETIME
 
   constructor(
     private createEventFormService: CreateEventFormService
   ) {
-   }
+  }
 
   ngOnInit(): void {
     this.$createEventForm = this.createEventFormService.getCreateEventForm().subscribe(form => {
-      this.createEventForm = form      
+      this.createEventForm = form
     })
   }
 

@@ -20,7 +20,7 @@
 						<!-- The first item in the list is always active -->
 						<div class="row no-gutters flex-grow-1  content-compensation">
 							<div class="col-12 align-self-center">
-								<div class="row list-item mb-4 active">
+								<div class="row list-item mb-4" [ngClass]="{active: createEventActive}">
 									<div class="col-auto">
 										<div class="circle text-center ft-alata">
 											<span>1</span>
@@ -31,7 +31,7 @@
 									</div>
 								</div>
 
-								<div class="row  list-item mb-4" [ngClass]="{active: state==createTickets}">
+								<div class="row  list-item mb-4" [ngClass]="{active: createTicketActive}">
 									<div class="col-auto">
 										<div class="circle text-center ft-alata">
 											<span>2</span>
@@ -42,7 +42,7 @@
 									</div>
 								</div>
 
-								<div class="row  list-item mb-4" [ngClass]="{active: state==createPersonalDetails}">
+								<div class="row  list-item mb-4" [ngClass]="{active: createPersonalDetailsActive}">
 									<div class="col-auto">
 										<div class="circle text-center ft-alata">
 											<span>3</span>
@@ -53,7 +53,7 @@
 									</div>
 								</div>
 
-								<div class="row  list-item" [ngClass]="{active: state==overview}">
+								<div class="row  list-item" [ngClass]="{active: overviewActive}">
 									<div class="col-auto">
 										<div class="circle text-center ft-alata">
 											<span>4</span>
